@@ -1832,7 +1832,7 @@ config SPI_NAND_BOOT
 choice
     prompt "Select SPI NAND Address Type"
     depends on SPI_NAND_BOOT
-    default SPI_NAND_ADDR_NO_DUMMY_BYTE
+    default SPI_NAND_ADDR_HAS_DUMMY_BYTE
     help
         HAS/NO Dummy address choice.
     help_cht
