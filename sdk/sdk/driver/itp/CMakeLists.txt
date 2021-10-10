@@ -252,6 +252,11 @@ add_library(itp STATIC
     itp_ctrlboard_codec.c
 )
 
+if (DEFINED CFG_LCD_INIT_WITH_SPI)
+    add_subdirectory(spilcd)
+    target_link_libraries(itp spilcd)
+endif()
+
 if (DEFINED CFG_STNLCD_ENABLE)
     add_library(itp STATIC
         itp_stnlcd.c

@@ -826,7 +826,93 @@ config LCD_TRIPLE_BUFFER
         啟用 LCD triple buffer
     help_chs
         启用 LCD triple buffer
-        
+
+config BUILD_SPI_LCD
+    bool
+
+config LCD_INIT_WITH_SPI
+    bool "LCD SPI initialization"
+    depends on LCD_ENABLE
+    select BUILD_SPI_LCD
+    default n
+    help
+        Enable LCD SPI initialization or not.
+    help_cht
+        啟用 LCD SPI 初始化。
+    help_chs
+        启用 LCD SPI 初始化。
+
+choice
+    prompt "Select SPI-LCD type"
+    depends on LCD_INIT_WITH_SPI
+    default LCD_854X480_DX050H049
+
+config SPI_LCD_854X480_DX050H049
+    bool "LCD_854X480_DX050H049
+    help
+	    Select the DX050H049 854X480 screen.
+    help_cht
+        選擇 IPS DX050H049（854X480）的屏幕。
+    help_chs
+        选择 IPS DX050H049（854X480）的屏幕。
+
+endchoice
+
+config LCD_SPI_CS_GPIO
+    string "LCD SPI CS Pin"
+    depends on LCD_INIT_WITH_SPI
+    default "-1"
+    help
+        LCD SPI CS Pin.
+    help_cht
+        LCD SPI CS Pin.
+    help_chs
+        LCD SPI CS Pin.
+
+config LCD_SPI_CLK_GPIO
+    string "LCD SPI CLK Pin"
+    depends on LCD_INIT_WITH_SPI
+    default "-1"
+    help
+        LCD SPI CLK Pin.
+    help_cht
+        LCD SPI CLK Pin.
+    help_chs
+        LCD SPI CLK Pin.
+
+config LCD_SPI_DATA_GPIO
+    string "LCD SPI DATA Pin"
+    depends on LCD_INIT_WITH_SPI
+    default "-1"
+    help
+        LCD SPI DATA Pin.
+    help_cht
+        LCD SPI DATA Pin.
+    help_chs
+        LCD SPI DATA Pin.      
+
+config LCD_LCM_RESET
+    string "LCD LCM Reset Pin"
+    depends on LCD_INIT_WITH_SPI
+    default "-1"
+    help
+        LCD LCM Reset Pin.
+    help_cht
+        LCD LCM Reset Pin.
+    help_chs
+        LCD LCM Reset Pin.
+
+config LCD_LCM_POWER
+    string "LCD Power Pin"
+    depends on LCD_INIT_WITH_SPI
+    default "-1"
+    help
+        LCD Power Pin.
+    help_cht
+        LCD Power Pin.
+    help_chs
+        LCD Power Pin.
+
 config HDMI_OUT_ENABLE
     bool "HDMI Out Enable"
     depends on LCD_ENABLE

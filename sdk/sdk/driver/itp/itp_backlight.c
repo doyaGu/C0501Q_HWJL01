@@ -17,7 +17,7 @@
 #define BL_PWM ITH_PWM1
 #else
 #define GPIO_MODE ITH_GPIO_MODE2
-#define BL_PWM ITH_PWM5
+#define BL_PWM ITH_PWM4
 #endif
 
 static const unsigned int blDutyCycleTable[] = { CFG_BACKLIGHT_DUTY_CYCLES };

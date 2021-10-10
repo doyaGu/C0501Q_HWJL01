@@ -316,6 +316,60 @@ if (DEFINED CFG_LCD_TRIPLE_BUFFER)
     )
 endif()
 
+if (DEFINED CFG_LCD_INIT_WITH_SPI)
+    add_definitions(
+    -DCFG_LCD_INIT_WITH_SPI
+   )
+endif()
+
+if (DEFINED CFG_SPI_LCD_854X480_DX050H049)
+    add_definitions(
+    -DCFG_SPI_LCD_854X480_DX050H049
+   )
+endif()
+
+if (DEFINED CFG_SPI_LCD_854X480_ILI9806E)
+    add_definitions(
+        -DCFG_SPI_LCD_854X480_ILI9806E
+    )
+endif()
+
+if (DEFINED CFG_LCD_SPI_CLK_GPIO)
+    add_definitions(
+       -DCFG_LCD_SPI_CLK_GPIO=${CFG_LCD_SPI_CLK_GPIO}
+    )
+endif()
+
+if (DEFINED CFG_LCD_SPI_CS_GPIO)
+    add_definitions(
+       -DCFG_LCD_SPI_CS_GPIO=${CFG_LCD_SPI_CS_GPIO}
+    )
+endif()
+
+if (DEFINED CFG_LCD_SPI_DATA_GPIO)
+    add_definitions(
+       -DCFG_LCD_SPI_DATA_GPIO=${CFG_LCD_SPI_DATA_GPIO}
+    )
+endif()
+
+if (DEFINED CFG_LCD_LCM_RESET)
+    add_definitions(
+       -DCFG_LCD_LCM_RESET=${CFG_LCD_LCM_RESET}
+    )
+endif()
+
+if (DEFINED CFG_LCD_LCM_POWER)
+    add_definitions(
+       -DCFG_LCD_LCM_POWER=${CFG_LCD_LCM_POWER}
+    )
+
+endif()
+if (DEFINED CFG_LCD_LCM_BACKLIGHT_EN)
+    add_definitions(
+       -DCFG_LCD_LCM_BACKLIGHT_EN=${CFG_LCD_LCM_BACKLIGHT_EN}
+    )
+endif()
+
 if (DEFINED CFG_HDMI_OUT_ENABLE)
     add_definitions(
         -DCFG_HDMI_OUT_ENABLE

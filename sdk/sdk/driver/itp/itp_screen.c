@@ -321,6 +321,9 @@ static int ScreenIoctl(int file, unsigned long request, void* ptr, void* info)
     case ITP_IOCTL_POST_RESET:
 #if defined(CFG_LCD_ENABLE) && !defined(CFG_LCD_INIT_ON_BOOTING)
         ithLcdLoadScriptNext();
+    #if defined(CFG_LCD_INIT_WITH_SPI)
+        itpSpiLcdInit();
+    #endif
 #endif
         break;
 
