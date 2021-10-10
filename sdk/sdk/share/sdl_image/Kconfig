@@ -1,0 +1,16 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+config BUILD_JPEG
+	def_bool y if BUILD_SDL_IMAGE
+
+config BUILD_PNG
+	def_bool y if BUILD_SDL_IMAGE
+
+config BUILD_SDL
+	def_bool y if BUILD_SDL_IMAGE
+	
+config BUILD_ZLIB
+	def_bool y if BUILD_SDL_IMAGE

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ITE Display Control Board Setting Page</title>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta http-equiv="cache-control" content="no-cache"/>
+        <meta http-equiv="expires" content="0"/>
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <script type="text/javascript" src="info.js"> </script>
+        <script type="text/javascript" src="jquery.min.js"> </script>
+        <style type="text/css">
+            h3 {
+                text-align: center;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <iframe id="iframeupload" name="iframeupload" style="display:none" onload="return uploadComplete();"> </iframe>
+
+        <h1>ITE Ctrlboard Setting Page</h1>
+        <br />
+        <hr />
+
+        <h3>System Information</h3>
+        <table border="1" width="100%">
+            <tr>
+                <td>MAC address:</td>
+                <td><span id="macaddr"></span></td>
+            </tr>
+            <tr>
+                <td>IP:</td>
+                <td><span id="ipaddr"></span></td>
+            </tr>
+			<tr>
+                <td>SIP account:</td>
+                <td><span id="sip_account"></span></td>
+            </tr>
+            <tr>
+                <td>SIP password:</td>
+                <td><span id="sip_password"></span></td>
+            </tr>
+            <tr>
+                <td>SIP register domain:</td>
+                <td><span id="sip_domain"></span></td>
+            </tr>
+            <tr>
+                <td>Software version:</td>
+                <td><span id="sw_ver"></span></td>
+            </tr>
+            <tr>
+                <td>Hardware version:</td>
+                <td><span id="hw_ver"></span></td>
+            </tr>
+        </table>
+        <br />
+
+        <h3><span id="timer" /></h3>
+        <h3><span id="firmware" /></h3>
+
+        <form id="fUpgrade" name="fUpgrade" enctype="multipart/form-data" method="post" action="/dev/info.cgi" target="iframeupload">
+            File to Upgrade Firmware:
+            <input type="file" name="filename"/>
+            <input type="submit" name="Submit" id="fUpgrade_Submit" value="Upgrade" onclick="return startUpload();"/>
+        </form>
+        <hr />
+
+        <br />
+        <input type="button" id="rebootBtn" value="Reboot" onclick="return rebootSystem();"/>
+        <br />
+        <hr />
+
+        <input type="hidden" name="action" value="setting"/>
+        <span>Brightness:</span>
+        <input type="text" id="brightness" name="brightness" size="1" maxlength="1" onkeyup="return checkNumber(this.id, this);"/>
+        <br />
+        <span>Screensaver time:</span>
+        <input type="text" id="screensaver_time" name="screensaver_time" size="3" maxlength="3" onkeyup="return checkNumber(this.id, this);"/>
+        <br />
+        <span>Screensaver type:</span>
+        <select id="screensaver_type" name="screensaver_type">
+            <option id="screensaver_none" value="0">None</option>
+            <option id="screensaver_clock" value="1">Clock</option>
+            <option id="screensaver_blank" value="2">Blank</option>
+            <option id="screensaver_photo" value="3">Photo</option>
+        </select>
+        <br />
+        <span>Language:</span>
+        <select id="lang" name="lang">
+            <option id="lang_cht" value="cht">繁中</option>
+            <option id="lang_chs" value="chs">简中</option>
+            <option id="lang_eng" value="eng">English</option>
+        </select>
+        <br />
+        <span>Wifi mode:</span>
+        <select id="wifi_mode" name="wifi_mode">
+            <option id="wifi_client" value="client">Client</option>
+            <option id="wifi_softap" value="softap">SoftAP</option>
+        </select>
+        <br />
+        <span>Key sound volume:</span>
+        <input type="text" id="keylevel" name="keylevel" size="3" maxlength="3" onkeyup="return checkVolume(this.id, this);"/>
+        <br />
+        <span>Key sound type:</span>
+        <select id="keysound_type" name="keysound_type">
+            <option id="key_1" value="key1.wav">Key1</option>
+            <option id="key_2" value="key2.wav">Key2</option>
+            <option id="key_3" value="key3.wav">Key3</option>
+        </select>
+        <br />
+        <span>Audio volume:</span>
+        <input type="text" id="play_lev" name="play_lev" size="3" maxlength="3" onkeyup="return checkVolume(this.id, this);"/>
+        <br />
+
+        <br /><br />
+        <input type="button" id="updatebtn" value="Update" onclick="return updateCtrlBoardSetting();"/>
+        <br />
+
+        <!--[if lt IE 9]>
+            IE 瀏覽器版本低於 9.
+            <script type="text/javascript">
+                notSupportOldIE();
+            </script>
+        <![endif]-->
+    </body>
+</html>

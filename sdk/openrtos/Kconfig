@@ -1,0 +1,45 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+menu "OpenRTOS"
+        hidden if DEV_DEVELOP
+
+config GCC_LTO
+    bool "GCC LTO enable"
+    depends on CPU_FA626 || CPU_RISCV
+    default y if (DEV_RELEASE && (CPU_FA626 || CPU_RISCV))
+    default n if DEV_DEVELOP
+    help
+        Link Time Optimization. Recommends disabled on develop time to save build time.
+        Enabled on release time to reduce ROM image size.
+
+    help_cht
+        開啟 GCC LTO (Link time optimization)。Linking 的時間會較久，但執行碼會較小，也較有效率。
+
+    help_chs
+        开启 GCC LTO (Link time optimization)。Linking 的时间会较久，但执行码会较小，也较有效率。
+
+config OPENRTOS_HEAP_SIZE
+    string "The size of individual heap size"
+    default "0"
+    help
+        The size of individual heap size. 0 indicates to use global heap management.
+    help_cht
+        單獨切給作業系統使用的記憶體大小， 0表示不切割。
+    help_chs
+        单独切给作业系统使用的记忆体大小， 0表示不切割。
+
+config MMAP_SIZE
+    string "The size of memory mapping"
+    default "0x420000" if OPENVG_ENABLE
+    default "0"
+    help
+        The size of memory mapping. RD internal use only.
+    help_cht
+        指定另一塊獨立空間的記憶體大小供 nedmalloc 使用。當程式需要獨立切出記憶體使用時使用，例如 OpenVG。
+    help_chs
+        指定另一块独立空间的记忆体大小供 nedmalloc 使用。当程式需要独立切出记忆体使用时使用，例如 OpenVG。
+
+endmenu

@@ -1,0 +1,41 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_FTP_CLIENT
+    bool
+    default y
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    #select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+
+config NET_ENABLE
+    def_bool y
+
+config NET_ETHERNET
+    def_bool y
+
+config FS_FAT
+    def_bool y
+config WIN32_SIMULATOR
+    def_bool y
+config BUILD_INIPARSER
+    def_bool y
+
+config NET_HTTP
+    def_bool y
+
+config NET_FTP
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+

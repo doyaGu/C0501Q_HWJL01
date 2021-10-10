@@ -1,0 +1,288 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_ITU
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    select HAVE_VIDEO
+    
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9079
+    def_bool y
+
+config RAM_INIT_SCRIPT
+    default "IT9079A1_Initial_DDR2_Mem_tiling_pitch2048_360MHZ.scr"
+
+config DCPS_ENABLE
+    def_bool y
+
+config BACKLIGHT_ENABLE
+    def_bool y
+
+config BACKLIGHT_DUTY_CYCLES
+    default "95, 92, 88, 82, 75, 65, 55, 40, 25, 5"
+
+config BACKLIGHT_DEFAULT_DUTY_CYCLE
+    default "5"
+
+config LCD_ENABLE
+    def_bool y
+
+config LCD_HEIGHT
+    default "480"
+
+config LCD_INIT_SCRIPT
+    default "lcd_800_480_innolux_7inch_888.txt.in"
+
+config CMDQ_ENABLE
+    def_bool y
+
+config M2D_ENABLE
+    def_bool y
+
+config AUDIO_ENABLE
+    def_bool y
+
+config AUDIO_DAC_MODULE
+    default "itp_dac_alc5616.c"
+
+config AUDIO_CODEC_MP3DEC
+    def_bool y
+
+config AUDIO_CODEC_WMADEC
+    def_bool y
+
+config AUDIO_CODEC_WAV
+    def_bool y
+
+config VIDEO_ENABLE
+    def_bool y
+
+config KEYPAD_ENABLE
+    def_bool y
+
+config KEYPAD_MODULE
+    default "itp_keypad_it7236.c"
+
+config KEYPAD_MAPPING_TABLE
+    default "keypad_doorbell_indoor.inc"
+
+config TOUCH_KEYPAD_SET_KEY_NUMBER_ENABLE
+    def_bool y
+
+config TOUCH_KEY_NUM
+    default "5"
+
+config GPIO_KEYPAD
+    default "23"
+
+config TOUCH_KEY_USE_I2C
+    def_bool y
+
+config USB0_ENABLE
+    def_bool y
+
+config MSC_ENABLE
+    def_bool y
+
+config FS_FAT
+    def_bool y
+
+config I2C0_ENABLE
+    default y
+
+config I2S_ENABLE
+    def_bool y
+
+config I2S_SPDIF_ENABLE
+    def_bool n
+
+config TOUCH_ENABLE
+    def_bool y
+
+config TOUCH_MODULE
+    default "it7260"
+
+config TOUCH_X_MAX_VALUE
+    default "0x31F"
+
+config TOUCH_Y_MAX_VALUE
+    default "0x1DF"
+
+config GPIO_TOUCH_INT
+    default "13"
+
+config GPIO_TOUCH_WAKE
+    default "-1"
+
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "5"
+
+config GPIO_UART1_RX
+    default "-1"
+
+config TASK_DRIVE_PROBE
+    def_bool y
+
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9079A1_Initial_DDR2_Mem_tiling_pitch2048_320MHZ.txt"
+
+config ITU_FT_CACHE_ENABLE
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_AUDIO_MGR
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+menu "ITU Test"
+
+choice
+	prompt "Test App"
+	default TEST_SDL
+
+config TEST_SDL
+	bool "SDL"
+
+config TEST_STNLCD
+	bool "STNLCD"
+
+config TEST_HELLOWORLD
+	bool "HELLOWORLD"
+
+config TEST_BUTTON
+	bool "BUTTON"
+
+config TEST_LANGUAGE
+	bool "LANGUAGE"
+
+config TEST_CURSOR
+	bool "CURSOR"
+
+config TEST_PROGRESSBAR
+	bool "PROGRESSBAR"
+
+config TEST_LISTBOX
+	bool "LISTBOX"
+
+config TEST_TRACKBAR
+	bool "TRACKBAR"
+
+config TEST_ARRAY
+	bool "ARRAY"
+
+config TEST_JPEG
+	bool "JPEG"
+
+config TEST_MULTILINE
+	bool "MULTILINE"
+
+config TEST_COMPRESS
+	bool "COMPRESS"
+
+config TEST_FUNCTION
+	bool "FUNCTION"
+
+config TEST_LISTBOX2
+	bool "LISTBOX2"
+
+config TEST_CUSTOM
+	bool "CUSTOM"
+
+config TEST_ICONLISTBOX
+	bool "ICONLISTBOX"
+
+config TEST_CIRCLEPROGRESSBAR
+	bool "CIRCLEPROGRESSBAR"
+
+config TEST_DRAW
+	bool "DRAW"
+
+config TEST_SCROLLBAR
+	bool "SCROLLBAR"
+
+config TEST_WHEEL
+	bool "WHEEL"
+
+config TEST_COVERFLOW
+	bool "COVERFLOW"
+
+config TEST_SCROLLLISTBOX
+	bool "SCROLLLISTBOX"
+
+config TEST_VIDEO
+	bool "VIDEO"
+
+config TEST_COLORPICKER
+	bool "COLORPICKER"
+
+config TEST_IMAGECOVERFLOW
+	bool "IMAGECOVERFLOW"
+
+config TEST_CURVE
+	bool "CURVE"
+
+config TEST_TABLELISTBOX
+	bool "TABLELISTBOX"
+
+config TEST_PNG
+	bool "PNG"
+
+config TEST_TABLEICONLISTBOX
+	bool "TABLEICONLISTBOX"
+
+config TEST_MULTIFONT
+	bool "MULTIFONT"
+
+config TEST_CLONE
+	bool "CLONE"
+
+config TEST_TABLELISTBOX2
+	bool "TABLELISTBOX2"
+
+config TEST_ANIMPAGE
+	bool "ANIMPAGE"
+
+config TEST_BITBLT
+	bool "BITBLT"
+
+config TEST_FILESLIDESHOW
+	bool "FILESLIDESHOW"
+
+config TEST_SHOWLOGO
+	bool "SHOWLOGO"
+
+config TEST_MULTIGESTURE
+	bool "MULTIGESTURE"
+
+config TEST_CLIPPINGCOLOR
+	bool "CLIPPINGCOLOR"
+
+config TEST_ROTATE
+	bool "ROTATE"
+
+endchoice
+
+endmenu

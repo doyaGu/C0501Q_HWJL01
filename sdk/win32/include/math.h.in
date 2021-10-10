@@ -1,0 +1,102 @@
+#ifndef ITP_MATH_H
+#define ITP_MATH_H
+
+#include "$ENV{CFG_VC_INC_PATH}/math.h"
+#include <float.h>
+#include <ymath.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#ifndef NAN
+    #define NAN _Nan._Double
+#endif
+
+#ifndef INFINITY
+union MSVC_EVIL_FLOAT_HACK
+{
+    unsigned __int8 Bytes[4];
+    float           Value;
+};
+static union MSVC_EVIL_FLOAT_HACK INFINITY_HACK = {{0x00, 0x00, 0x80, 0x7F}};
+    #define INFINITY (INFINITY_HACK.Value)
+#endif
+
+#ifdef finite
+    #undef finite
+#endif
+#define finite   _finite
+#ifdef isfinite
+    #undef isfinite
+#endif
+#define isfinite _finite
+#ifdef isnan
+    #undef isnan
+#endif
+#define isnan    _isnan
+#ifdef isinf
+    #undef isinf
+#endif
+#define isinf(x) (!_finite(x) && !_isnan(x))
+
+static __inline long int lrint(double flt)
+{
+    int intgr;
+    _asm
+    {
+        fld flt
+        fistp intgr
+    };
+    return intgr;
+}
+
+static __inline long int lrintf(float flt)
+{
+    int intgr;
+    _asm
+    {
+        fld flt
+        fistp intgr
+    };
+    return intgr;
+}
+
+static __inline __int64 llrint(double x)
+{
+    return (__int64)lrint(x);
+}
+
+static __inline __int64 llrintf(float x)
+{
+    return (__int64)lrintf(x);
+}
+
+static __inline double trunc(double a)
+{
+    return a < 0.0 ? ceil(a) : floor(a);
+}
+
+static __inline float truncf(float a)
+{
+    return a < 0.0f ? ceilf(a) : floorf(a);
+}
+
+static __inline double round(double x)
+{
+    return (x - floor(x) > 0.5) ? ceil(x) : floor(x);
+}
+
+static __inline float roundf(float x)
+{
+   return x >= 0.0f ? floorf(x + 0.5f) : ceilf(x - 0.5f);
+}
+
+float cbrtf(float x);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // ITP_MATH_H

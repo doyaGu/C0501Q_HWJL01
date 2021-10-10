@@ -1,0 +1,91 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+menu "ith"
+
+config ITH_ERR
+    bool "Error Log"
+    default y
+    help
+        Output error log.
+    help_cht
+        輸出錯誤訊息。
+    help_chs
+        输出错误讯息。
+
+config ITH_WARN
+    bool "Warning Log"
+    default y
+    help
+        Output warning log.
+    help_cht
+        輸出警告訊息。
+    help_chs
+        输出警告讯息。
+
+config ITH_INFO
+    bool "Information Log"
+    default y
+    help
+        Output information log.
+    help_cht
+        輸出資訊訊息。
+    help_chs
+        输出资讯讯息。
+
+config ITH_DBG
+    bool "Debug Log"
+    default n
+    help
+        Output debug log.
+    help_cht
+        輸出除錯訊息。
+    help_chs
+        输出侦错讯息。
+
+config ITH_FPGA
+    bool "FPGA Simulation"
+    default n
+    help
+        Build for FPGA Simulation. (Only used at FPGA verification)
+    help_cht
+        開啟 FPGA 模擬模式功能。(此功能只在 FPGA 驗證時使用）
+    help_chs
+        开启 FPGA 模拟模式功能。(此功能只在 FPGA 验證时使用）
+
+config ITH_FPGA_CLK_CPU
+    string "FPGA CPU clock"
+    depends on ITH_FPGA
+    default "40000000"
+    help
+        FPGA CPU clock
+    help_cht
+        在 FPGA 環境下 CPU 的速度設定。
+    help_chs
+        在 FPGA 环境下 CPU 的速度设定。
+
+config ITH_FPGA_CLK_MEM
+    string "FPGA memory clock"
+    depends on ITH_FPGA
+    default "36000000"
+    help
+        FPGA memory clock
+    help_cht
+        在 FPGA 環境下記憶體的速度設定。
+    help_chs
+        在 FPGA 环境下记忆体的速度设定。
+
+config ITH_FPGA_CLK_BUS
+    string "FPGA bus clock"
+    depends on ITH_FPGA
+    default "27000000"
+    help
+        FPGA bus clock
+    help_cht
+        在 FPGA 環境下 APB bus 的速度設定。
+    help_chs
+        在 FPGA 环境下 APB bus 的速度设定。
+
+endmenu

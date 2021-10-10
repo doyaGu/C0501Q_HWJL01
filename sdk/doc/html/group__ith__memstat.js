@@ -1,0 +1,38 @@
+var group__ith__memstat =
+[
+    [ "ITHMemStatRequest", "group__ith__memstat.html#gaef57f305ab0dcc43c6cb453d9cf25005", [
+      [ "ITH_MEMSTAT_I2S_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a51def522f15a1a04f85958768b8bc142", null ],
+      [ "ITH_MEMSTAT_I2S_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a6c3497740db673cdb921df2011812adc", null ],
+      [ "ITH_MEMSTAT_TSI_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a5afb6f1676b0a45cd430e58d38d633bf", null ],
+      [ "ITH_MEMSTAT_HOST_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a9e0aeb8f506e50685d440ef774b91cb1", null ],
+      [ "ITH_MEMSTAT_HOST_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005ab7b89e301c5408238da7623b67dbbf08", null ],
+      [ "ITH_MEMSTAT_LCD_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005afc8f8fa79cdc05fbc160cc217308ab58", null ],
+      [ "ITH_MEMSTAT_ISP_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a87df92c7f253f720fb7e44cb573a62fe", null ],
+      [ "ITH_MEMSTAT_CAP_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a9dc3c8bfdc69b10e7e180eb96f534db6", null ],
+      [ "ITH_MEMSTAT_CMDQ_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a4fb2dd6814a9786f757d190936207342", null ],
+      [ "ITH_MEMSTAT_IQUEUE_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a67b1c66d0463a02f52d574d679390421", null ],
+      [ "ITH_MEMSTAT_USB", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a33d652b542ceb9537c714df8dc815cc3", null ],
+      [ "ITH_MEMSTAT_ARM", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005af13cdf1b409088c994e2bdc7efb52fdf", null ],
+      [ "ITH_MEMSTAT_VIDEO_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005ae40f1d99904a79dd14c3a473aad32579", null ],
+      [ "ITH_MEMSTAT_VIDEO_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a36f9e2ab7902a05a543a135fb189d213", null ],
+      [ "ITH_MEMSTAT_ISP_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a9d0e8ee44ed3426cb717053e31b20aee", null ],
+      [ "ITH_MEMSTAT_TS", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005aa5c4b26b9b2b3e9475ec3f0861cde00f", null ],
+      [ "ITH_MEMSTAT_RISC", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005abbc07646ede99ee567e726b8d9ac8668", null ],
+      [ "ITH_MEMSTAT_AHB", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a90a7f336479d8b5ff8a2b0b9d387f343", null ],
+      [ "ITH_MEMSTAT_UENC_READ", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a9cd68f3657c4bc1c89fe09690e079633", null ],
+      [ "ITH_MEMSTAT_UENC_WRITE", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a9f4bc5790beac74cad91fdf2a22c037d", null ],
+      [ "ITH_MEMSTAT_OPENVG", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a2b552d3335e94437032bfbea81c9bf27", null ],
+      [ "ITH_MEMSTAT_MEMBIST", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005ae28b496300f639f1eb549a1f89c80757", null ],
+      [ "ITH_MEMSTAT_MEMBIST1", "group__ith__memstat.html#ggaef57f305ab0dcc43c6cb453d9cf25005a802a18c9cfe315af4dcdaa0a72be487d", null ]
+    ] ],
+    [ "ithMemStatGetAllServCount", "group__ith__memstat.html#gae22540840c7afe14a7b688c8f7ccc532", null ],
+    [ "ithMemStatGetServ0Num", "group__ith__memstat.html#ga423b1af7e0c2db89a577e91bd44779c0", null ],
+    [ "ithMemStatGetServ1Num", "group__ith__memstat.html#ga2ddfef5de6737d5a2d5bdcbf928557b4", null ],
+    [ "ithMemStatGetServCount", "group__ith__memstat.html#ga17184af4ac09efe14cac49858cfffb6e", null ],
+    [ "ithMemStatGetServNum", "group__ith__memstat.html#gaa1c2edc14ad359cef0111789469cbad6", null ],
+    [ "ithMemStatServCounterDisable", "group__ith__memstat.html#gad8ea4f2ab30773248162fe63214581a1", null ],
+    [ "ithMemStatServCounterEnable", "group__ith__memstat.html#gad90d22257e69082b92551ded6526bab4", null ],
+    [ "ithMemStatSetServ0Request", "group__ith__memstat.html#gabda034f8744ca337c8aeedb82fb7503a", null ],
+    [ "ithMemStatSetServ1Request", "group__ith__memstat.html#ga8ca6d1a667fcc2c85eb3628eb37ed6a5", null ],
+    [ "ithMemStatSetServCountPeriod", "group__ith__memstat.html#ga08f2869f8930fb1e403276367d3ff872", null ]
+];

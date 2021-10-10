@@ -1,0 +1,92 @@
+﻿#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_JPG
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_VIDEO
+    select HAVE_AUDIO
+
+config CMAKE_SOURCE_DIR
+    string
+    option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9856
+    def_bool y
+
+config DEF_CHIP_REV_A0
+    def_bool y  
+
+config RAM_SIZE
+    default "0x4000000"
+
+config RAM_INIT_SCRIPT
+    default "IT9850A0_400MHz_tiling_pitch2048.scr"
+
+config LCD_ENABLE
+    def_bool y
+
+config LCD_WIDTH
+    default "800"
+
+config LCD_HEIGHT
+    default "480"
+    
+config LCD_PITCH
+    default "1600"
+
+config LCD_INIT_SCRIPT
+    default "IT9850_LCD_800_480_Allentech_7inch_565.txt.in"
+
+config BACKLIGHT_ENABLE
+    def_bool y
+
+config BACKLIGHT_DUTY_CYCLES
+    default "95, 92, 88, 82, 75, 65, 55, 40, 25, 5"
+
+config GPIO_BACKLIGHT_PWM
+     default "64"
+
+config BACKLIGHT_DEFAULT_DUTY_CYCLE
+    default "5"
+    
+config CMDQ_ENABLE
+    def_bool y
+
+config M2D_ENABLE
+    def_bool y
+
+config JPEG_HW_ENABLE
+	default y
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHz.txt"
+
+config BUILD_FFMPEG
+    def_bool y
+
+config VIDEO_ENABLE
+    def_bool y
+
+config WIN32_SIMULATOR
+    def_bool n
+
+config FS_FAT
+    def_bool y
+    
+config ITU_UCL_ENABLE
+    def_bool y
+ 
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

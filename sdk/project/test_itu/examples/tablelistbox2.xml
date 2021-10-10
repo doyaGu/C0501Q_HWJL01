@@ -1,0 +1,180 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6075.23719, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6075.23719, Culture=neutral, PublicKeyToken=null" name="Background3" children="Controls">
+      <Object type="GUIDesigner.TableListBoxWidget, GUIDesigner, Version=1.0.6075.23719, Culture=neutral, PublicKeyToken=null" name="TableListBox1" children="Controls">
+        <Property name="ItemHeight">49</Property>
+        <Property name="TextAlign">TopLeft</Property>
+        <Property name="FocusColor">ActiveCaption</Property>
+        <Property name="FocusFontColor">WindowText</Property>
+        <Property name="ReadFontColor">GrayText</Property>
+        <Property name="BackAlpha">0</Property>
+        <Property name="ScrollDelay">3</Property>
+        <Property name="StopDelay">30</Property>
+        <Property name="TotalFrame">300</Property>
+        <Property name="Draggable">True</Property>
+        <Property name="HasLongPress">True</Property>
+        <Property name="ItemCount">100</Property>
+        <Property name="SlidePage">3</Property>
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Function,Load,OnLoad,</Property>
+        <Property name="Action02">Bind,Sync,TableListBox2,</Property>
+        <Property name="Action03">Check,Select,TableListBox2,</Property>
+        <Property name="Action04">Bind,Sync,TableIconListBox1,</Property>
+        <Property name="Action05">Check,Select,TableIconListBox1,</Property>
+        <Property name="Action06">None,Load,,</Property>
+        <Property name="Action07">None,Load,,</Property>
+        <Property name="Action08">None,Load,,</Property>
+        <Property name="Action09">None,Load,,</Property>
+        <Property name="Action10">None,Load,,</Property>
+        <Property name="Action11">None,Load,,</Property>
+        <Property name="Action12">None,Load,,</Property>
+        <Property name="Action13">None,Load,,</Property>
+        <Property name="Action14">None,Load,,</Property>
+        <Property name="Action15">None,Load,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Items">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">4</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">5</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">6</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">7</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">8</Item>
+        </Property>
+        <Property name="Location">9, 29</Property>
+        <Property name="Name">TableListBox1</Property>
+        <Property name="Size">577, 392</Property>
+        <Property name="TabIndex">0</Property>
+      </Object>
+      <Object type="GUIDesigner.TableListBoxWidget, GUIDesigner, Version=1.0.6075.23719, Culture=neutral, PublicKeyToken=null" name="TableListBox2" children="Controls">
+        <Property name="ItemHeight">49</Property>
+        <Property name="TextAlign">BottomLeft</Property>
+        <Property name="FocusColor">Transparent</Property>
+        <Property name="FocusFontColor">WindowText</Property>
+        <Property name="ReadFontColor">GrayText</Property>
+        <Property name="BackAlpha">0</Property>
+        <Property name="ScrollDelay">3</Property>
+        <Property name="StopDelay">30</Property>
+        <Property name="TotalFrame">300</Property>
+        <Property name="Draggable">True</Property>
+        <Property name="HasLongPress">True</Property>
+        <Property name="ItemCount">100</Property>
+        <Property name="SlidePage">3</Property>
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Function,Load,OnLoad,</Property>
+        <Property name="Action02">Function,Select,OnSelect,</Property>
+        <Property name="Action03">Function,MouseUp,OnMouseUp,</Property>
+        <Property name="Action04">Function,MouseLongPress,OnMouseLongPress,</Property>
+        <Property name="Action05">Bind,Sync,TableListBox1,</Property>
+        <Property name="Action06">Check,Select,TableListBox1,</Property>
+        <Property name="Action07">Bind,Sync,TableIconListBox1,</Property>
+        <Property name="Action08">Check,Select,TableIconListBox1,</Property>
+        <Property name="Action09">None,Load,,</Property>
+        <Property name="Action10">None,Load,,</Property>
+        <Property name="Action11">None,Load,,</Property>
+        <Property name="Action12">None,Load,,</Property>
+        <Property name="Action13">None,Load,,</Property>
+        <Property name="Action14">None,Load,,</Property>
+        <Property name="Action15">None,Load,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Font">Calibri, 14.25pt</Property>
+        <Property name="Items">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">4</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">5</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">6</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">7</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">8</Item>
+        </Property>
+        <Property name="Location">9, 29</Property>
+        <Property name="Name">TableListBox2</Property>
+        <Property name="Size">577, 391</Property>
+        <Property name="TabIndex">1</Property>
+      </Object>
+      <Object type="GUIDesigner.TableIconListBoxWidget, GUIDesigner, Version=1.0.6075.23719, Culture=neutral, PublicKeyToken=null" name="TableIconListBox1" children="Controls">
+        <Property name="ItemHeight">49</Property>
+        <Property name="PageIndexTarget" />
+        <Property name="PageCountTarget" />
+        <Property name="FocusColor">ActiveCaption</Property>
+        <Property name="BackAlpha">0</Property>
+        <Property name="ScrollDelay">3</Property>
+        <Property name="StopDelay">30</Property>
+        <Property name="TotalFrame">300</Property>
+        <Property name="Draggable">True</Property>
+        <Property name="HasLongPress">True</Property>
+        <Property name="ItemCount">100</Property>
+        <Property name="SlidePage">3</Property>
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Function,Load,OnLoadIcon,</Property>
+        <Property name="Action02">Function,Select,OnSelect,</Property>
+        <Property name="Action03">Function,MouseUp,OnMouseUp,</Property>
+        <Property name="Action04">Bind,Sync,TableListBox1,</Property>
+        <Property name="Action05">Check,Select,TableListBox1,</Property>
+        <Property name="Action06">Bind,Sync,TableListBox2,</Property>
+        <Property name="Action07">Check,Select,TableListBox2,</Property>
+        <Property name="Action08">Function,MouseLongPress,OnMouseLongPress,</Property>
+        <Property name="Action09">None,Load,,</Property>
+        <Property name="Action10">None,Load,,</Property>
+        <Property name="Action11">None,Load,,</Property>
+        <Property name="Action12">None,Load,,</Property>
+        <Property name="Action13">None,Load,,</Property>
+        <Property name="Action14">None,Load,,</Property>
+        <Property name="Action15">None,Load,,</Property>
+        <Property name="PixelFormat">RGB565</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="Image0">
+          <Binary>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAfBJREFUWEe9V8tKAmEYPWM6FjpipRCRl8BbRNi+nVBBbYMgcFuL6m1aVIuiNvUMrSIqbBGkIbTsCSqIIEqrMyg06Nyc+WcOsxhw/jnzne92lGAD0zKWFCxEMDuMjIz4kHrmrY3nLzQ/cfOBi3f13hVCEtbjuMqhNY9f0+u7jMsc1uIISo4YFxU8liw4+r+gXkJFGYQvEsB+Cm2raIxi5cG9KYwEbFBOBFHLDxxQP/F1HsmgKR+ZmoNLZxRio2jMR/XuCgJi0nIzPn09D1OCmTqszF8vlhX8OK0I865gvVSiGjpZEpkqnX4oavpvY9QTAbWs7PcubkXUurmYnC8q8mHn/WtOoP2V8ywrA9sJzzXssG6OA2cZn8hO0gD73L4abp58KAIvcz6RkQitsk9kJLJejG6k057lBsarXzKSCA1xO8VcgzoL5DzrU85OWfq7SZ/IttjUBV/GFUuRfhD0XjXRC7o/efSDXVS9XzH0n11weT7NeJg5+k/63X+sxDy0BfS7vThOexLcQUrPPUYDuBe9AVh6dIj6mAyJTB79Ll2vGcgnJD76XQumzldQz6O083qh/6TfNVRPN9LVmBNJKR39rhOw/6pj6nyx/PvEXUU/SP/JI67A45yfnNfcD2xPbne+mhdvuJ7ol3YSyIVtUfwBtS62jyODn3gAAAAASUVORK5CYII=</Binary>
+        </Property>
+        <Property name="Image1">
+          <Binary>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAkVJREFUWEe9l81LFHEYx5/vk+mu4EtFIKaCHlRQ9lJYeAuiPAgm2FEQgo558BVEof4H6U0QdpWyQ509t4oVyRYK7Wrt0X8g8qTjdx1lR11nZudtmMMM88zzmd/z/J7n+Q7E6YBIBxofSU+vJLqktQ0NcaNGxPiPf3+NvW3Jr8uvVfmWM/YMJ1d2z6ukYkQffNdXh5I2ZN3mPJAvGzo/rPcr5YoX4oD27GDJnnHxaVaT/Xq7DF4tYimdOpS1ckmmPcOwqGM1qHJGNuN6Bu+8Yaxv/dDXt3DNjteCG3902T/J9JDT1KU8Ru+nLgRFMv1wfaXjuaTTwZJMb8zf+WAO6j3D646w/0Tul369U+TFULGLwFJVsh6K9fdUH4YRQKtP1nthcexGm/ombNhXnSdIutHk2I38fwr7WTsaZBxD/n258fAcA/IJL9yY+rdZwaxkkfLvyI2H35qUfV11Y+rfhiAxnGaVf8yph3S0sEjDmItqg2SRlM94GVxW7HTKR8zJBJ5EAxvFY0mgOZJ2le5EY6ERZzQA0WEfHurBQiPm8Uz7wo4k9efJ/Izjah7vw+NRf1LvFof1kPaGJgvWqHfPyBAGdEVnwlhcSidPsmUF1iO+hcVgeRldoEIsLVVbcTOvH4LiUe9SX9uJYvICWR/1LvW1s9yvR/Vx/jz+WPDFZZ2qQ9yZZFowpdyfHuqBoRvUu24xVjvWH+ud/cWxn9FgU99Sf8as9eSByVUm0MJ+zflAwXI8//gjmuYFb6mXqM+oB0vs7wuwI6nfDsrI6YaqAAAAAElFTkSuQmCC</Binary>
+        </Property>
+        <Property name="Image2">
+          <Binary>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAhpJREFUWEe9lztLA1EQhc8IGl+I+EihJATFQi1ixMIXKFpYWgRBEDUBQbBQEiSPPv4SCxG00MpfYCWiqCgYFW0EwT+QYtcTE5LoJrvG7N4lRWB357tz5s7cswKrSyA9GBrAglcm3fpwB/o0NPClOsl86k8fcvemnz/i7B0POnSrYJXvN6BxQjZ2cJmCloJu+tO2cTEu4Xq4quYxm4AE43i2YvxeQQyPflmsgteC9lU5+EM2lXLVVmS/GW3WyC74oritNiHj8xFcdcJjxusWX0JeaiflIsQkXZFH9WzJqXStEbkqq6esyaFdOZXGYf1+izkqS06QvmNqP/anC00J2FYq46JjSBf7bwqbjqWVb49xhLNisn8juHYaxvlCEDzir6F/zWdY6V2tRwYxh7jTaeXizyCCEE7UwNZwBI5ONTCCsIeMGhhBUEPKUdTClMrIWaJGSYI4Rk7VwNZxjHkk1MBmEYVXAmrGVa8MZwex7Qe0USr6wewg5jWNLaeVnMBG/rx2oTmJV+d49J/0u0VzMCbLjsG0EQn+sCEUdF2OneDR7+arVQpsRccuHuzlReWWDrG8VXVLfxJvdvFoouivzUyxG/27uK+dx3bqNiflVkE9Q7XVj363onrGTFlS7s9/SErp6Hetv1+MT7D/pmUrips/zDONfnBKNul3/0MqvMMsvQhwXofllMdE4fzjH9qKkJzQn3ngL7O/Ddgv+2APhPIkIdIAAAAASUVORK5CYII=</Binary>
+        </Property>
+        <Property name="Hided">False</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Items">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">4</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">5</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">6</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">7</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">8</Item>
+        </Property>
+        <Property name="Location">586, 29</Property>
+        <Property name="Name">TableIconListBox1</Property>
+        <Property name="Size">120, 392</Property>
+        <Property name="TabIndex">2</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background3</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="Action01">Reload,Enter,TableListBox1,</Property>
+    <Property name="Action02">Reload,Enter,TableListBox2,</Property>
+    <Property name="Action03">Reload,Enter,TableIconListBox1,</Property>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

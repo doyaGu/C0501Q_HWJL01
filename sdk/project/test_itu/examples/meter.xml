@@ -1,0 +1,76 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Object type="GUIDesigner.MeterWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Meter1" children="Controls">
+        <Object type="GUIDesigner.IconWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Icon4" children="Controls">
+          <Property name="Image">
+            <Binary>iVBORw0KGgoAAAANSUhEUgAAAAgAAAB0CAYAAAC473MxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFJJREFUSEvtyjEKACEMBdEFz5La+xeey3IlYkSDKJbCFAPh530iEnZ58LeWwJ4TugMpx5retgMAetsOAOht+3vABQAAAABA2wAAwAGMqG8euCQUkuDIzuhEA5MAAAAASUVORK5CYII=</Binary>
+          </Property>
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="External">False</Property>
+          <Property name="ExternalImage">False</Property>
+          <Property name="Stretch">False</Property>
+          <Property name="Angle">0</Property>
+          <Property name="Alpha">255</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TabStop">False</Property>
+          <Property name="TabIndex">0</Property>
+          <Property name="Location">121, 0</Property>
+          <Property name="Name">Icon4</Property>
+          <Property name="Size">8, 116</Property>
+        </Object>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="Value">0</Property>
+        <Property name="PointerTarget">Icon4</Property>
+        <Property name="PointerX">4</Property>
+        <Property name="PointerY">116</Property>
+        <Property name="StartAngle">0</Property>
+        <Property name="EndAngle">360</Property>
+        <Property name="MaxValue">100</Property>
+        <Property name="SupportTouch">True</Property>
+        <Property name="Action01">Function,Changed,OnChanged,</Property>
+        <Property name="Action02">None,Changed,,</Property>
+        <Property name="Action03">None,Changed,,</Property>
+        <Property name="Action04">None,Changed,,</Property>
+        <Property name="Action05">None,Changed,,</Property>
+        <Property name="Action06">None,Changed,,</Property>
+        <Property name="Action07">None,Changed,,</Property>
+        <Property name="Action08">None,Changed,,</Property>
+        <Property name="Action09">None,Changed,,</Property>
+        <Property name="Action10">None,Changed,,</Property>
+        <Property name="Action11">None,Changed,,</Property>
+        <Property name="Action12">None,Changed,,</Property>
+        <Property name="Action13">None,Changed,,</Property>
+        <Property name="Action14">None,Changed,,</Property>
+        <Property name="Action15">None,Changed,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="Location">272, 118</Property>
+        <Property name="Name">Meter1</Property>
+        <Property name="Size">256, 244</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

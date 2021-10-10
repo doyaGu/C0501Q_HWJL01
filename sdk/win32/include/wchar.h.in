@@ -1,0 +1,12 @@
+#ifndef ITP_WCHAR_H
+#define ITP_WCHAR_H
+
+#undef __STDC__
+#define __STDC__ 1
+
+#include "$ENV{CFG_VC_INC_PATH}/wchar.h"
+
+#undef __STDC__
+#define __STDC__ 0
+
+#endif // ITP_WCHAR_H

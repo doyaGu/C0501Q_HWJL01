@@ -1,0 +1,65 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_QRENCODE
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config LCD_ENABLE
+    def_bool y
+
+config I2S_ENABLE
+    def_bool y
+
+config I2S_SPDIF_ENABLE
+    def_bool n
+
+config AUDIO_ENABLE
+    def_bool y
+
+config VIDEO_ENABLE
+    def_bool y
+
+config FFMPEG_H264_SW
+    def_bool y
+
+config ITU_UCL_ENABLE
+    def_bool y
+
+config WIN32_SIMULATOR
+    def_bool y
+
+config ITU_FT_CACHE_ENABLE
+    def_bool y
+
+config BUILD_AUDIO_MGR
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+config BUILD_PYINPUT
+    def_bool y
+	
+
+	
+config CMAKE_SOURCE_DIR
+    string
+    option env="CMAKE_SOURCE_DIR"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

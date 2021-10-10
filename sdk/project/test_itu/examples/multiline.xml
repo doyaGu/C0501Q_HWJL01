@@ -1,0 +1,83 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Object type="GUIDesigner.TextBoxWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="TextBox1" children="Controls">
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="FontIndex">0</Property>
+        <Property name="ShowCursor">False</Property>
+        <Property name="TextColor">WindowText</Property>
+        <Property name="BackAlpha">255</Property>
+        <Property name="LineHeight">9</Property>
+        <Property name="FocusColor">Transparent</Property>
+        <Property name="Action01">None,MouseDown,,</Property>
+        <Property name="Action02">None,MouseDown,,</Property>
+        <Property name="Action03">None,MouseDown,,</Property>
+        <Property name="Action04">None,MouseDown,,</Property>
+        <Property name="Action05">None,MouseDown,,</Property>
+        <Property name="Action06">None,MouseDown,,</Property>
+        <Property name="Action07">None,MouseDown,,</Property>
+        <Property name="Action08">None,MouseDown,,</Property>
+        <Property name="Action09">None,MouseDown,,</Property>
+        <Property name="Action10">None,MouseDown,,</Property>
+        <Property name="Action11">None,MouseDown,,</Property>
+        <Property name="Action12">None,MouseDown,,</Property>
+        <Property name="Action13">None,MouseDown,,</Property>
+        <Property name="Action14">None,MouseDown,,</Property>
+        <Property name="Action15">None,MouseDown,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Multiline">True</Property>
+        <Property name="ForeColor">GrayText</Property>
+        <Property name="MaxLength">640</Property>
+        <Property name="Location">37, 22</Property>
+        <Property name="Name">TextBox1</Property>
+        <Property name="Size">115, 57</Property>
+        <Property name="TabIndex">0</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">Gray</Property>
+      <Property name="Location">12, 12</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">200, 100</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

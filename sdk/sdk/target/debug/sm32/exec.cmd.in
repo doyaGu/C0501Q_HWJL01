@@ -1,0 +1,13 @@
+@echo off
+
+cd %CMAKE_SOURCE_DIR%\build\%CFG_PLATFORM%\%CFG_PROJECT%\project\%TARGET%
+
+glamomem -t glamomem.dat -i -q
+glamomem -t glamomem.dat -l ${CMAKE_PROJECT_NAME}.bin
+
+if "${CFG_CHIP_PKG_IT9920}" == "y" (
+    glamomem -t glamomem.dat -R 0x1 -a 0xb020001c
+) else (
+    glamomem -t glamomem.dat -R 0x003e -a 0x44
+    glamomem -t glamomem.dat -R 0x1001 -a 0x168C
+)

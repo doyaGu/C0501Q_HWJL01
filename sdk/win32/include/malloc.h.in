@@ -1,0 +1,95 @@
+#ifndef ITP_MALLOC_H
+#define ITP_MALLOC_H
+
+#include "$ENV{CFG_VC_INC_PATH}/malloc.h"
+#include "$ENV{CFG_VC_INC_PATH}/crtdbg.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+struct mallinfo {
+  int arena;    /* total space allocated from system */
+  int ordblks;  /* number of non-inuse chunks */
+  int smblks;   /* unused -- always zero */
+  int hblks;    /* number of mmapped regions */
+  int hblkhd;   /* total space in mmapped regions */
+  int usmblks;  /* unused -- always zero */
+  int fsmblks;  /* unused -- always zero */
+  int uordblks; /* total allocated space */
+  int fordblks; /* total non-inuse space */
+  int keepcost; /* top-most, releasable (via malloc_trim) space */
+};	
+
+struct mallinfo mallinfo(void);
+void malloc_stats(void);
+
+#ifdef CFG_DBG_MEMLEAK
+
+extern void *dbg_malloc(size_t size, char *file_name, unsigned long line_number);
+extern void *dbg_realloc(void *ptr, size_t size, char *file_name, unsigned long line_number);
+extern void *dbg_calloc(size_t num, size_t size, char *file_name, unsigned long line_number);
+extern void dbg_free(void *ptr, char *file_name, unsigned long line_number);
+
+#ifdef malloc
+#undef malloc
+#endif
+#define malloc(s) dbg_malloc(s, __FILE__, __LINE__)
+
+#ifdef realloc
+#undef realloc
+#endif
+#define realloc(p, s) dbg_realloc(p, s, __FILE__, __LINE__)
+
+#ifdef calloc
+#undef calloc
+#endif
+#define calloc(n, s) dbg_calloc(n, s, __FILE__, __LINE__)
+
+#ifdef free
+#undef free
+#endif
+#define free(p) dbg_free(p, __FILE__, __LINE__)
+
+#elif defined(CFG_DBG_RMALLOC)
+
+#define FUNCTIONIZE(a,b)  a(b)
+#define STRINGIZE(a)      #a
+#define INT2STRING(i)     FUNCTIONIZE(STRINGIZE,i)
+#define RM_FILE_POS       __FILE__ ":" INT2STRING(__LINE__)
+
+void *Rmalloc(size_t size, const char *file);
+void *Rcalloc(size_t nelem, size_t size, const char *file);
+void *Rrealloc(void *p, size_t size, const char *file);
+void  Rfree(void *p, const char *file);
+
+#  ifdef malloc
+#    undef malloc
+#  endif
+#  define malloc(s)       Rmalloc((s), RM_FILE_POS)
+
+#  ifdef calloc
+#    undef calloc
+#  endif
+#  define calloc(n,s)     Rcalloc((n), (s), RM_FILE_POS)
+
+#  ifdef realloc
+#    undef realloc
+#  endif
+#  define realloc(p,s)    Rrealloc((p), (s), RM_FILE_POS)
+
+#  ifdef free
+#    undef free
+#  endif
+#  define free(p)         Rfree((p), RM_FILE_POS)
+
+#endif // CFG_DBG_MEMLEAK
+
+#define memalign(alignment, size)   malloc(size)
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // ITP_MALLOC_H

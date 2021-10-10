@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98184E59-5FA2-4175-B2BF-FC3EC81A84C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUIDesigner</RootNamespace>
+    <AssemblyName>GUIDesigner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/GUIDesigner/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>846BBA7E25A5EC24A55BA484318EFFA65EE502E4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GUIDesigner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itu">
+      <HintPath>..\..\tool\bin\itu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalogClockWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimationWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AudioWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BackgroundButtonWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BackgroundWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BlurWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CalendarWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DragIconWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawPenWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DuplicateNamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuplicateNamesForm.Designer.cs">
+      <DependentUpon>DuplicateNamesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircleProgressBarWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="ColorPickerWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContainerWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoverFlowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CurveWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalClock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DraggableTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormAutoGenITU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoGenITU.Designer.cs">
+      <DependentUpon>FormAutoGenITU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IconWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageCoverFlowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JpegQualityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JpegQualityForm.Designer.cs">
+      <DependentUpon>JpegQualityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeystrokMessageFilter.cs" />
+    <Compile Include="LanguageSpriteWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MediaFileListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MeterWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MouseMessageFilter.cs" />
+    <Compile Include="PageFlowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupButtonWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupRadioBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LayerWidget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RippleBackgroundWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScaleCoverFlowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollBarWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollIconListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollMediaFileListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollTextWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShadowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SlideshowWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpriteButtonWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpriteWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TableIconListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TableListBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolboxService.cs" />
+    <Compile Include="TrackBarWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VideoWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WheelBackgroundWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WheelWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="DuplicateNamesForm.resx">
+      <DependentUpon>DuplicateNamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoGenITU.resx">
+      <DependentUpon>FormAutoGenITU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JpegQualityForm.resx">
+      <DependentUpon>JpegQualityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

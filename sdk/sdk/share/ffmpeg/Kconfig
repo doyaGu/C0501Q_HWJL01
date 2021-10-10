@@ -1,0 +1,39 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+# if BUILD_FFMPEG
+
+config BUILD_ITC
+    def_bool y if BUILD_FFMPEG
+
+config BUILD_ZLIB
+    def_bool y if BUILD_FFMPEG
+
+menu "ffmpeg"
+depends on VIDEO_ENABLE
+
+config FFMPEG_ENC
+    bool "Enable Encoders"
+    default n
+    help
+        Enable Encoders.
+    help_cht
+        開啟編碼器的功能。
+    help_chs
+        开启编码器的功能。
+
+config FFMPEG_H264_SW
+    bool "Use Software H.264"
+    default n
+    help
+        Use Software H.264.
+    help_cht
+        使用軟體的 H.264。
+    help_chs
+        使用软件的 H.264。
+
+endmenu
+
+# endif # BUILD_FFMPEG

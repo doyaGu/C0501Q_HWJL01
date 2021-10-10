@@ -1,0 +1,38 @@
+var group__doorbell__indoor__remote =
+[
+    [ "ServerInfo", "struct_server_info.html", [
+      [ "addressBookUrl", "struct_server_info.html#a614d5c330b2de6c0f146de662cd1af16", null ],
+      [ "addressBookVersion", "struct_server_info.html#a34455a392d9a5da9e8f65208d073f4f4", null ],
+      [ "advertisementUrl", "struct_server_info.html#af16e189817f0482f76111f0daec55b05", null ],
+      [ "advertisementVersion", "struct_server_info.html#abaf1492094583230c9387c454ed4b860", null ],
+      [ "callingTime", "struct_server_info.html#ae60899224e0781fe2973c11256c01b45", null ],
+      [ "cardListUrl", "struct_server_info.html#ab19a57cd5ff1d6ba3f70e6356741c3fb", null ],
+      [ "cardListVersion", "struct_server_info.html#aad5380d2afbc4e983d8c55c3e118d817", null ],
+      [ "dialTime", "struct_server_info.html#a8df9f1d0cbb44093c592ac1eb7e5d146", null ],
+      [ "firmwareUrl", "struct_server_info.html#a1d2de9909f30da04df06cc1bf422273c", null ],
+      [ "firmwareVersion", "struct_server_info.html#a7df805bd87120648a6e87e0610bbe263", null ],
+      [ "playLevel", "struct_server_info.html#aeb9dbd9d3038f455e1f2e830a1fc0115", null ],
+      [ "recLevel", "struct_server_info.html#a44709542a143465f72684c37c8400a49", null ],
+      [ "ringLevel", "struct_server_info.html#adee0650722123cffc8f05ed1399885b0", null ],
+      [ "screensaverUrl", "struct_server_info.html#a5f91f02c612a1d3c88c1f3261e010a9c", null ],
+      [ "screensaverVersion", "struct_server_info.html#a80504f4685b271354b0c5107b855a534", null ],
+      [ "settingUrl", "struct_server_info.html#aa25dda9fa38e0e8d5d5ab10b6ac8dd8f", null ],
+      [ "settingVersion", "struct_server_info.html#a7f3d1ce6eadd3a8735e52be3ab4bd3eb", null ],
+      [ "voiceMemoTime", "struct_server_info.html#aceb265b3e5b6b052c6b9c3853c7fa12d", null ]
+    ] ],
+    [ "RemoteGetOutdoorInfoCallback", "group__doorbell__indoor__remote.html#gaeb3e250ff94ae988edd9c1bf8268a319", null ],
+    [ "RemoteGetWeatherCallback", "group__doorbell__indoor__remote.html#ga96aa2ac01adcd2fe251625ac3ec47dcf", null ],
+    [ "RemoteCallElevator", "group__doorbell__indoor__remote.html#gae6f46ee688568961bb7831fbfbfa85cb", null ],
+    [ "RemoteCheckCard", "group__doorbell__indoor__remote.html#ga7e459cf93271379f74d5a38701720423", null ],
+    [ "RemoteExit", "group__doorbell__indoor__remote.html#ga201b7a2aa84c200346fd8e769f267de0", null ],
+    [ "RemoteGetDontDisturbConfig", "group__doorbell__indoor__remote.html#gad2e7729deb74a3d2b01622c8024a6dc6", null ],
+    [ "RemoteGetOutdoorInfo", "group__doorbell__indoor__remote.html#gaa21288a4512794763bbf9cdad5741aa9", null ],
+    [ "RemoteGetServerInfo", "group__doorbell__indoor__remote.html#ga8889148ccc326db11059e802ab92d664", null ],
+    [ "RemoteGetWeather", "group__doorbell__indoor__remote.html#gafe6f4f3370e2bbd598aa7f0fcb38a49a", null ],
+    [ "RemoteInit", "group__doorbell__indoor__remote.html#ga8f3bb6d757ad546e8b85abdfccf56b78", null ],
+    [ "RemoteOpenDoor", "group__doorbell__indoor__remote.html#ga5cbeaaf434c42e72318e9563063d891e", null ],
+    [ "RemoteSetDontDisturbConfig", "group__doorbell__indoor__remote.html#gac1536c485f7022bcdd89ffe04c09aac5", null ],
+    [ "RemoteSetOutdoorConfig", "group__doorbell__indoor__remote.html#ga30fb593ba20935710ab151e93e571a5a", null ],
+    [ "RemoteSetOutdoorSetting", "group__doorbell__indoor__remote.html#ga49722d97831d83833e1f58cec56fe488", null ],
+    [ "theOutdoorServerInfo", "group__doorbell__indoor__remote.html#ga512be7b617e07f496303eab7e638adc2", null ]
+];

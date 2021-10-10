@@ -1,0 +1,1 @@
+set(CFG_BUILD_COREC 1)

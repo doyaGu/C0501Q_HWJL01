@@ -1,0 +1,2 @@
+﻿#define SDL_REVISION "hg-6419:b75e82af5ef1"
+#define SDL_REVISION_NUMBER 6419

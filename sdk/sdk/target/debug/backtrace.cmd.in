@@ -1,0 +1,12 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+echo Please Enter Back Trace Addresses
+set /p addresses= Here -^>  
+
+${ADDR2LINE} -f -p -s -e ${CMAKE_PROJECT_NAME} %addresses%
+
+pause

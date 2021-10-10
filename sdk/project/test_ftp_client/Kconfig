@@ -1,0 +1,193 @@
+﻿#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CTRLBOARD
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9854
+    def_bool y
+
+config DEF_CHIP_REV_A0
+    def_bool y
+
+config RAM_SIZE
+    default "0x4000000"
+
+config RAM_INIT_SCRIPT
+    default "IT9850A0_360MHz.scr"
+
+
+config USB0_ENABLE
+    def_bool y
+
+config USB1_ENABLE
+    def_bool y
+    
+config MSC_ENABLE
+    def_bool y
+
+config FS_FAT
+    def_bool y
+
+
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "4"
+
+config GPIO_UART1_RX
+    default "-1"
+
+config UART0_ENABLE
+    def_bool y
+
+config GPIO_UART0_TX
+    default "34"
+
+config GPIO_UART0_RX
+    default "33"
+
+config SPI0_MOSI_GPIO
+    default "18"
+
+config SPI0_MISO_GPIO
+    default "19"
+
+config SPI0_CLOCK_GPIO
+    default "20"
+
+config SPI0_CHIP_SEL_GPIO
+    default "14"
+
+config SPI1_ENABLE
+    def_bool y
+
+config SPI0_MOSI_GPIO
+    default "29"
+
+config SPI0_MISO_GPIO
+    default "30"
+
+config SPI0_CLOCK_GPIO
+    default "31"
+
+config SPI0_CHIP_SEL_GPIO
+    default "15"
+
+config NET_ENABLE
+    def_bool y
+
+config TASK_DRIVE_PROBE
+    def_bool y
+
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHz.txt"
+
+config DBG_STATS
+    def_bool y
+
+config DBG_STATS_HEAP
+    def_bool y
+
+config DEF_BUILD_MINSIZEREL
+    def_bool y
+
+config SYSTEM_NAME
+    default "ITE Control Board ftp client download test"
+
+config GCC_LTO
+    def_bool y
+
+config BUILD_INIPARSER
+    def_bool y
+
+config BUILD_PYINPUT
+    def_bool y
+
+if NET_ENABLE
+config NET_ETHERNET
+    def_bool n
+
+config NET_ETHERNET_LINK_INTR
+    def_bool y
+
+config NET_ETHERNET_MAC_ADDR_RANDOM
+    def_bool y
+
+config NET_ETHERNET_MAC_ADDR_STORAGE
+    def_bool y
+
+if NET_ETHERNET_MAC_ADDR_NOR
+
+config NET_ETHERNET_MAC_ADDR_POS
+    default "0x70000"
+
+endif
+
+config NET_ETHERNET_MAC_ADDR_UPGRADE
+    def_bool y
+
+config NET_DHCP_SERVER
+	def_bool y
+
+config DHCPS_ADDR_COUNT
+  default "254"
+
+config BUILD_MICROHTTPD
+    def_bool y
+
+config BUILD_XML2
+    def_bool y
+endif
+
+config NET_WIFI
+    def_bool y
+    
+if NET_WIFI
+config NET_WIFI_WPA
+    def_bool y
+
+config NET_WIFI_SSID
+    default "CtrlBoard"
+
+config NET_WIFI_FIND_BEST_CHANNEL
+    default n
+	
+config NET_WIFI_REDEFINE
+	def_bool y
+
+config NET_DHCP_SERVER
+    def_bool y
+
+config DHCPS_ADDR_COUNT
+    default "254"
+
+config CTRLBOARD_REDUCE_PBUFSIZE
+    def_bool y
+endif
+
+config NET_HTTP
+    def_bool y
+
+config NET_FTP
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+

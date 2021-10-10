@@ -1,0 +1,85 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config BOOTLOADER
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DCPS_ENABLE
+	def_bool y
+
+config NOR_CACHE_FLUSH_INTERVAL
+	default "0"
+
+config NOR_ENABLE
+	def_bool y
+
+config SD0_ENABLE
+	def_bool y
+
+config FS_FAT
+	def_bool y
+
+config UART1_ENABLE
+	def_bool y
+
+config KEYPAD_ENABLE
+    def_bool y
+
+config KEYPAD_REPEAT
+    def_bool y
+
+config UPGRADE_IMAGE
+    def_bool y
+
+config BUILD_UPGRADE
+	def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+menu "BootLoader"
+
+config BL_ERR
+	bool "Error Log"
+	default y
+	help
+		Output error log
+
+config BL_WARN
+	bool "Warning Log"
+	default y
+	help
+		Output warning log
+
+config BL_INFO
+	bool "Information Log"
+	default y
+	help
+		Output information log
+
+config BL_DBG
+	bool "Debug Log"
+	default n
+	help
+		Output debug log
+
+config BL_LCD_CONSOLE
+	bool "Shows console to LCD"
+	depends on LCD_ENABLE && !LCD_MULTIPLE
+	default n
+	help
+		Shows console logs to LCD on upgrading mode.
+
+endmenu

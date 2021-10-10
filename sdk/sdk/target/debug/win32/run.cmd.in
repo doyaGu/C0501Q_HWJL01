@@ -1,0 +1,7 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+${CMAKE_PROJECT_NAME}.exe

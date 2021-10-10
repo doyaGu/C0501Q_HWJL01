@@ -1,0 +1,4 @@
+﻿#ifndef ITP_NETINET_IP_ICMP_H
+#define ITP_NETINET_IP_ICMP_H
+
+#endif /* ITP_NETINET_IP_ICMP_H */

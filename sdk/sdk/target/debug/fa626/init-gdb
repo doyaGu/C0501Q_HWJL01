@@ -1,0 +1,17 @@
+target remote localhost:3333
+
+define ite_break_at_abort
+    b *0x10
+end
+
+define ite_shows_abort_callstack
+    set $pc = $lr
+    where
+end
+
+define ite_debug_abort
+    b *0x10
+    c
+    set $pc = $lr
+    where
+end

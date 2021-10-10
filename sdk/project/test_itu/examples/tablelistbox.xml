@@ -1,0 +1,73 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Background3" children="Controls">
+      <Object type="GUIDesigner.TableListBoxWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="TableListBox1" children="Controls">
+        <Property name="ItemHeight">49</Property>
+        <Property name="TextAlign">TopLeft</Property>
+        <Property name="FocusColor">ActiveCaption</Property>
+        <Property name="FocusFontColor">WindowText</Property>
+        <Property name="ReadFontColor">GrayText</Property>
+        <Property name="BackAlpha">255</Property>
+        <Property name="ScrollDelay">3</Property>
+        <Property name="StopDelay">30</Property>
+        <Property name="TotalFrame">300</Property>
+        <Property name="Draggable">True</Property>
+        <Property name="HasLongPress">False</Property>
+        <Property name="ItemCount">100</Property>
+        <Property name="SlidePage">3</Property>
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Function,Load,OnLoad,</Property>
+        <Property name="Action02">Function,Select,OnSelect,</Property>
+        <Property name="Action03">None,Load,,</Property>
+        <Property name="Action04">None,Load,,</Property>
+        <Property name="Action05">None,Load,,</Property>
+        <Property name="Action06">None,Load,,</Property>
+        <Property name="Action07">None,Load,,</Property>
+        <Property name="Action08">None,Load,,</Property>
+        <Property name="Action09">None,Load,,</Property>
+        <Property name="Action10">None,Load,,</Property>
+        <Property name="Action11">None,Load,,</Property>
+        <Property name="Action12">None,Load,,</Property>
+        <Property name="Action13">None,Load,,</Property>
+        <Property name="Action14">None,Load,,</Property>
+        <Property name="Action15">None,Load,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Items">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">4</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">5</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">6</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">7</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">8</Item>
+        </Property>
+        <Property name="Location">9, 29</Property>
+        <Property name="Name">TableListBox1</Property>
+        <Property name="Size">577, 392</Property>
+        <Property name="TabIndex">0</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background3</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="Action01">Reload,Enter,TableListBox1,</Property>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

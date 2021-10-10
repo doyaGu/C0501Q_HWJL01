@@ -1,0 +1,13 @@
+info ${CMAKE_PROJECT_NAME}
+
+mcu castor3
+family ${CFG_CHIP_FAMILY}
+ram_size ${CFG_RAM_SIZE}
+big-endian ${CFG_GLAMOMEM_BIG_ENDIAN}
+init_script ${PROJECT_SOURCE_DIR}\sdk\target\debug\${CFG_DBG_INIT_SCRIPT}
+outbuf_addr 0xC0
+outbuf_size_addr 0xC4
+outbuf_index_addr 0xC8
+inbuf_addr 0xFF4
+inbuf_size_addr 0xFF8
+inbuf_index_addr 0xFFC

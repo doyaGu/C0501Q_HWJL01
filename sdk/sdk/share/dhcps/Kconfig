@@ -1,0 +1,23 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+if BUILD_DHCPS
+
+menu "dhcps"
+
+config DHCPS_ADDR_COUNT
+    string "Maximum offer address count"
+    depends on BUILD_DHCPS
+    default "254"
+    help
+        Maximum offer address count, must between 1 ~ 254.
+    help_cht
+        提供最大 IP 地址的數量，必須在 1 ~ 254 之間。
+    help_chs
+        提供最大 IP 地址的数量，必须在 1 ~ 254 之间。
+
+endmenu
+
+endif # BUILD_DHCPS

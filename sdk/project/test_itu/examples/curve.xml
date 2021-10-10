@@ -1,0 +1,70 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Object type="GUIDesigner.CurveWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Curve1" children="Controls">
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="GradientColor">Blue</Property>
+        <Property name="GradientMode">True</Property>
+        <Property name="PointCount">5</Property>
+        <Property name="Point00">0, 100</Property>
+        <Property name="Point01">50, 50</Property>
+        <Property name="Point02">100, 40</Property>
+        <Property name="Point03">150, 25</Property>
+        <Property name="Point04">200, 100</Property>
+        <Property name="Point05">0, 0</Property>
+        <Property name="Point06">0, 0</Property>
+        <Property name="Point07">0, 0</Property>
+        <Property name="Point08">0, 0</Property>
+        <Property name="Point09">0, 0</Property>
+        <Property name="Point10">0, 0</Property>
+        <Property name="Point11">0, 0</Property>
+        <Property name="Point12">0, 0</Property>
+        <Property name="Point13">0, 0</Property>
+        <Property name="Point14">0, 0</Property>
+        <Property name="Point15">0, 0</Property>
+        <Property name="Point16">0, 0</Property>
+        <Property name="Point17">0, 0</Property>
+        <Property name="Point18">0, 0</Property>
+        <Property name="Point19">0, 0</Property>
+        <Property name="Point20">0, 0</Property>
+        <Property name="Point21">0, 0</Property>
+        <Property name="Point22">0, 0</Property>
+        <Property name="Point23">0, 0</Property>
+        <Property name="Point24">0, 0</Property>
+        <Property name="Point25">0, 0</Property>
+        <Property name="Point26">0, 0</Property>
+        <Property name="Point27">0, 0</Property>
+        <Property name="Point28">0, 0</Property>
+        <Property name="Point29">0, 0</Property>
+        <Property name="Point30">0, 0</Property>
+        <Property name="Point31">0, 0</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Red</Property>
+        <Property name="Location">300, 190</Property>
+        <Property name="Name">Curve1</Property>
+        <Property name="Size">200, 100</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

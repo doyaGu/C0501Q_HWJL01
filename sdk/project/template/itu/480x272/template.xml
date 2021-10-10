@@ -1,0 +1,125 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6186.24767, Culture=neutral, PublicKeyToken=null" name="logoLayer" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6186.24767, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="TransferAlpha">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Stretch">False</Property>
+      <Property name="Angle">0</Property>
+      <Property name="TransformType">None</Property>
+      <Property name="TransformX">100</Property>
+      <Property name="TransformY">100</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">Black</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">480, 272</Property>
+    </Object>
+    <Property name="Action01">Goto,Enter,mainLayer,</Property>
+    <Property name="ClientSize">480, 272</Property>
+    <Property name="Name">logoLayer</Property>
+  </Object>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6186.24767, Culture=neutral, PublicKeyToken=null" name="mainLayer" children="Controls">
+    <Object type="GUIDesigner.BackgroundButtonWidget, GUIDesigner, Version=1.0.6186.24767, Culture=neutral, PublicKeyToken=null" name="mainBackgroundButton" children="Controls">
+      <Object type="GUIDesigner.PopupButtonWidget, GUIDesigner, Version=1.0.6186.24767, Culture=neutral, PublicKeyToken=null" name="PopupButton" children="Controls">
+        <Property name="BackgroundImage">
+          <Binary>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDooor+mD8HCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z</Binary>
+        </Property>
+        <Property name="Alpha">255</Property>
+        <Property name="PixelFormat">RGB565</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="ResponseToUpKey">False</Property>
+        <Property name="IncreasePercent">30</Property>
+        <Property name="AlphaPercent">50</Property>
+        <Property name="TotalFrame">10</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Function,Press,MainButtonOnPress,</Property>
+        <Property name="Action02">None,Press,,</Property>
+        <Property name="Action03">None,Press,,</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">White</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Action</Property>
+        <Property name="Font">Calibri, 40pt</Property>
+        <Property name="ForeColor">White</Property>
+        <Property name="Location">140, 86</Property>
+        <Property name="Name">PopupButton</Property>
+        <Property name="Size">200, 100</Property>
+        <Property name="TabIndex">0</Property>
+      </Object>
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="TransferAlpha">False</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Action01">None,Press,,</Property>
+      <Property name="Action02">None,Press,,</Property>
+      <Property name="Action03">None,Press,,</Property>
+      <Property name="Action04">None,Press,,</Property>
+      <Property name="Action05">None,Press,,</Property>
+      <Property name="Action06">None,Press,,</Property>
+      <Property name="Action07">None,Press,,</Property>
+      <Property name="Action08">None,Press,,</Property>
+      <Property name="Action09">None,Press,,</Property>
+      <Property name="Action10">None,Press,,</Property>
+      <Property name="Action11">None,Press,,</Property>
+      <Property name="Action12">None,Press,,</Property>
+      <Property name="Action13">None,Press,,</Property>
+      <Property name="Action14">None,Press,,</Property>
+      <Property name="Action15">None,Press,,</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">White</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">mainBackgroundButton</Property>
+      <Property name="Size">480, 272</Property>
+    </Object>
+    <Property name="DoubleBuffered">True</Property>
+    <Property name="Action01">Show,Enter,mainLayer,</Property>
+    <Property name="Action02">Function,Enter,MainOnEnter,</Property>
+    <Property name="Action03">Function,Timer,MainOnTimer,</Property>
+    <Property name="ClientSize">480, 272</Property>
+    <Property name="Name">mainLayer</Property>
+  </Object>
+</ITU>

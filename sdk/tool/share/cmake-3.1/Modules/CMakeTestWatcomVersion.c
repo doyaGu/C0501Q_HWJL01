@@ -1,0 +1,1 @@
+﻿VERSION=__WATCOMC__

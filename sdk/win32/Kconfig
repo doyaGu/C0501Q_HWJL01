@@ -1,0 +1,26 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+menu "Win32"
+
+config WIN32_FS_HW
+	bool "Use hardware filesystem"
+	default n
+
+config WIN32_SIMULATOR
+	bool "Simulator"
+	default n
+
+config WIN32_LWIP_ADAPTER
+	string "lwIP Adapter Index"
+	depends on NET_ENABLE
+	default "0"
+	help
+	    the index of the windows network adapter to use
+
+config TEMP_DRIVE
+    default "T"
+
+endmenu

@@ -1,0 +1,18 @@
+#include "ram.txt"
+
+#ifdef CFG_BACKLIGHT_FILESIZE
+
+#include "lcd.txt"
+
+// delay 20ms then turn on backlight
+if (read_mask(0x0002, 0xffff) == 0x9070) {
+    wait(CFG_BACKLIGHT_BOOTLODER_DELAY*(10000000/83));  // delay (CFG_BACKLIGHT_BOOTLODER_DELAY/67)*(10000000)*3 CPU cycles on 9070 @cpu=360Mhz
+} else if (read_mask(0x0002, 0xffff) == 0x9910) {
+    wait(CFG_BACKLIGHT_BOOTLODER_DELAY*(10000000/83));  // delay (CFG_BACKLIGHT_BOOTLODER_DELAY/67)*(10000000)*3 CPU cycles on 9910 @cpu=360Mhz
+} else {
+    wait(CFG_BACKLIGHT_BOOTLODER_DELAY*1000);           // delay CFG_BACKLIGHT_BOOTLODER_DELAY*1000 us on P9850 or after project
+}
+data(0x00000000, 1, CFG_BACKLIGHT_FILESIZE, CFG_BACKLIGHT_FILESIZE, "backlight.bin");
+call(CFG_BACKLIGHT_ENTRY_ADDR);
+
+#endif

@@ -1,0 +1,128 @@
+/*
+ * RGB LCD Initialization Script
+ *
+ * Date          : 2017/3/29
+ * Chip Type     : IT9850
+ * Resolution    : 1280x720
+ * Color format  : RGB565
+ * LCD interface : 24-bits
+ * 
+ */
+
+/* ************************************************* */
+/*               Please don't remove!                */
+/* ************************************************* */
+/*!NzUsMCwwLDAsMCwxMjgwLDcyMCwwLDIsMCwxOTgwLDQwLDIyMCwwLDAsNDQwLDc1MCw1LDIwLDAsMCw1LDAsMCwxLDA=!*/
+
+/* ************************************************* */
+/*     IT9850, RGB Interface mode, Clock Setting     */
+/* ************************************************* */
+write(0x002A, 0x0022);
+
+/* ************************************************* */
+/*                    PLL3 ck3_n1                    */
+/* ************************************************* */
+write(0x00C0, 0x400C);
+write(0x00C2, 0x000B);
+write(0x00C4, 0x2339);
+write(0x00C4, 0x3339);
+write(0x00C4, 0x2339);
+
+write(0x0028, 0xC000);
+//LCD reset
+write(0x002A, 0x3022);
+wait(1); // 9850 unit: us
+write(0x002A, 0x0022);
+wait(1);
+
+/* ************************************************* */
+/*                  General Setting                  */
+/* ************************************************* */
+write(0x1100, 0x2000);
+write(0x1102, 0x0A60);
+write(0x1104, 0x8002);
+write(0x1106, 0x0000);
+write(0x1108, 0x0F00);
+write(0x110C, (0<<12) | ${CFG_LCD_WIDTH});
+write(0x110E, ${CFG_LCD_HEIGHT});
+write(0x1110, ${CFG_LCD_PITCH});
+write(0x1112, ${CFG_LCDA_ADDR} & 0xffff);
+write(0x1114, ${CFG_LCDA_ADDR} >> 16);
+
+/* ************************************************* */
+/*                  Test Color Mode                  */
+/* ************************************************* */
+write(0x1222, 0x0000);
+write(0x1224, 0x00FF);
+write(0x1220, 0x0002);
+
+/* ************************************************* */
+/*              Hardware Cursor Setting              */
+/* ************************************************* */
+write(0x1120, 0x0000);
+write(0x1138, 0x2000);
+
+/* ************************************************* */
+/*                 Interface Setting                 */
+/* ************************************************* */
+write(0x1190, 0x0007);
+write(0x1192, 0x07BC);
+write(0x1194, 0x02EE);
+
+/* ************************************************* */
+/*                   Port setting                    */
+/* ************************************************* */
+//Output HSync
+write(0x11A0, 0x1000);
+write(0x11A2, 0x0000);
+write(0x11A4, 0x2028);
+write(0x11A6, 0x0000);
+write(0x11A8, 0x17BC);
+write(0x11AA, 0x0000);
+write(0x11AC, 0x2000);
+write(0x11AE, 0x0000);
+//Output VSync
+write(0x11B0, 0x57BC);
+write(0x11B2, 0x0000);
+write(0x11B4, 0x27BC);
+write(0x11B6, 0x0004);
+write(0x11B8, 0x17BC);
+write(0x11BA, 0x02ED);
+write(0x11BC, 0x27BC);
+write(0x11BE, 0x0000);
+//Output DE
+write(0x11C0, 0x1104);
+write(0x11C2, 0x0019);
+write(0x11C4, 0x2604);
+write(0x11C6, 0x02E9);
+write(0x11C8, 0x1104);
+write(0x11CA, 0x0019);
+write(0x11CC, 0x2604);
+write(0x11CE, 0x02E9);
+
+/* ************************************************* */
+/*               Pin driving setting                 */
+/* ************************************************* */
+write(0x8138, 0x2AAA);
+write(0x813A, 0x0000);
+write(0x813C, 0x0000);
+write(0x813E, 0x8000);
+write(0x8140, 0xAA92);
+
+/* ************************************************* */
+/*                 Pin Share setting                 */
+/* ************************************************* */
+write(0x8108, 0x4000);
+write(0x810A, 0x5555);
+write(0x810C, 0x5555);
+write(0x810E, 0x1555);
+write(0x8110, 0x0154);
+
+write(0x1258, 0x0000);
+
+/* ************************************************* */
+/*                    Enable LCD                     */
+/* ************************************************* */
+write(0x111E, 0x0001);
+wait(1);
+write(0x111E, 0x0003);

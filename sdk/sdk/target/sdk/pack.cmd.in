@@ -1,0 +1,9 @@
+@echo off
+
+for /f %%a in ('cd') do set CURR_PATH=%%a
+
+pkgtool -o ${CFG_UPGRADE_FILENAME} ${args} --key ${CFG_UPGRADE_ENC_KEY}
+pkgtool -l ${CFG_UPGRADE_FILENAME}
+pkgtool -s ${CFG_UPGRADE_NOR_IMAGE_SIZE} -o ${CFG_UPGRADE_NOR_IMAGE_FILENAME} -n ${CFG_UPGRADE_FILENAME}
+
+pause

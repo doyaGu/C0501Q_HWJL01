@@ -1,0 +1,4 @@
+#
+# Presetting for bootloader
+#
+CFG_BOOTLOADER_ENABLE=y

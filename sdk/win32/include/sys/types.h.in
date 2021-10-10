@@ -1,0 +1,67 @@
+#ifndef ITP_SYS_TYPES_H
+#define ITP_SYS_TYPES_H
+
+#include "$ENV{CFG_VC_INC_PATH}/sys/types.h"
+#include <stddef.h>
+#include "lwipopts.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#ifndef inline
+    #define inline __inline
+#endif
+
+#ifndef __attribute__
+    #define __attribute__()
+#endif
+
+#ifndef _BSDTYPES_DEFINED
+/* also defined in mingw/gmon.h and in w32api/winsock[2].h */
+typedef	unsigned char	u_char;
+typedef	unsigned short	u_short;
+typedef	unsigned int	u_int;
+typedef	unsigned long	u_long;
+#define _BSDTYPES_DEFINED
+#endif
+
+typedef unsigned long id_t;
+typedef int mode_t;
+typedef long off_t;
+typedef unsigned long useconds_t;
+typedef unsigned long timer_t;
+typedef unsigned long clockid_t;
+typedef long suseconds_t;
+typedef int gid_t;
+typedef int pid_t;
+typedef int ssize_t;
+typedef	unsigned short	ino_t;
+typedef unsigned short uid_t;
+typedef unsigned short nlink_t;
+typedef unsigned long fsblkcnt_t;
+typedef unsigned long fsfilcnt_t;
+typedef char * caddr_t;      /* core address */
+typedef unsigned int dev_t;
+
+struct timespec {
+  time_t  tv_sec;   /* Seconds */
+  long    tv_nsec;  /* Nanoseconds */
+};
+
+struct itimerspec {
+  struct timespec  it_interval;  /* Timer period */
+  struct timespec  it_value;     /* Timer expiration */
+};
+
+typedef unsigned char u_int8_t;
+typedef unsigned short u_int16_t;
+typedef unsigned int u_int32_t;
+typedef unsigned long long u_int64_t;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // ITP_SYS_TYPES_H

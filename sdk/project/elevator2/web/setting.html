@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ITE Elevator Setting Page</title>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta http-equiv="cache-control" content="no-cache"/>
+        <meta http-equiv="expires" content="0"/>
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <script type="text/javascript" src="info.js"> </script>
+        <script type="text/javascript" src="jquery.min.js"> </script>
+        <style type="text/css">
+            h3 {
+                text-align: center;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <iframe id="iframeupload" name="iframeupload" style="display:none" onload="return uploadComplete();"> </iframe>
+
+        <h1>ITE Elevator Setting Page</h1>
+        <br />
+        <hr />
+
+        <h3>System Information</h3>
+        <table border="1" width="100%">
+            <tr>
+                <td>MAC address:</td>
+                <td><span id="macaddr"></span></td>
+            </tr>
+            <tr>
+                <td>IP:</td>
+                <td><span id="ipaddr"></span></td>
+            </tr>
+            <tr>
+                <td>Software version:</td>
+                <td><span id="sw_ver"></span></td>
+            </tr>
+        </table>
+        <br />
+
+        <h3><span id="timer" /></h3>
+        <h3><span id="firmware" /></h3>
+
+        <form id="fUpgrade" name="fUpgrade" enctype="multipart/form-data" method="post" action="/dev/info.cgi" target="iframeupload">
+            File to Upgrade Firmware:
+            <input type="file" name="filename"/>
+            <input type="submit" name="Submit" id="fUpgrade_Submit" value="Upgrade" onclick="return startUpload();"/>
+        </form>
+        <hr />
+
+        <br />
+        <input type="button" id="rebootBtn" value="Reboot" onclick="return rebootSystem();"/>
+        <br />
+        <hr />
+
+        <input type="hidden" name="action" value="setting"/>
+        <span>Language:</span>
+        <select id="lang" name="lang">
+            <option id="lang_cht" value="cht">繁中</option>
+            <option id="lang_chs" value="chs">简中</option>
+            <option id="lang_eng" value="eng">English</option>
+        </select>
+        <br />
+        <span>Demo Enable:</span>
+        <select id="demo_enable" name="demo_enable">
+            <option id="demo_enable_no" value="0">No</option>
+            <option id="demo_enable_yes" value="1">Yes</option>
+        </select>
+        <br />
+
+        <span>Date Format:</span>
+        <select id="date_format" name="date_format">
+            <option id="date_format_0" value="0">YYYY/MM/DD</option>
+            <option id="date_format_1" value="1">DD/MM/YYYY</option>
+            <option id="date_format_2" value="2">MM/DD/YYYY</option>
+        </select>
+        <br />
+
+        <span>Sound Enable:</span>
+        <select id="sound_enable" name="sound_enable">
+            <option id="sound_enable_no" value="0">No</option>
+            <option id="sound_enable_yes" value="1">Yes</option>
+        </select>
+        <br />
+
+        <span>Screensaver time:</span>
+        <input type="text" id="screensaver_time" name="screensaver_time" size="3" maxlength="3" onkeyup="return checkNumber(this.id, this);"/>
+        <br />
+
+        <span>Message Format:</span>
+        <select id="info1_format" name="info1_format">
+            <option id="info1_format_0" value="0">Left --> Right</option>
+            <option id="info1_format_1" value="1">Right --> Left</option>
+            <option id="info1_format_2" value="2">Top --> Bottom</option>
+            <option id="info1_format_3" value="2">Bottom --> Top</option>
+        </select>
+        <br />
+
+        <br /><br />
+        <input type="button" id="updatebtn" value="Update" onclick="return updateElevatorSetting();"/>
+        <br />
+
+        <input type="hidden" name="action" value="account"/>
+        <span>New ID:</span>
+        <input type="text" id="user_id" name="user_id" size="32" maxlength="32"/>
+        <br />
+
+        <span>current Password:</span>
+        <input type="password" id="old_password" name="old_password" size="32" maxlength="32"/>
+        <br />
+
+        <span>New Password:</span>
+        <input type="password" id="user_password" name="user_password" size="32" maxlength="32"/>
+        <br />
+
+        <span>Confirm Password:</span>
+        <input type="password" id="confirm_password" name="confirm_password" size="32" maxlength="32"/>
+        <br />
+
+        <br /><br />
+        <input type="button" id="accountupdatebtn" value="Update Account" onclick="return updateElevatorAccount();"/>
+        <br />
+
+        <input type="hidden" name="action" value="datetime"/>
+        <span>Date: Year:</span>
+        <input type="text" id="date_year" name="date_year" size="4" maxlength="4" onkeyup="return checkNumber(this.id, this);"/>
+        <span>Month:</span>
+        <input type="text" id="date_month" name="date_month" size="2" maxlength="2" onkeyup="return checkNumber(this.id, this);"/>
+        <span>Day:</span>
+        <input type="text" id="date_day" name="date_day" size="2" maxlength="2" onkeyup="return checkNumber(this.id, this);"/>                
+        <br />
+        <span>Time: Hour:</span>
+        <input type="text" id="time_hour" name="time_hour" size="2" maxlength="2" onkeyup="return checkNumber(this.id, this);"/>
+        <span>Minute:</span>
+        <input type="text" id="time_minute" name="time_minute" size="2" maxlength="2" onkeyup="return checkNumber(this.id, this);"/>
+        <span>Second:</span>
+        <input type="text" id="time_second" name="time_second" size="2" maxlength="2" onkeyup="return checkNumber(this.id, this);"/>                
+        <br />
+
+        <br /><br />
+        <input type="button" id="datetimeupdatebtn" value="Update Date/Time" onclick="return updateElevatorDateTime();"/>
+        <br />
+
+        <input type="button" id="upgradeNetResBtn" value="Upgrade Data by Network" onclick="return upgradeNetRes();"/>
+        <br />
+
+        <input type="button" id="upgradeNetFwBtn" value="Upgrade Firmware by Network" onclick="return upgradeNetFw();"/>
+        <br />
+
+        <!--[if lt IE 9]>
+            IE 瀏覽器版本低於 9.
+            <script type="text/javascript">
+                notSupportOldIE();
+            </script>
+        <![endif]-->
+    </body>
+</html>

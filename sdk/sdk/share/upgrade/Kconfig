@@ -1,0 +1,65 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+if BUILD_UPGRADE
+
+config BUILD_ITC
+    def_bool y if BUILD_UPGRADE
+
+menu "upgrade"
+
+config UG_ERR
+    bool "Error Log"
+    default y
+    help
+        Output error log.
+    help_cht
+        輸出錯誤訊息。
+    help_chs
+        输出错误讯息。
+
+config UG_WARN
+    bool "Warning Log"
+    default y
+    help
+        Output warning log.
+    help_cht
+        輸出警告訊息。
+    help_chs
+        输出警告讯息。
+
+config UG_INFO
+    bool "Information Log"
+    default y
+    help
+        Output information log.
+    help_cht
+        輸出資訊訊息。
+    help_chs
+        输出资讯讯息。
+
+config UG_DBG
+    bool "Debug Log"
+    default n
+    help
+        Output debug log.
+    help_cht
+        輸出除錯訊息。
+    help_chs
+        输出侦错讯息。
+
+config UG_BUF_SIZE
+    string "Upgrade used buffer size"
+    default "0x20000"
+    help
+        Upgrade used buffer size.
+    help_cht
+        內部緩衝區記憶體大小。
+    help_chs
+        内部缓冲区内存大小。
+
+endmenu
+
+endif # BUILD_UPGRADE

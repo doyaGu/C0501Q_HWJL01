@@ -1,0 +1,43 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">False</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">Red</Property>
+      <Property name="GradientMode">BackwardDiagonal</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 190</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">800, 100</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

@@ -1,0 +1,154 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Background3" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background3</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Object type="GUIDesigner.ButtonWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Button3" children="Controls">
+        <Property name="Alpha">0</Property>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="Stretch">False</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Show,SlideUp,Background2,3 10</Property>
+        <Property name="Action02">Hide,SlideUp,Background1,3 20</Property>
+        <Property name="Action03">None,Press,,</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Angle">0</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Button3</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Location">0, 0</Property>
+        <Property name="Name">Button3</Property>
+        <Property name="Size">400, 240</Property>
+        <Property name="TabIndex">1</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">Red</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">400, 240</Property>
+    </Object>
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Object type="GUIDesigner.ButtonWidget, GUIDesigner, Version=1.0.6071.30926, Culture=neutral, PublicKeyToken=null" name="Button4" children="Controls">
+        <Property name="Alpha">0</Property>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="Stretch">False</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="FontIndex">0</Property>
+        <Property name="Action01">Show,SlideDown,Background1,5 20</Property>
+        <Property name="Action02">Hide,SlideDown,Background2,5 10</Property>
+        <Property name="Action03">None,Press,,</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Angle">0</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Button4</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Location">0, 0</Property>
+        <Property name="Name">Button4</Property>
+        <Property name="Size">400, 240</Property>
+        <Property name="TabIndex">2</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">Green</Property>
+      <Property name="Location">50, 50</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">400, 240</Property>
+      <Property name="Visible">False</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

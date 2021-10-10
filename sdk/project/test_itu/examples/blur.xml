@@ -1,0 +1,125 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6185.18868, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6185.18868, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Object type="GUIDesigner.WheelWidget, GUIDesigner, Version=1.0.6185.18868, Culture=neutral, PublicKeyToken=null" name="Wheel2" children="Controls">
+        <Property name="ItemHeight">49</Property>
+        <Property name="TextAlign">MiddleCenter</Property>
+        <Property name="FocusColor">ActiveCaption</Property>
+        <Property name="FocusIndex">1</Property>
+        <Property name="TotalFrame">10</Property>
+        <Property name="BackAlpha">255</Property>
+        <Property name="Draggable">True</Property>
+        <Property name="FocusFontHeight">30</Property>
+        <Property name="FontIndex">0</Property>
+        <Property name="Cycle">False</Property>
+        <Property name="Items1">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">一</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">二</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">三</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">四</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">五</Item>
+        </Property>
+        <Property name="Items2">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">一</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">二</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">三</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">四</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">五</Item>
+        </Property>
+        <Property name="Action01">Function,Changed,OnChanged,</Property>
+        <Property name="Action02">Input,Changed,Text1,</Property>
+        <Property name="Action03">None,Changed,,</Property>
+        <Property name="Action04">None,Changed,,</Property>
+        <Property name="Action05">None,Changed,,</Property>
+        <Property name="Action06">None,Changed,,</Property>
+        <Property name="Action07">None,Changed,,</Property>
+        <Property name="Action08">None,Changed,,</Property>
+        <Property name="Action09">None,Changed,,</Property>
+        <Property name="Action10">None,Changed,,</Property>
+        <Property name="Action11">None,Changed,,</Property>
+        <Property name="Action12">None,Changed,,</Property>
+        <Property name="Action13">None,Changed,,</Property>
+        <Property name="Action14">None,Changed,,</Property>
+        <Property name="Action15">None,Changed,,</Property>
+        <Property name="Touchable">True</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Items">
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">4</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">5</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">6</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">7</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">8</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">9</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">10</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">11</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">12</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">13</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">14</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">15</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">16</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">17</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">18</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">19</Item>
+          <Item type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">20</Item>
+        </Property>
+        <Property name="Location">329, 157</Property>
+        <Property name="Name">Wheel2</Property>
+        <Property name="Size">154, 147</Property>
+        <Property name="TabIndex">0</Property>
+      </Object>
+      <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6185.18868, Culture=neutral, PublicKeyToken=null" name="Text1" children="Controls">
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="FontIndex">0</Property>
+        <Property name="Hided">False</Property>
+        <Property name="TextAlign">TopCenter</Property>
+        <Property name="Font">Calibri, 30pt</Property>
+        <Property name="Location">329, 106</Property>
+        <Property name="Name">Text1</Property>
+        <Property name="Size">154, 51</Property>
+      </Object>
+      <Object type="GUIDesigner.BlurWidget, GUIDesigner, Version=1.0.6185.18868, Culture=neutral, PublicKeyToken=null" name="Blur1" children="Controls">
+        <Property name="Factor">25</Property>
+        <Property name="Static">False</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Location">300, 183</Property>
+        <Property name="Name">Blur1</Property>
+        <Property name="Size">200, 100</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="TransferAlpha">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Stretch">False</Property>
+      <Property name="Angle">0</Property>
+      <Property name="TransformType">None</Property>
+      <Property name="TransformX">100</Property>
+      <Property name="TransformY">100</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

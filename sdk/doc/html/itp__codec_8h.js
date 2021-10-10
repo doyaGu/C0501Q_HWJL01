@@ -1,0 +1,26 @@
+var itp__codec_8h =
+[
+    [ "itp_codec_get_i2s_sample_rate", "itp__codec_8h.html#a99c7ac77d67fb9b9f061381d908d1705", null ],
+    [ "itp_codec_playback_amp_volume_down", "itp__codec_8h.html#a784fb79c0c6f865fbfa62775c7198430", null ],
+    [ "itp_codec_playback_amp_volume_up", "itp__codec_8h.html#acd6b73b9b174803d53d5651fd7228cfa", null ],
+    [ "itp_codec_playback_deinit", "itp__codec_8h.html#afb43a7e39c22a14b7f207e00b819f880", null ],
+    [ "itp_codec_playback_get_currvol", "itp__codec_8h.html#a610f592ca6bec01e55d4dc7c140aeb9f", null ],
+    [ "itp_codec_playback_get_currvolperc", "itp__codec_8h.html#ac6899e946587eb1b5d6ba5c15b202aca", null ],
+    [ "itp_codec_playback_get_vol_range", "itp__codec_8h.html#a013938948251798bccb2ac9d4a26894b", null ],
+    [ "itp_codec_playback_init", "itp__codec_8h.html#a484b61185098a989371e7466a76e7c7d", null ],
+    [ "itp_codec_playback_linein_bypass", "itp__codec_8h.html#a8312752a9daaebeef05bf67e6d7c38c0", null ],
+    [ "itp_codec_playback_mute", "itp__codec_8h.html#a6cc23531cf1d691fe7cb9d4d3c54ac1c", null ],
+    [ "itp_codec_playback_set_direct_vol", "itp__codec_8h.html#a7c2ec9d5b305ac06e18e1b314a66e73c", null ],
+    [ "itp_codec_playback_set_direct_volperc", "itp__codec_8h.html#aa0ca52af09c2942d9485c58050ba03e3", null ],
+    [ "itp_codec_playback_unmute", "itp__codec_8h.html#a4bc9c20b857c9b77dd55a6efe7169806", null ],
+    [ "itp_codec_rec_deinit", "itp__codec_8h.html#a06e98b6fac2495cb8814ca81cb829ec7", null ],
+    [ "itp_codec_rec_get_currvol", "itp__codec_8h.html#a277e6b56db57ae89fa940332d2b284c0", null ],
+    [ "itp_codec_rec_get_vol_range", "itp__codec_8h.html#ab73a9cc712be8ca122bf17af6c96373c", null ],
+    [ "itp_codec_rec_init", "itp__codec_8h.html#ac8db064a783ab2167523ef95c67a1e3b", null ],
+    [ "itp_codec_rec_mute", "itp__codec_8h.html#a5c82bed6988af40edcaf98c6a135366b", null ],
+    [ "itp_codec_rec_set_direct_vol", "itp__codec_8h.html#add6d323884122b1f20873c3de0e5a11e", null ],
+    [ "itp_codec_rec_unmute", "itp__codec_8h.html#a22c30471ff18c490a240e2cd3f3be5e0", null ],
+    [ "itp_codec_set_i2s_sample_rate", "itp__codec_8h.html#a68332f63ff6fb874160400a5f3431708", null ],
+    [ "itp_codec_standby", "itp__codec_8h.html#a2493c1f9908ce47c06edfd194f87b354", null ],
+    [ "itp_codec_wake_up", "itp__codec_8h.html#a9553498420b7211d271ce809a907b1e2", null ]
+];

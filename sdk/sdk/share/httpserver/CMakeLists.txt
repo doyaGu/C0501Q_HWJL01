@@ -1,0 +1,34 @@
+include_directories(
+    .
+    ./httpserver
+    ${PROJECT_SOURCE_DIR}/sdk/share/tre
+    ${PROJECT_SOURCE_DIR}/sdk/share/microhttpd
+    ${PROJECT_SOURCE_DIR}/sdk/share/microhttpd/include
+)
+
+add_library(httpserver STATIC
+    details/comet_manager.cpp
+    details/http_endpoint.cpp
+    httpserver/details/cache_entry.hpp
+    httpserver/details/comet_manager.hpp
+    httpserver/details/http_endpoint.hpp
+    httpserver/details/http_response_ptr.hpp
+    httpserver/details/modded_request.hpp
+    #httpserver/binders.hpp
+    httpserver/create_webserver.hpp
+    httpserver/http_request.hpp
+    httpserver/http_resource.hpp
+    httpserver/http_response.hpp
+    httpserver/http_response_builder.hpp
+    httpserver/http_utils.hpp
+    httpserver/string_utilities.hpp
+    httpserver/webserver.hpp
+    config.hpp
+    http_request.cpp
+    http_resource.cpp
+    http_response.cpp
+    http_utils.cpp
+    httpserver.hpp
+    string_utilities.cpp
+    webserver.cpp
+)

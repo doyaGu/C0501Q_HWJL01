@@ -1,0 +1,28 @@
+var group__doorbell__indoor =
+[
+    [ "Device Infomation", "group__doorbell__indoor__deviceinfo.html", "group__doorbell__indoor__deviceinfo" ],
+    [ "Address Book", "group__doorbell__indoor__addressbook.html", "group__doorbell__indoor__addressbook" ],
+    [ "Audio Player", "group__doorbell__indoor__audio.html", "group__doorbell__indoor__audio" ],
+    [ "Audio Recorder", "group__doorbell__indoor__audiorecord.html", "group__doorbell__indoor__audiorecord" ],
+    [ "Call Logs", "group__doorbell__indoor__calllog.html", "group__doorbell__indoor__calllog" ],
+    [ "Capture", "group__doorbell__indoor__capture.html", "group__doorbell__indoor__capture" ],
+    [ "Card List", "group__doorbell__indoor__cardlist.html", "group__doorbell__indoor__cardlist" ],
+    [ "House", "group__doorbell__indoor__house.html", "group__doorbell__indoor__house" ],
+    [ "Configuration", "group__doorbell__indoor__config.html", "group__doorbell__indoor__config" ],
+    [ "Guard", "group__doorbell__indoor__guard.html", "group__doorbell__indoor__guard" ],
+    [ "Event", "group__doorbell__indoor__event.html", "group__doorbell__indoor__event" ],
+    [ "Linphone", "group__doorbell__indoor__linphone.html", "group__doorbell__indoor__linphone" ],
+    [ "Message", "group__doorbell__indoor__message.html", "group__doorbell__indoor__message" ],
+    [ "Network", "group__doorbell__indoor__network.html", "group__doorbell__indoor__network" ],
+    [ "Peripheral", "group__doorbell__indoor__peripheral.html", "group__doorbell__indoor__peripheral" ],
+    [ "Remote", "group__doorbell__indoor__remote.html", "group__doorbell__indoor__remote" ],
+    [ "Screen", "group__doorbell__indoor__screen.html", "group__doorbell__indoor__screen" ],
+    [ "String", "group__doorbell__indoor__string.html", "group__doorbell__indoor__string" ],
+    [ "Upgrade", "group__doorbell__indoor__upgrade.html", "group__doorbell__indoor__upgrade" ],
+    [ "Video Memo", "group__doorbell__indoor__videomemo.html", "group__doorbell__indoor__videomemo" ],
+    [ "Video Recorder", "group__doorbell__indoor__videorecord.html", "group__doorbell__indoor__videorecord" ],
+    [ "Voice Memo", "group__doorbell__indoor__voicememo.html", "group__doorbell__indoor__voicememo" ],
+    [ "Weather", "group__doorbell__indoor__weather.html", "group__doorbell__indoor__weather" ],
+    [ "Web Server", "group__doorbell__indoor__webserver.html", "group__doorbell__indoor__webserver" ],
+    [ "Scene", "group__doorbell__indoor__scene.html", "group__doorbell__indoor__scene" ]
+];

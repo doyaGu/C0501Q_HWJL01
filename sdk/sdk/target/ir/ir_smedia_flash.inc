@@ -1,0 +1,20 @@
+// see sdk\include\SDL\SDL_scancode.h for all codes
+// SMEDIA controller for flash; vendor ID: 0x6F82
+{ 0x05, SDL_SCANCODE_UP },          // UP
+{ 0x1B, SDL_SCANCODE_DOWN },        // DOWN
+{ 0x09, SDL_SCANCODE_RIGHT },       // RIGHT
+{ 0x07, SDL_SCANCODE_LEFT },        // LEFT
+{ 0x08, SDL_SCANCODE_RETURN },      // OK
+{ 0x1E, SDL_SCANCODE_ESCAPE },      // MENU
+{ 0x1A, SDL_SCANCODE_PAGEUP },      // VOL+
+{ 0x02, SDL_SCANCODE_PAGEDOWN },    // VOL-
+{ 0x01, SDL_SCANCODE_HOME },        // BEGIN
+{ 0x03, SDL_SCANCODE_END },         // END
+{ 0x04, SDL_SCANCODE_DELETE },      // STOP
+{ 0x06, SDL_SCANCODE_INSERT },      // PLAY
+{ 0x12, SDL_SCANCODE_CAPSLOCK },    // ON/OFF
+{ 0x0A, SDL_SCANCODE_BACKSPACE },   // MUTE
+{ 0x1F, SDL_SCANCODE_SPACE },       // ROTATE
+{ 0x0C, SDL_SCANCODE_TAB },         // MP3
+{ 0x0D, SDL_SCANCODE_LCTRL },       // VIDEO
+{ 0x0E, SDL_SCANCODE_LSHIFT },      // SLIDE

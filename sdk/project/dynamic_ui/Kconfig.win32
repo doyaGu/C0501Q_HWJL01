@@ -1,0 +1,41 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config DYNAMIC_UI
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config FONT_FILENAME
+    default "DroidSansMono.ttf"    
+    
+config LCD_ENABLE
+    def_bool y
+
+config ITU_UCL_ENABLE
+    def_bool y
+
+config WIN32_SIMULATOR
+    def_bool y
+
+config BUILD_INIPARSER
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

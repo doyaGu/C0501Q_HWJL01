@@ -1,0 +1,8 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+${GDB} -x ${PROJECT_SOURCE_DIR}/sdk/target/debug/fa626/init-gdb ${CMAKE_PROJECT_NAME}
+if errorlevel 1 pause

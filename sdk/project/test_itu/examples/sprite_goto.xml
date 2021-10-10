@@ -1,0 +1,186 @@
+<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Object type="GUIDesigner.ButtonWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Button6" children="Controls">
+        <Property name="Alpha">255</Property>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="Stretch">False</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="Action01">Goto,Press,Sprite1,1</Property>
+        <Property name="Action02">None,Press,,0</Property>
+        <Property name="Action03">None,Press,,0</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Angle">0</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Button6</Property>
+        <Property name="Location">262, 60</Property>
+        <Property name="Name">Button6</Property>
+        <Property name="Size">75, 23</Property>
+        <Property name="TabIndex">2</Property>
+      </Object>
+      <Object type="GUIDesigner.ButtonWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Button5" children="Controls">
+        <Property name="Alpha">255</Property>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="Stretch">False</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="Action01">Goto,Press,Sprite1,0</Property>
+        <Property name="Action02">None,Press,,0</Property>
+        <Property name="Action03">None,Press,,0</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Angle">0</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Button5</Property>
+        <Property name="Location">262, 20</Property>
+        <Property name="Name">Button5</Property>
+        <Property name="Size">75, 23</Property>
+        <Property name="TabIndex">1</Property>
+      </Object>
+      <Object type="GUIDesigner.ButtonWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Button7" children="Controls">
+        <Property name="Alpha">255</Property>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="Stretch">False</Property>
+        <Property name="Text1" />
+        <Property name="Text2" />
+        <Property name="Text3" />
+        <Property name="Text4" />
+        <Property name="Text5" />
+        <Property name="Text6" />
+        <Property name="Text7" />
+        <Property name="Action01">Goto,Press,Sprite1,2</Property>
+        <Property name="Action02">None,Press,,0</Property>
+        <Property name="Action03">None,Press,,0</Property>
+        <Property name="Action04">None,Press,,</Property>
+        <Property name="Action05">None,Press,,</Property>
+        <Property name="Action06">None,Press,,</Property>
+        <Property name="Action07">None,Press,,</Property>
+        <Property name="Action08">None,Press,,</Property>
+        <Property name="Action09">None,Press,,</Property>
+        <Property name="Action10">None,Press,,</Property>
+        <Property name="Action11">None,Press,,</Property>
+        <Property name="Action12">None,Press,,</Property>
+        <Property name="Action13">None,Press,,</Property>
+        <Property name="Action14">None,Press,,</Property>
+        <Property name="Action15">None,Press,,</Property>
+        <Property name="Angle">0</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="FlatAppearance">
+          <Property name="BorderColor">WindowFrame</Property>
+          <Property name="MouseDownBackColor">Transparent</Property>
+          <Property name="MouseOverBackColor">Transparent</Property>
+        </Property>
+        <Property name="Text">Button7</Property>
+        <Property name="Location">262, 94</Property>
+        <Property name="Name">Button7</Property>
+        <Property name="Size">75, 23</Property>
+        <Property name="TabIndex">3</Property>
+      </Object>
+      <Object type="GUIDesigner.SpriteWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Sprite1" children="Controls">
+        <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="ShowingEffect">None</Property>
+          <Property name="HidingEffect">None</Property>
+          <Property name="GradientColor">
+          </Property>
+          <Property name="GradientMode">None</Property>
+          <Property name="BackColor">Red</Property>
+          <Property name="Location">62, 28</Property>
+          <Property name="Name">Background2</Property>
+          <Property name="Size">119, 54</Property>
+        </Object>
+        <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Background3" children="Controls">
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="ShowingEffect">None</Property>
+          <Property name="HidingEffect">None</Property>
+          <Property name="GradientColor">
+          </Property>
+          <Property name="GradientMode">None</Property>
+          <Property name="BackColor">Green</Property>
+          <Property name="Location">35, 40</Property>
+          <Property name="Name">Background3</Property>
+          <Property name="Size">143, 39</Property>
+        </Object>
+        <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6.31005, Culture=neutral, PublicKeyToken=null" name="Background4" children="Controls">
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="ShowingEffect">None</Property>
+          <Property name="HidingEffect">None</Property>
+          <Property name="GradientColor">
+          </Property>
+          <Property name="GradientMode">None</Property>
+          <Property name="BackColor">Blue</Property>
+          <Property name="Location">16, 55</Property>
+          <Property name="Name">Background4</Property>
+          <Property name="Size">159, 42</Property>
+        </Object>
+        <Property name="Delay">10</Property>
+        <Property name="Repeat">False</Property>
+        <Property name="Playing">False</Property>
+        <Property name="Progress">False</Property>
+        <Property name="Location">20, 20</Property>
+        <Property name="Name">Sprite1</Property>
+        <Property name="Size">200, 100</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Location">12, 12</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">373, 231</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

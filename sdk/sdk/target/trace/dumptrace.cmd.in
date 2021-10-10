@@ -1,0 +1,11 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+if "${TRACE_DATA_SIZE}" == "0" exit
+glamomem -t glamomem.dat -S recoder.bin -a 0x${TRACE_DATA_ADDR} -s ${TRACE_DATA_SIZE}
+
+if "${DUMPVCD}" == "0" exit
+dumpvcd recoder.bin recoder.vcd

@@ -1,0 +1,110 @@
+if (${CFG_NET_WIFI_80211N} STREQUAL "1")
+    add_definitions(
+        -DCFG_NET_WIFI_ENABLE_80211N
+    )
+endif()
+
+include_directories(
+    .
+    ${PROJECT_SOURCE_DIR}/sdk/include/
+    hostapd
+    src/ap
+    src/common
+    src/crypto
+    src/drivers
+    src/eap_common
+    src/eap_peer
+    src/eap_server
+    src/eapol_auth
+    src/eapol_supp
+    src/l2_packet
+    src/p2p
+    src/radius
+    src/rsn_supp
+    src/tls
+    src/utils
+    src/wps
+    src
+)
+
+add_library(hostapd STATIC
+    hostapd/main.c
+    hostapd/config_file.c
+    src/ap/hostapd.c
+    src/ap/wpa_auth_glue.c
+    src/ap/drv_callbacks.c
+    src/ap/ap_drv_ops.c
+    src/ap/utils.c
+    src/ap/authsrv.c
+    src/ap/ieee802_1x.c
+    src/ap/ap_config.c
+    src/ap/ieee802_11_auth.c
+    src/ap/sta_info.c
+    src/ap/wpa_auth.c
+    src/ap/tkip_countermeasures.c
+    src/ap/ap_mlme.c
+    src/ap/wpa_auth_ie.c
+    src/ap/preauth_auth.c
+    src/ap/pmksa_cache_auth.c
+    src/utils/eloop.c
+    src/utils/common.c
+    src/utils/wpa_debug.c
+    src/utils/wpabuf.c
+    src/utils/os_unix.c
+    src/utils/ip_addr.c
+    src/common/ieee802_11_common.c
+    src/common/wpa_common.c
+    src/eapol_auth/eapol_auth_sm.c
+    #hostapd/dump_state.c
+    #src/eapol_auth/eapol_auth_dump.c
+    #src/radius/radius.c
+    #src/radius/radius_client.c
+    #src/ap/accounting.c
+    #src/ap/vlan_init.c
+    hostapd/ctrl_iface.c
+    src/ap/ctrl_iface_ap.c
+    src/crypto/md5.c
+    src/drivers/driver_rtw.c
+    src/drivers/drivers.c
+    src/drivers/netlink.c
+    src/drivers/linux_ioctl.c
+    src/l2_packet/l2_packet_linux.c
+    #src/utils/uuid.c
+    #src/ap/wps_hostapd.c
+    #src/eap_server/eap_server_wsc.c
+    #src/eap_common/eap_wsc_common.c
+    #src/wps/wps.c
+    #src/wps/wps_common.c
+    #src/wps/wps_attr_parse.c
+    #src/wps/wps_attr_build.c
+    #src/wps/wps_attr_process.c
+    #src/wps/wps_dev_attr.c
+    #src/wps/wps_enrollee.c
+    #src/wps/wps_registrar.c
+    hostapd/eap_register.c
+    src/eap_server/eap_server.c
+    src/eap_common/eap_common.c
+    src/eap_server/eap_server_methods.c
+    src/eap_server/eap_server_identity.c
+
+    src/crypto/tls_openssl.c
+    src/crypto/crypto_openssl.c
+
+    src/crypto/aes-wrap.c
+    src/crypto/aes-cbc.c
+    src/crypto/sha1.c
+    src/crypto/sha256.c
+    src/crypto/dh_groups.c
+    src/utils/base64.c
+    src/crypto/random.c
+
+    src/ap/beacon.c
+    src/ap/wmm.c
+    src/ap/ap_list.c
+    src/ap/ieee802_11.c
+    src/ap/hw_features.c
+    src/ap/ieee802_11_ht.c
+    src/crypto/sha1-pbkdf2.c
+    #src/ap/iapp.c
+    src/ap/peerkey_auth.c
+)

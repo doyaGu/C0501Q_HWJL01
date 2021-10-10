@@ -1,0 +1,55 @@
+add_definitions(
+    -DFT2_BUILD_LIBRARY
+    )
+
+if (CMAKE_BUILD_TYPE STREQUAL Debug)
+    add_definitions(
+        -DDEBUG
+        )
+endif()
+    
+add_library(freetype STATIC
+    #autofit/autofit.c
+    base/ftapi.c
+    base/ftbase.c
+    base/ftbbox.c
+    #base/ftbdf.c
+    base/ftbitmap.c
+    #base/ftdebug.c
+    #base/ftgasp.c
+    base/ftgloadr.c
+    base/ftglyph.c
+    #base/ftgxval.c
+    base/ftinit.c
+    #base/ftlcdfil.c
+    #base/ftmm.c
+    #base/ftotval.c
+    #base/ftpatent.c
+    #base/ftpfr.c
+    base/ftstroke.c
+    #base/ftsynth.c
+    base/ftsystem.c
+    #base/fttype1.c
+    #base/ftwinfnt.c
+    #base/ftxf86.c
+    #bdf/bdf.c
+    cache/ftcache.c
+    #cff/cff.c
+    #cid/type1cid.c
+    #gxvalid/gxvalid.c
+    #gzip/ftgzip.c
+    #lzw/ftlzw.c
+    #otvalid/otvalid.c
+    #pcf/pcf.c
+    #pfr/pfr.c
+    #psaux/psaux.c
+    #pshinter/pshinter.c
+    #psnames/psnames.c
+    raster/raster.c
+    sfnt/sfnt.c
+    smooth/smooth.c
+    truetype/truetype.c
+    #type1/type1.c
+    #type42/type42.c
+    #winfonts/winfnt.c
+    )

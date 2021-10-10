@@ -1,0 +1,111 @@
+;CVD  Tuesday, April 24, 2012  15:31:22
+;OPTION SET START
+
+;Interface Option
+CPUTYPE FA626
+OPTION.JTAGCLOCK 6.000000Mhz
+OPTION.EnReset ON
+OPTION.TRST ON
+OPTION.ResBreak OFF
+OPTION.WaitReset OFF
+OPTION.CR ON
+OPTION.RegisterInit OFF
+OPTION.PCZero ON
+OPTION.RTCK OFF
+OPTION.DACR OFF
+OPTION.BigEndian OFF
+OPTION.SerialWire OFF
+OPTION.Update ON
+OPTION.DevName evb_ks17c4000
+OPTION.DisMode FA626
+OPTION.SpeedUp ON
+OPTION.InterruptRESet
+OPTION.InterruptRESet
+
+;Debugger Setting
+DEBUG.AutoCompletedisable OFF
+DEBUG.CHeckTarGetSleepMode OFF
+DEBUG.DownLoadBuffer 2048.
+DEBUG.DownloadMode OFF
+DEBUG.ElapsedTimeMaxCount 50.
+DEBUG.HideDebugWindow OFF
+DEBUG.InternallyUsedHWBreakpoint ON
+DEBUG.LoadAsyncMode ON
+DEBUG.MemorySegmentSize S512
+DEBUG.RecordElapsedTimes OFF
+DEBUG.RecordRegister ON
+DEBUG.ReferenceVoltage VREF
+DEBUG.RefreshInterval 500ms
+DEBUG.ResetAllOption OFF
+DEBUG.ResponseTimeOut 3000ms
+DEBUG.SetNTRSTLow OFF
+DEBUG.ShowDebugWindowTop ON
+DEBUG.ShowJumpAddress OFF
+DEBUG.ShowSourceLineInCallStack OFF
+DEBUG.VarToolTipRESet
+DEBUG.VarToolTipFormat HEX
+DEBUG.PollingTime 20ms
+DEBUG.GostopBPTime 0ms
+
+;Processor Properties Setting
+
+;Vector Catch Setting
+PROC.VCReset ON
+PROC.VCUndefine ON
+PROC.SWI OFF
+PROC.Pabort ON
+PROC.Dabort ON
+PROC.Reserved OFF
+PROC.IRQ OFF
+PROC.FIQ OFF
+PROC.VectorCatch ON
+
+;Semihosting Setting
+PROC.SemiHost.Vector 0x00000008
+PROC.SemiHost.Heapinfo 0x00080000 0x00001000
+PROC.SemiHost.Stackinfo 0x00080000 0x00001000
+PROC.SemiHost.Args 
+
+;Terminal Setting
+PROC.TERM.Method None
+PROC.TERM.MODE VT100
+
+;Serialport Setting
+PROC.SERialport COM1 38400 8 NONE 1STOP NONE
+
+;Memory Map Setting
+CFlash.Device Am29LV800BB
+CFlash.DownLoad OFF
+CFlash.ERASEtype CHIP
+CFlash.DataWidth W16
+CFlash.Base 0x00000000
+CFlash.Size 0x00000000
+CFlash.BaseTwo 0x00000000
+CFlash.Size 0x00000000
+CFlash.RamBase 0x00000000
+CFlash.RamSize 0x00000000
+CFlash.BLANKCheck OFF
+CFlash.Verify OFF
+CFlash.UserOption OFF
+CFlash.KeepFlashLoaderMemory OFF
+CFlash.SectorRESET
+MemMap.MemRangeRESET
+MemMap.MemRange 0xC0000000--0xD0000000 ReadWrite W16
+MemMap.MemBufMode MIX
+MemMap.MemBufSaveoption OFF
+MemMap.MemBufRangeRESET
+;OPTION SET END
+
+;Source Path Setting
+;SourcePathReset
+;AddSourcePath ${PROJECT_SOURCE_DIR}
+SetDirSourcePath ${PROJECT_SOURCE_DIR}
+;OPTION SET END
+
+sys.u
+
+do ${PROJECT_SOURCE_DIR}/sdk/target/debug/${CFG_DBG_ICE_SCRIPT}
+loadimage ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}
+
+b.s BootInit /o
+go

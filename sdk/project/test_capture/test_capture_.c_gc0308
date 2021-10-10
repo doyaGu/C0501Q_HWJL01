@@ -1,0 +1,154 @@
+#include <sys/time.h>
+#include <sys/ioctl.h>
+#include <stdio.h>
+#include <pthread.h>
+#include <unistd.h>
+#include "ite/itp.h"
+#include "capture_s/ite_capture.h"
+#include "capture_module/adv7180.h"
+#include "isp/mmp_isp.h"   //for ISP
+#include "ite/itv.h"       //for VideoInit()
+#include "ite/ith_video.h" //for VideoInit()
+#include "capture_s/capture_types.h"
+
+bool stopTest;
+
+typedef enum SEND_STATE_TAG
+{
+    SEND_BEGIN,
+    SEND_START,
+    SEND_STOP,
+} SEND_STATE;
+
+static void
+VideoInit(
+    void)
+{
+    ithVideoInit(NULL);
+    itv_init();
+}
+
+static void
+VideoExit(
+    void)
+{
+    /* release dbuf & itv */
+    itv_flush_dbuf();
+    itv_deinit();
+
+    /* release decoder stuff */
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+    ithVideoExit();
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+}
+
+void SettingISPAnd_FilpLCD(
+    void)
+{
+    static int         New_state   = 0;
+    static int         Old_state   = 0;
+    static int         state_count = 0;
+    static int         cap_idx     = 0;
+    uint8_t            *dbuf       = NULL;
+    ITV_DBUF_PROPERTY  dbufprop    = {0};
+    ITE_CAP_VIDEO_INFO outdata     = {0};
+
+    //itv_enable_isp_feature(MMP_ISP_DEINTERLACE); //Benson
+
+    dbuf = itv_get_dbuf_anchor();
+    if (dbuf == NULL)
+        return;
+
+    ithCaptureGetNewFrame(&outdata);
+
+    dbufprop.src_w    = outdata.OutWidth;
+    dbufprop.src_h    = outdata.OutHeight;
+    dbufprop.pitch_y  = outdata.PitchY;
+    dbufprop.pitch_uv = outdata.PitchUV;
+    dbufprop.format   = MMP_ISP_IN_YUV422;
+    dbufprop.ya       = outdata.DisplayAddrY;
+    dbufprop.ua       = outdata.DisplayAddrU;
+    dbufprop.va       = outdata.DisplayAddrV;
+    //printf("dbufprop.ya=0x%x,dbufprop.ua=0x%x,dbufprop.va=0x%x,dbufprop.src_w=%d,dbufprop.src_h=%d,dbufprop.pitch_y=%d,dbufprop.pitch_uv=%d\n",dbufprop.ya,dbufprop.ua,dbufprop.va,dbufprop.src_w,dbufprop.src_h,dbufprop.pitch_y,dbufprop.pitch_uv);
+    itv_update_dbuf_anchor(&dbufprop);
+
+    return;
+}
+
+void *TestFunc(void *arg)
+{
+    itpInit();
+    ioctl(ITP_DEVICE_SCREEN, ITP_IOCTL_POST_RESET, NULL);
+    ioctl(ITP_DEVICE_BACKLIGHT, ITP_IOCTL_RESET, NULL);
+
+    ioctl(ITP_DEVICE_BACKLIGHT, ITP_IOCTL_ON, NULL);
+
+    while (!stopTest)
+    {
+        ITE_CAP_HANDLE      capHandle     = {0};
+        uint16_t            bSignalStable = 0;
+        uint8_t             *startaddr    = NULL;
+        struct  timeval     start;
+        struct  timeval     end;
+        unsigned long       diff;
+        uint32_t            size;
+        SEND_STATE          gState = SEND_BEGIN;
+        CaptureModuleDriver GC0308;//ADV7180;
+        sleep(3);
+
+        size      = CAP_MEM_BUF_HEIGHT * CAP_INPUT_MAX_HEIGHT;
+#ifndef _WIN32
+        startaddr = (uint8_t *)memalign(64, size); //64 bit aligen
+#else
+        startaddr = calloc(1, size);
+#endif
+
+        VideoInit();
+
+        do
+        {
+            switch (gState)
+            {
+            case SEND_BEGIN:
+
+                ithCap_CreateHandle(&capHandle, startaddr);
+
+                GC0308 = (CaptureModuleDriver)GC0308CaptureModuleDriver_Create();
+                ithCaptureSetModule(GC0308);
+
+                //malloc_stats();
+                usleep(1000 * 1000 * 3);
+                //bSignalStable = mmpCapDeviceIsSignalStable();
+                //if (!bSignalStable)
+                //{
+                //    printf("Capture device not stable!!\n");
+                //}
+                printf("ith9850CaptureRun\n");
+                ithCaptureRun();
+                gettimeofday(&start, NULL);
+                gState = SEND_START;
+                break;
+
+            case SEND_START:
+                SettingISPAnd_FilpLCD();
+                mmpDumpReg();
+                gettimeofday(&end, NULL);
+                diff = (end.tv_sec) - (start.tv_sec);
+                if (diff >= 10)
+                {
+                    printf("get frame\n");
+                    gState = SEND_STOP;
+                }
+                break;
+
+            case SEND_STOP:
+                printf("ith9850CaptureTerminate\n");
+                ithCap_DestroyHandle(&capHandle);
+                usleep(1000 * 1000 * 3);
+                gState = SEND_BEGIN;
+                break;
+            }
+        } while (!stopTest);
+    }
+    return NULL;
+}

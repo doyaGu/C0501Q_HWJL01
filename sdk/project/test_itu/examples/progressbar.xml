@@ -1,0 +1,67 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6100.27970, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6100.27970, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="TransferAlpha">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Object type="GUIDesigner.ProgressBarWidget, GUIDesigner, Version=1.0.6100.27970, Culture=neutral, PublicKeyToken=null" name="ProgressBar1" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="Orientation">Horizontal</Property>
+      <Property name="Minimum">0</Property>
+      <Property name="Maximum">100</Property>
+      <Property name="Step">1</Property>
+      <Property name="Value">0</Property>
+      <Property name="GradientColor">Red</Property>
+      <Property name="GradientMode">BackwardDiagonal</Property>
+      <Property name="ValueTarget">Text1</Property>
+      <Property name="Hided">False</Property>
+      <Property name="BackColor">MenuHighlight</Property>
+      <Property name="FlatAppearance">
+        <Property name="BorderColor">WindowFrame</Property>
+        <Property name="MouseDownBackColor">Highlight</Property>
+        <Property name="MouseOverBackColor">Transparent</Property>
+      </Property>
+      <Property name="Location">97, 215</Property>
+      <Property name="Name">ProgressBar1</Property>
+      <Property name="Size">422, 51</Property>
+    </Object>
+    <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6100.27970, Culture=neutral, PublicKeyToken=null" name="Text1" children="Controls">
+      <Property name="Text1" />
+      <Property name="Text2" />
+      <Property name="Text3" />
+      <Property name="Text4" />
+      <Property name="Text5" />
+      <Property name="Text6" />
+      <Property name="Text7" />
+      <Property name="FontIndex">0</Property>
+      <Property name="Hided">False</Property>
+      <Property name="TextAlign">TopCenter</Property>
+      <Property name="Text">Text1</Property>
+      <Property name="Font">Calibri, 30pt</Property>
+      <Property name="Location">550, 215</Property>
+      <Property name="Name">Text1</Property>
+      <Property name="Size">154, 51</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

@@ -1,0 +1,23 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+config BUILD_EXOSIP2
+	def_bool y if BUILD_MEDIASTREAMER2
+
+config BUILD_FFMPEG
+	def_bool y if (BUILD_MEDIASTREAMER2 && LCD_ENABLE)
+
+config BUILD_LWIP
+	def_bool y if BUILD_MEDIASTREAMER2
+
+config BUILD_SDL
+	def_bool y if BUILD_MEDIASTREAMER2
+
+config BUILD_SPEEX
+	def_bool y if BUILD_MEDIASTREAMER2
+
+config BUILD_ORTP
+	def_bool y if BUILD_MEDIASTREAMER2
+	

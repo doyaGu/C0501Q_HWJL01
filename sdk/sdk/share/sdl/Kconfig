@@ -1,0 +1,10 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+config BUILD_OPENVG_RI
+	def_bool y if (BUILD_SDL && OPENVG_SW)
+
+config BUILD_OPENVG
+	def_bool y if (BUILD_SDL && OPENVG_ENABLE && !OPENVG_SW)

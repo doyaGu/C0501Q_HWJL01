@@ -1,0 +1,21 @@
+//SPI NAND Config Format
+//{ name, MID, DID1, DID2, bytesPerPage, pagesPerBlock, totalBlocks, bytesPerSpare},
+//Description of each attribute
+//  name:      string(Max 32bytes)
+//  MID:       Hexformat 0xXX (upper case)
+//  DID1:      Hexformat 0xXX (upper case)
+//  DID2:      Hexformat 0xXX (upper case)
+//  bytesPerPage:   integer
+//  pagesPerBlock:  integer
+//  totalBlocks:    integer
+//  bytesPerSpare:  integer
+
+{ "GD_5F1GQ4UC", 0xC8, 0xB1, 0x48, 1, 2048, 64, 1024, 128 },
+{ "GD_5F2GQ4UC", 0xC8, 0xB2, 0x48, 1, 2048, 64, 2048, 128 },
+{ "GD_5F4GQ4UC", 0xC8, 0xB4, 0x68, 1, 4096, 64, 2048, 256 },
+{ "GD_5F1GQ4UB", 0xC8, 0xD1, 0x00, 1, 2048, 64, 1024, 128 },
+{ "GD_5F2GQ4UB", 0xC8, 0xD2, 0x00, 1, 2048, 64, 2048, 128 },
+{ "MX35LF1GE4AB", 0xC2, 0x12, 0x00, 2, 2048, 64, 1024, 128 },
+{ "MX35LF2GE4AB", 0xC2, 0x22, 0x00, 2, 2048, 64, 2048, 128 },
+{ "W25N01GV", 0xEF, 0xAA, 0x21, 2, 2048, 64, 1024, 128 },
+{ "PN26G01AWSIUG", 0xA1, 0xE1, 0x00, 4, 2048, 64, 1024, 128 },

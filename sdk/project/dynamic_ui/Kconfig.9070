@@ -1,0 +1,222 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config DYNAMIC_UI
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9079
+    def_bool y
+
+config RAM_INIT_SCRIPT
+    default "IT9079A1_Initial_DDR2_Mem_tiling_pitch2048_360MHZ.scr"
+
+config DCPS_ENABLE
+    def_bool y
+
+config FONT_FILENAME
+    default "DroidSansMono.ttf"
+
+config BACKLIGHT_ENABLE
+    def_bool y
+
+config BACKLIGHT_DUTY_CYCLES
+    default "95, 92, 88, 82, 75, 65, 55, 40, 25, 5"
+
+config BACKLIGHT_DEFAULT_DUTY_CYCLE
+    default "5"
+
+config LCD_ENABLE
+    def_bool y
+
+config LCD_HEIGHT
+    default "480"
+
+config LCD_INIT_SCRIPT
+    default "lcd_800_480_innolux_7inch_888.txt.in"
+
+config CMDQ_ENABLE
+    def_bool y
+
+config M2D_ENABLE
+    def_bool y
+
+config KEYPAD_ENABLE
+    def_bool y
+
+config KEYPAD_MODULE
+    default "itp_keypad_it7236.c"
+
+config KEYPAD_MAPPING_TABLE
+    default "keypad_doorbell_indoor.inc"
+
+config TOUCH_KEYPAD_SET_KEY_NUMBER_ENABLE
+    def_bool y
+
+config TOUCH_KEY_NUM
+    default "5"
+
+config GPIO_KEYPAD
+    default "23"
+
+config TOUCH_KEY_USE_I2C
+    def_bool y
+    
+config NOR_ENABLE
+    def_bool y
+
+config NOR_CACHE_SIZE
+    default "0x80000"
+
+config NOR_RESERVED_SIZE
+    default "0x300000"
+
+config NOR_PARTITION0
+    def_bool y
+
+config NOR_PARTITION0_SIZE
+    default "0x0"
+
+config USB0_ENABLE
+    def_bool y
+
+config MSC_ENABLE
+    def_bool y
+
+config FS_FAT
+    def_bool y
+
+config RTC_ENABLE
+    def_bool y
+
+config I2C0_ENABLE
+    default y
+
+config TOUCH_ENABLE
+    def_bool y
+
+config TOUCH_MODULE
+    default "it7260"
+
+config TOUCH_X_MAX_VALUE
+    default "0x31F"
+
+config TOUCH_Y_MAX_VALUE
+    default "0x1DF"
+
+config GPIO_TOUCH_INT
+    default "13"
+
+config GPIO_TOUCH_WAKE
+    default "-1"
+
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "5"
+
+config GPIO_UART1_RX
+    default "-1"
+
+config TASK_DRIVE_PROBE
+    def_bool y
+
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9079A1_Initial_DDR2_Mem_tiling_pitch2048_320MHZ.txt"
+
+config ITU_FT_CACHE_ENABLE
+    def_bool y
+
+config BUILD_INIPARSER
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+config BUILD_UPGRADE
+    def_bool y
+
+######################################################################
+# Start of bootloader setting
+######################################################################
+config BOOTLOADER_ENABLE
+    def_bool n
+
+if BOOTLOADER_ENABLE && LCD_ENABLE
+
+config LCD_INIT_ON_BOOTING 
+    def_bool y
+
+
+config LCD_BOOT_BITMAP
+    default "logo.bmp"
+
+endif
+
+if BOOTLOADER_ENABLE
+
+config UPGRADE_BOOTLOADER
+    def_bool y
+
+config UPGRADE_IMAGE
+    def_bool y
+
+config UPGRADE_IMAGE_POS
+    default "0x80000"
+
+config UPGRADE_DATA
+    def_bool y
+
+config UPGRADE_OPEN_FILE
+    def_bool y
+
+config UPGRADE_PARTITION
+    def_bool y
+
+config UPGRADE_DELETE_PKGFILE_AFTER_FINISH
+    def_bool y
+
+config UPGRADE_NOR_IMAGE
+    def_bool y
+
+config UPGRADE_NOR_IMAGE_SIZE
+    default "0x1000000"
+
+config BL_LCD_CONSOLE
+    def_bool y
+
+config BL_ERR
+    def_bool y
+
+config BL_WARN
+    def_bool y
+
+config BL_INFO
+    def_bool y
+
+config BL_DBG
+    def_bool y
+
+endif
+######################################################################
+# End of bootloader setting
+######################################################################
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

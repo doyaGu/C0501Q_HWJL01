@@ -1,0 +1,7 @@
+#ifndef ITP_MEMLEAK_H
+#define ITP_MEMLEAK_H
+
+#include "$ENV{CFG_VC_INC_PATH}/stdlib.h"
+#include "$ENV{CFG_VC_INC_PATH}/string.h"
+
+#endif // ITP_MEMLEAK_H

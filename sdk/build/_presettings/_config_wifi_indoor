@@ -1,0 +1,9 @@
+#
+# Presetting for wifi indoor only
+#
+CFG_USB1_ENABLE=y
+CFG_NET_ETHERNET=n
+CFG_NET_WIFI=y
+CFG_NET_WIFI_MGR=y
+CFG_NET_WIFI_8188EUS=y
+CFG_NET_WIFI_WPA=y

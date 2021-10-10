@@ -1,0 +1,9 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+${PROJECT_SOURCE_DIR}/tool/bin/libCodeSize C:/ITEGCC/BIN/sm32-elf-readelf.exe ${CMAKE_BINARY_DIR}/lib/sm32 ${CMAKE_BINARY_DIR}/project/${CMAKE_PROJECT_NAME}/${CMAKE_PROJECT_NAME}.symbol ${CMAKE_PROJECT_NAME}_CodeSize.txt
+
+pause

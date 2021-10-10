@@ -1,0 +1,48 @@
+
+# For JP2 interface
+#target jtag jtag://localhost:8888
+#set $pc=0x100
+
+# For JTAG interface
+target remote localhost:3333
+set $pc=0x100
+set *(short*)0xc020168c=1
+
+# Setup the gdb to stop at trap, alignment, bus error, and illegal instructions
+# spr dsr 0x2062
+
+define call-stack
+  if $pc < 0x1000
+    set $pc = $EPCR
+  end
+  where
+  frame 0
+end
+
+define watch-store-ea
+  spr dcr0 0x62
+  spr dmr1 0
+  spr dmr2 0x2000
+  spr dvr0 $arg0
+end
+
+define watch-store-data
+  spr dcr0 0xa2
+  spr dmr1 0
+  spr dmr2 0x2000
+  spr dvr0 $arg0
+end
+
+define watch-load-ea
+  spr dcr0 0x42
+  spr dmr1 0
+  spr dmr2 0x2000
+  spr dvr0 $arg0
+end
+
+define watch-load-data
+  spr dcr0 0x82
+  spr dmr1 0
+  spr dmr2 0x2000
+  spr dvr0 $arg0
+end

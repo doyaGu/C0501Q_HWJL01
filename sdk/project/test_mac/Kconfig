@@ -1,0 +1,82 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9856
+	def_bool y
+	
+config MEMDBG_ENABLE
+	def_bool n
+
+config ROM_COMPRESS
+	def_bool n
+
+config NET_ENABLE
+	def_bool y
+
+config NET_ETHERNET
+	def_bool y
+
+config DEF_NET_RTL8304MB
+	def_bool y
+
+config NET_ETHERNET_LINK_INTR
+	default y
+
+config GPIO_ETHERNET
+	default "34, 35, 36, 90, 91, 92, 93, 94, 95, 96"
+
+config GPIO_ETHERNET_LINK
+	default "33"
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHZ.txt"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+
+menu "MAC Test"
+
+choice
+	prompt "Test App"
+	default TEST_LB_1
+
+config TEST_LB_1
+	bool "Loopback test APP1"
+	help
+	    Wait each packet complete.
+
+config TEST_LB_2
+	bool "Loopback test APP2"
+	help
+	    Don't wait packet complete.
+
+config TEST_LWIP
+	bool "Test by ping"
+	help
+	    Ping by another PC and our IP is 192.168.1.1
+
+endchoice
+
+
+config ETH_MODE
+    string "Loopback mode"
+    depends on (TEST_LB_1 || TEST_LB_2)
+    default "2"
+    help
+        ITE_ETH_MAC_LB		 = 2
+        ITE_ETH_PCS_LB_10	 = 3
+        ITE_ETH_PCS_LB_100	 = 4
+        ITE_ETH_MDI_LB_10	 = 5
+        ITE_ETH_MDI_LB_100	 = 6
+
+endmenu
+
+

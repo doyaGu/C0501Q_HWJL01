@@ -1,0 +1,33 @@
+INCLUDE_DIRECTORIES(
+    ${SMEDIA_INC_DIRS}
+    )
+
+SET(WMA_SRCS
+    asf.c
+    bitstream.c
+    divdi3.c
+    fft.c
+    freqinfo.c
+    main.c
+    mdct.c
+    wmadec.c
+    wmafixed.c
+)
+
+IF(ENABLE_CODECS_PLUGIN)
+    ADD_EXECUTABLE(wmadecode.plugin
+        ${WMA_SRCS}
+    )
+
+    ADD_CUSTOM_COMMAND(
+        TARGET wmadecode.plugin
+        POST_BUILD
+        COMMAND ${CMAKE_OBJCOPY}
+                -O binary ${CMAKE_CURRENT_BINARY_DIR}/wmadecode.plugin ${LIBRARY_OUTPUT_PATH}/wmadec.bin
+    )
+ELSE(ENABLE_CODECS_PLUGIN)
+    ADD_LIBRARY(wmadecode STATIC
+        ${WMA_SRCS}
+    )
+ENDIF(ENABLE_CODECS_PLUGIN)
+

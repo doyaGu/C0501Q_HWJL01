@@ -1,0 +1,19 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config ALT_CPU_ENABLE
+    bool
+    default y
+
+config DEF_CPU_SM32
+	def_bool y
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

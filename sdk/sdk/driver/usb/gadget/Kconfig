@@ -1,0 +1,236 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+choice
+    prompt "USB Device module"
+    depends on USB_DEVICE
+    default USB_DEVICE_USB0 if DEF_USB_DEVICE_USB0
+    default USB_DEVICE_USB1 if DEF_USB_DEVICE_USB1
+    default USB_DEVICE_USB0
+
+config USB_DEVICE_USB0
+    bool "use USB0 module"
+    depends on USB0_ENABLE
+    help
+        use USB0 module
+    help_cht
+        使用 USB0 的設備端功能。
+    help_chs
+        使用 USB0 的设备端功能。
+
+config USB_DEVICE_USB1
+    bool "use USB1 module"
+    depends on USB1_ENABLE
+    help
+        use USB1 module
+    help_cht
+        使用 USB1 的設備端功能。
+    help_chs
+        使用 USB1 的设备端功能。
+
+endchoice
+
+#
+# USB Gadget Drivers
+#
+choice
+    bool "USB Gadget Drivers"
+    depends on USB_DEVICE
+    default USBD_FILE_STORAGE
+
+config USBD_FILE_STORAGE
+    bool "usb mass storage"
+    depends on USB_DEVICE
+    help
+        The File Storage Gadget acts as a USB Mass Storage disk drive.
+    help_cht
+        設備端功能為大容量儲存設備。
+    help_chs
+        设备端功能为大容量储存设备。
+
+config USBD_IDB
+   bool "iTE Development Bridge"
+   depends on USBD_FILE_STORAGE
+   default n
+   help
+        Other gadget driver.
+
+endchoice
+
+
+config USB_VENDOR_ID
+    string "Vendor ID"
+    depends on USB_DEVICE
+    default "0x048D"
+    help
+        Vendor ID (assigned by the USB-IF).
+    help_cht
+        廠商識別碼。
+    help_chs
+        厂商标识符。
+
+config USB_PRODUCT_ID
+    string "Product ID"
+    depends on USB_DEVICE
+    default "0x9070"
+    help
+        Product ID (assigned by the manufacturer).
+    help_cht
+        產品識別碼。
+    help_chs
+        产品标识符。
+
+config USBD_STR_MANUFACTURER
+    string "Manufacturer String"
+    depends on USB_DEVICE
+    default "ITE Tech."
+    help
+        String descriptor describing manufacturer.
+    help_cht
+        製造商名稱字串。
+    help_chs
+        制造商名称字符串。
+
+config USBD_STR_PRODUCT
+    string "Product String"
+    depends on USB_DEVICE
+    default "Castor3"
+    help
+        String descriptor describing product.
+    help_cht
+        產品名稱字串。
+    help_chs
+        产品名称字符串。
+
+config USBD_STR_SERIAL_NUMBER
+    string
+    prompt "Serial Number String" if DEV_DEVELOP
+    depends on USB_DEVICE
+    default "907012344321"
+    help
+        String descriptor describing the device's serial number. Need at least 12 uppercase hexadecimal characters, with a maximum of 126.
+    help_cht
+        序號指標。至少12個大寫16進制字符，最多126個。
+    help_chs
+        序号指标。至少12个大写16进制字符，最多126个。
+
+config USB_DEVICE_DISKS
+    string "USB Device Disks"
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "0, 1"
+    help
+        USB Device Disk Numbers. The maximum count is 4
+
+        SD0       = 0,
+        SD1       = 1,
+        NAND      = 5,
+        NOR       = 6,
+        USB0 MSC0 = 7,
+        USB0 MSC1 = 8,
+        USB0 MSC2 = 9,
+        USB0 MSC3 = 10,
+        USB1 MSC0 = 15,
+        USB1 MSC1 = 16,
+        USB1 MSC2 = 17,
+        USB1 MSC3 = 18,
+        RAM Disk  = 23   => This is just for test only! It shall only has one disk if you choose this ram disk.
+    help_cht
+        指定磁碟號碼。最多可指定4個。可設定的磁碟號碼：
+
+        SD0       = 0,
+        SD1       = 1,
+        NAND      = 5,
+        NOR       = 6,
+        USB0 MSC0 = 7,
+        USB0 MSC1 = 8,
+        USB0 MSC2 = 9,
+        USB0 MSC3 = 10,
+        USB1 MSC0 = 15,
+        USB1 MSC1 = 16,
+        USB1 MSC2 = 17,
+        USB1 MSC3 = 18,
+        RAM Disk  = 23 (此為測試用，且只能指定單一個磁碟)。
+    help_chs
+        指定磁盘号码。最多可指定4个。可设定的磁盘号码：
+
+        SD0       = 0,
+        SD1       = 1,
+        NAND      = 5,
+        NOR       = 6,
+        USB0 MSC0 = 7,
+        USB0 MSC1 = 8,
+        USB0 MSC2 = 9,
+        USB0 MSC3 = 10,
+        USB1 MSC0 = 15,
+        USB1 MSC1 = 16,
+        USB1 MSC2 = 17,
+        USB1 MSC3 = 18,
+        RAM Disk  = 23 (此为测试用，且只能指定单一个磁盘)。
+
+config USBD_LUN_VENDOR_ID
+    string
+    prompt "USB Device Vendor ID" if DEV_DEVELOP
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "'G','e','n','e','r','i','c',' '"
+    help
+        USB Device Vendor ID, need 8 bytes, format is like this: 'G','e','n','e','r','i','c',' '
+    help_cht
+        廠商識別字串，共8個字元，格式為: 'G','e','n','e','r','i','c',' '
+    help_chs
+        厂商标识符串，共8个字符，格式为: 'G','e','n','e','r','i','c',' '
+
+config USBD_LUN0_PRODUCT_ID
+    string
+    prompt "USB Device Product ID at LUN #0" if DEV_DEVELOP
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "'S','t','o','r','a','g','e',' ','I','N','T','E','R','N','A','L'"
+    help
+        USB Device Product ID at LUN #0, need 16 bytes, format is like this: 'S','t','o','r','a','g','e',' ','I','N','T','E','R','N','A','L'
+    help_cht
+        第 0 個磁碟的產品識別字串，共16個字元，格式: 'S','t','o','r','a','g','e',' ','I','N','T','E','R','N','A','L'
+    help_chs
+        第 0 个磁盘的产品标识符串，共16个字符，格式: 'S','t','o','r','a','g','e',' ','I','N','T','E','R','N','A','L'
+
+config USBD_LUN1_PRODUCT_ID
+    string
+    prompt "USB Device Product ID at LUN #1" if DEV_DEVELOP
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "'S','t','o','r','a','g','e',' ','C','A','R','D',' ','1',' ',' '"
+    help
+        USB Device Product ID at LUN #1, need 16 bytes, format is like this: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','1',' ',' '
+    help_cht
+        第 1 個磁碟的產品識別字串，共16個字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','1',' ',' '
+    help_chs
+        第 1 个磁盘的产品标识符串，共16个字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','1',' ',' '
+
+config USBD_LUN2_PRODUCT_ID
+    string
+    prompt "USB Device Product ID at LUN #2" if DEV_DEVELOP
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "'S','t','o','r','a','g','e',' ','C','A','R','D',' ','2',' ',' '"
+    help
+        USB Device Product ID at LUN #2, need 16 bytes, format is like this: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','2',' ',' '
+    help_cht
+        第 2 個磁碟的產品識別字串，共16個字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','2',' ',' '
+    help_chs
+        第 2 个磁盘的产品标识符串，共16个字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','2',' ',' '
+
+config USBD_LUN3_PRODUCT_ID
+    string
+    prompt "USB Device Product ID at LUN #3" if DEV_DEVELOP
+    depends on USB_DEVICE
+    depends on USBD_FILE_STORAGE
+    default "'S','t','o','r','a','g','e',' ','C','A','R','D',' ','3',' ',' '"
+    help
+        USB Device Product ID at LUN #3, need 16 bytes, format is like this: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','3',' ',' '
+    help_cht
+        第 3 個磁碟的產品識別字串，共16個字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','3',' ',' '
+    help_chs
+        第 3 个磁盘的产品标识符串，共16个字元，格式: 'S','t','o','r','a','g','e',' ','C','A','R','D',' ','3',' ',' '

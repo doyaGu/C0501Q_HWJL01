@@ -1,0 +1,27 @@
+var group__ith__reg =
+[
+    [ "ITH_CLEAR_REG_BIT_A", "group__ith__reg.html#ga39ae8603b10e7466fbca985f3cb97acc", null ],
+    [ "ITH_CLEAR_REG_BIT_H", "group__ith__reg.html#ga812e2b9155b69870b5221d1b35a9e769", null ],
+    [ "ITH_READ_REG_A", "group__ith__reg.html#ga09c6f6835f5a5fdc8220b61c2dff9697", null ],
+    [ "ITH_READ_REG_H", "group__ith__reg.html#gaffa290932676ca51790293db65b209cb", null ],
+    [ "ITH_SET_REG_BIT_A", "group__ith__reg.html#ga1cfb9594c18c7e7c976a029b42f635d4", null ],
+    [ "ITH_SET_REG_BIT_H", "group__ith__reg.html#ga6e0f2eb0217a2eadc299b4b90126806a", null ],
+    [ "ITH_WRITE_REG_A", "group__ith__reg.html#gae4fb960492036e4e84f9e45414324a0e", null ],
+    [ "ITH_WRITE_REG_H", "group__ith__reg.html#gabfdcc2586ca9de9f10474f615b2b113c", null ],
+    [ "ITH_WRITE_REG_MASK_A", "group__ith__reg.html#gaa79a92319f928297c284c72f38955867", null ],
+    [ "ITH_WRITE_REG_MASK_H", "group__ith__reg.html#ga622add926b3052c16c6efa612aeed554", null ],
+    [ "ithClearRegBitA", "group__ith__reg.html#ga93595409c4c82b6e3a0002a0eac9298f", null ],
+    [ "ithClearRegBitH", "group__ith__reg.html#gab735bc27f040ac967d59f88110128735", null ],
+    [ "ithReadReg16", "group__ith__reg.html#ga1b076ae35ad869180e37ffac313f89bc", null ],
+    [ "ithReadReg8", "group__ith__reg.html#gab890ae663c48501cf149446f4b619144", null ],
+    [ "ithReadRegA", "group__ith__reg.html#gacb2e07e66bf995c026a2f6078f4ad3a1", null ],
+    [ "ithReadRegH", "group__ith__reg.html#ga791d222e98628cf6bd0de35994c9018d", null ],
+    [ "ithSetRegBitA", "group__ith__reg.html#gad2b7cae924b874d24d8baf63bf1041ae", null ],
+    [ "ithSetRegBitH", "group__ith__reg.html#ga23f9e3928fbb5d00e312103c5f262b54", null ],
+    [ "ithWriteReg16", "group__ith__reg.html#gac8c8a3bf57da7b2bec9a06deab735ab8", null ],
+    [ "ithWriteReg8", "group__ith__reg.html#gada124e775e24879ba065ea02bd45d019", null ],
+    [ "ithWriteRegA", "group__ith__reg.html#ga491a046ba8aac80fc17456b2957332ad", null ],
+    [ "ithWriteRegH", "group__ith__reg.html#gad06c3870368ac46fe00d0e49b320bd09", null ],
+    [ "ithWriteRegMaskA", "group__ith__reg.html#ga79724ba9acb6e9d2c644e6ae23888567", null ],
+    [ "ithWriteRegMaskH", "group__ith__reg.html#ga4daff7445e32e675e70f23b65b90b63b", null ]
+];

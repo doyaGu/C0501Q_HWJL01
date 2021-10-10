@@ -1,0 +1,334 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Background3" children="Controls">
+      <Object type="GUIDesigner.DigitalClockWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="DigitalClock1" children="Controls">
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text2" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text2</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">29, 40</Property>
+          <Property name="Name">Text2</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text4" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text4</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">136, 40</Property>
+          <Property name="Name">Text4</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text5" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text5</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">243, 40</Property>
+          <Property name="Name">Text5</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text6" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text6</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">29, 89</Property>
+          <Property name="Name">Text6</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text7" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text7</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">136, 89</Property>
+          <Property name="Name">Text7</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.SpriteWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Sprite1" children="Controls">
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text8" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Sun</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text8</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text9" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Mon</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text9</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text10" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Tue</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text10</Property>
+            <Property name="Size">43, 23</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text11" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Wed</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text11</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text12" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Thu</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text12</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text13" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Fri</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text13</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text14" children="Controls">
+            <Property name="Text1" />
+            <Property name="Text2" />
+            <Property name="Text3" />
+            <Property name="Text4" />
+            <Property name="Text5" />
+            <Property name="Text6" />
+            <Property name="Text7" />
+            <Property name="FontIndex">0</Property>
+            <Property name="Bold">False</Property>
+            <Property name="BoldSize">1</Property>
+            <Property name="Hided">False</Property>
+            <Property name="Text">Sat</Property>
+            <Property name="Font">Calibri, 30pt</Property>
+            <Property name="Location">0, 0</Property>
+            <Property name="Name">Text14</Property>
+            <Property name="Size">107, 49</Property>
+          </Object>
+          <Property name="Delay">10</Property>
+          <Property name="Repeat">False</Property>
+          <Property name="Playing">False</Property>
+          <Property name="Progress">False</Property>
+          <Property name="Action01">None,Stopped,,</Property>
+          <Property name="Action02">None,Stopped,,</Property>
+          <Property name="Action03">None,Stopped,,</Property>
+          <Property name="Action04">None,Stopped,,</Property>
+          <Property name="Action05">None,Stopped,,</Property>
+          <Property name="Action06">None,Stopped,,</Property>
+          <Property name="Action07">None,Stopped,,</Property>
+          <Property name="Action08">None,Stopped,,</Property>
+          <Property name="Action09">None,Stopped,,</Property>
+          <Property name="Action10">None,Stopped,,</Property>
+          <Property name="Action11">None,Stopped,,</Property>
+          <Property name="Action12">None,Stopped,,</Property>
+          <Property name="Action13">None,Stopped,,</Property>
+          <Property name="Action14">None,Stopped,,</Property>
+          <Property name="Action15">None,Stopped,,</Property>
+          <Property name="Hided">False</Property>
+          <Property name="Location">373, 40</Property>
+          <Property name="Name">Sprite1</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text15" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text15</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">243, 89</Property>
+          <Property name="Name">Text15</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6346.28133, Culture=neutral, PublicKeyToken=null" name="Text16" children="Controls">
+          <Property name="Text1" />
+          <Property name="Text2" />
+          <Property name="Text3" />
+          <Property name="Text4" />
+          <Property name="Text5" />
+          <Property name="Text6" />
+          <Property name="Text7" />
+          <Property name="FontIndex">0</Property>
+          <Property name="Bold">False</Property>
+          <Property name="BoldSize">1</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TextAlign">TopCenter</Property>
+          <Property name="Text">Text16</Property>
+          <Property name="Font">Calibri, 30pt</Property>
+          <Property name="Location">350, 89</Property>
+          <Property name="Name">Text16</Property>
+          <Property name="Size">107, 49</Property>
+        </Object>
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="AMPM">True</Property>
+        <Property name="YearTarget">Text2</Property>
+        <Property name="MonthTarget">Text4</Property>
+        <Property name="DayTarget">Text5</Property>
+        <Property name="HourTarget">Text6</Property>
+        <Property name="MinuteTarget">Text7</Property>
+        <Property name="SecondTarget">Text16</Property>
+        <Property name="WeekTarget">Sprite1</Property>
+        <Property name="ColonTarget">Text15</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Transparent</Property>
+        <Property name="Location">141, 141</Property>
+        <Property name="Name">DigitalClock1</Property>
+        <Property name="Size">549, 229</Property>
+      </Object>
+      <Property name="PixelFormat">ARGB8888</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="TransferAlpha">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Stretch">False</Property>
+      <Property name="Angle">0</Property>
+      <Property name="TransformType">None</Property>
+      <Property name="TransformX">100</Property>
+      <Property name="TransformY">100</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background3</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

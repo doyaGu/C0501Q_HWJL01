@@ -1,0 +1,210 @@
+﻿#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CTRLBOARD
+    bool
+    default y
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9852
+    def_bool y
+
+config DEF_CHIP_REV_A0
+    def_bool y  
+
+config RAM_SIZE
+    default "0x1000000"
+
+config RAM_INIT_SCRIPT
+    default "IT9850A0_360MHz.scr"
+
+config WATCHDOG_ENABLE
+    def_bool y
+
+config DCPS_ENABLE
+    def_bool y
+
+config RS485_0_ENABLE
+    def_bool y
+    
+config USB0_ENABLE
+    def_bool y
+
+config MSC_ENABLE
+    def_bool y
+
+config RTC_ENABLE
+    def_bool y
+
+config I2C0_ENABLE
+    def_bool y
+
+config DEF_IIC0_GPIO_CONFIG_1
+    def_bool y
+
+config POWER_SAVING_ENABLE
+    def_bool y
+
+config DEF_POWER_STANDBY
+    def_bool y
+
+config POWER_STANDBY_CPU_FREQ_RATIO
+    default "15"
+
+config POWER_STANDBY_BUS_FREQ_RATIO
+    default "30"
+
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "4"
+
+config GPIO_UART1_RX
+    default "-1"
+
+
+config SPI0_MOSI_GPIO
+    default "18"
+
+config SPI0_MISO_GPIO
+    default "19"
+
+config SPI0_CLOCK_GPIO
+    default "20"
+
+config SPI0_CHIP_SEL_GPIO
+    default "14"
+
+config GPIO_BACKLIGHT_PWM
+    default "64"
+
+config GPIO_EXPANDER_ENABLE
+    default n
+
+config NET_ENABLE
+    def_bool n
+
+config NET_ETHERNET
+    def_bool n
+
+config TASK_DRIVE_PROBE
+    def_bool y
+
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHz.txt"
+
+config DBG_STATS
+    def_bool y
+
+config DBG_STATS_HEAP
+    def_bool y
+
+config DEF_BUILD_MINSIZEREL
+    def_bool y
+
+config SYSTEM_NAME
+    default "ITE Display Control Board"
+
+config ITU_FT_CACHE_ENABLE
+    def_bool y
+
+config ITU_FT_CACHE_SIZE
+    default "0xFA000"
+
+config GCC_LTO
+    def_bool y
+
+config BUILD_AUDIO_MGR
+    def_bool y
+
+config BUILD_INIPARSER
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+config BUILD_UPGRADE
+    def_bool y
+
+######################################################################
+# Start of bootloader setting
+######################################################################
+config BOOTLOADER_ENABLE
+    def_bool n
+
+if BOOTLOADER_ENABLE && LCD_ENABLE
+
+config LCD_BOOT_BITMAP
+    default "logo.bmp"
+
+endif
+
+if BOOTLOADER_ENABLE
+
+config UPGRADE_BOOTLOADER
+    def_bool y
+
+config UPGRADE_IMAGE
+    def_bool y
+
+config UPGRADE_IMAGE_POS
+    default "0x80000"
+
+config UPGRADE_DATA
+    def_bool y
+
+config UPGRADE_PUBLIC
+    def_bool y
+
+config UPGRADE_OPEN_FILE
+    def_bool y
+
+config UPGRADE_PARTITION
+    def_bool y
+
+config UPGRADE_DELETE_PKGFILE_AFTER_FINISH
+    def_bool y
+
+config UPGRADE_NOR_IMAGE
+    def_bool y
+
+config UPGRADE_NOR_IMAGE_SIZE
+    default "0x1000000"
+
+config BL_LCD_CONSOLE
+    def_bool y
+
+config BL_ERR
+    def_bool y
+
+config BL_WARN
+    def_bool y
+
+config BL_INFO
+    def_bool y
+
+config BL_DBG
+    def_bool y
+
+endif
+
+######################################################################
+# End of bootloader setting
+######################################################################
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+

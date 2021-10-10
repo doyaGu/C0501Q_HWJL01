@@ -1,0 +1,17 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+source "$CMAKE_SOURCE_DIR/sdk/share/dhcps/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/eXosip2/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/ffmpeg/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/itc/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/itu/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/linphone/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/mediastreamer2/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/sdl/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/sdl_image/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/sdl_ttf/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/upgrade/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/share/xml2/Kconfig"

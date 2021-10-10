@@ -1,0 +1,8 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+config BUILD_ZLIB
+	def_bool y if BUILD_XML2
+

@@ -1,0 +1,36 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_UPGRADE
+    bool
+    default y
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    #select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config BUILD_UPGRADE
+	def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+menu "Upgrade Test"
+
+choice
+	prompt "Test App"
+	default TEST_CHECKCRC
+
+config TEST_CHECKCRC
+	bool "CHECKCRC"
+
+endchoice
+
+endmenu

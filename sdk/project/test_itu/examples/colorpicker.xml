@@ -1,0 +1,54 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Layer1" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background2" children="Controls">
+      <Object type="GUIDesigner.ColorPickerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="ColorPicker3" children="Controls">
+        <Property name="PixelFormat">ARGB8888</Property>
+        <Property name="Compress">True</Property>
+        <Property name="External">False</Property>
+        <Property name="ShowingEffect">None</Property>
+        <Property name="HidingEffect">None</Property>
+        <Property name="GradientColor">Blue</Property>
+        <Property name="GradientMode">Horizontal</Property>
+        <Property name="Action01">Function,Select,OnSelection,</Property>
+        <Property name="Action02">None,Select,,</Property>
+        <Property name="Action03">None,Select,,</Property>
+        <Property name="Action04">None,Select,,</Property>
+        <Property name="Action05">None,Select,,</Property>
+        <Property name="Action06">None,Select,,</Property>
+        <Property name="Action07">None,Select,,</Property>
+        <Property name="Action08">None,Select,,</Property>
+        <Property name="Action09">None,Select,,</Property>
+        <Property name="Action10">None,Select,,</Property>
+        <Property name="Action11">None,Select,,</Property>
+        <Property name="Action12">None,Select,,</Property>
+        <Property name="Action13">None,Select,,</Property>
+        <Property name="Action14">None,Select,,</Property>
+        <Property name="Action15">None,Select,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="BackColor">Red</Property>
+        <Property name="Location">20, 120</Property>
+        <Property name="Name">ColorPicker3</Property>
+        <Property name="Size">760, 200</Property>
+      </Object>
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background2</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Layer1</Property>
+  </Object>
+</ITU>

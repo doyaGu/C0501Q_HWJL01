@@ -1,0 +1,105 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9920
+	def_bool y
+	
+config MEMDBG_ENABLE
+	def_bool n
+
+config ROM_COMPRESS
+	def_bool n
+
+config NET_ENABLE
+	def_bool y
+
+config NET_ETHERNET
+	def_bool y
+
+config DEF_NET_RTL8211F
+	def_bool y
+
+config NET_ETHERNET_PHY_ADDR
+	default "1"
+
+config NET_ETHERNET_LINK_INTR
+	default n
+
+config GPIO_ETHERNET
+	default "25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39"
+
+config GPIO_ETHERNET_LINK
+	default "76"
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHZ.txt"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+
+menu "MAC Test"
+
+choice
+	prompt "Test App"
+	default TEST_WINDOW
+
+config TEST_WINDOW
+	bool "Find window test APP"
+	help
+	    Scan clock and delay.
+
+config TEST_LB_1
+	bool "Loopback test APP1"
+	help
+	    Wait each packet complete.
+
+config TEST_LB_2
+	bool "Loopback test APP2"
+	help
+	    Don't wait packet complete.
+
+config TEST_LWIP
+	bool "Test by ping"
+	help
+	    Ping by another PC and our IP is 192.168.1.1
+
+config TEST_MULTICAST
+	bool "Multicast function test"
+	depends on (!CHIP_PKG_IT9079 && !CHIP_PKG_IT9910 && !CHIP_PKG_IT9852 && !CHIP_PKG_IT9854 && !CHIP_PKG_IT9856)
+	help
+	    Test multicast feature for gmac.
+
+config TEST_JUMBO
+	bool "Fumbo frame test"
+	depends on (!CHIP_PKG_IT9079 && !CHIP_PKG_IT9910 && !CHIP_PKG_IT9852 && !CHIP_PKG_IT9854 && !CHIP_PKG_IT9856)
+	help
+	    Test jumbo frame for gmac.
+
+
+endchoice
+
+
+config ETH_MODE
+    string "Loopback mode"
+    depends on (!TEST_LWIP)
+    default "4"
+    help
+				ITE_ETH_MAC_LB         = 2
+				ITE_ETH_PCS_LB_10      = 3
+				ITE_ETH_PCS_LB_100     = 4
+				ITE_ETH_PCS_LB_1000    = 5
+				ITE_ETH_MDI_LB_10      = 6
+				ITE_ETH_MDI_LB_100     = 7
+				ITE_ETH_MDI_LB_1000    = 8
+				ITE_ETH_MAC_LB_1000    = 9
+endmenu
+
+

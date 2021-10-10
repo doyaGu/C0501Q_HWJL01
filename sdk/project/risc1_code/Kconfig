@@ -1,0 +1,59 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CODEC
+    bool
+    default n
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config DEF_CPU_SM32
+	def_bool y
+
+config GCC_LTO
+        def_bool n
+
+config AUDIO_ENABLE
+	default n
+
+config AUDIO_DAC_MODULE
+	default "itp_dac_ite9070.c"
+
+config AUDIO_CODEC_AACDEC
+	default n
+
+config AUDIO_CODEC_AMR
+	default n
+
+config AUDIO_CODEC_EAC3DEC
+	default n
+
+config AUDIO_CODEC_MP3DEC
+	default n
+
+config AUDIO_CODEC_WAV
+	default n
+
+config AUDIO_CODEC_WMADEC
+	default n
+
+config AUDIO_CODEC_FLACDEC
+	default n
+
+config RISC_TS_DEMUX_PLUGIN
+	default n
+
+config AUDIO_CODEC_SBC
+	default n
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

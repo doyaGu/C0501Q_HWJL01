@@ -1,0 +1,10 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+rem glamomem -t glamomem.dat -i -q
+rem glamomem -t glamomem.dat -l ${CMAKE_PROJECT_NAME}.bin
+glamomem -t glamomem.dat -q -e ${PROJECT_SOURCE_DIR}/sdk/target/debug/fa626/JTAG_Switch.txt
+openocd -f ${PROJECT_SOURCE_DIR}/sdk/target/debug/fa626/fa626.cfg

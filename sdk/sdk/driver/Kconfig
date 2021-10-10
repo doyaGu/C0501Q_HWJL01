@@ -1,0 +1,6 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+source "$CMAKE_SOURCE_DIR/sdk/driver/ith/Kconfig"
+source "$CMAKE_SOURCE_DIR/sdk/driver/itp/Kconfig"

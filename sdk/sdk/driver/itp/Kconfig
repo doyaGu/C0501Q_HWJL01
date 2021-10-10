@@ -1,0 +1,48 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+menu "itp"
+
+config ITP_ERR
+    bool "Error Log"
+    default y
+    help
+        Output error log. RD internal use only.
+    help_cht
+        輸出錯誤訊息。
+    help_chs
+        输出错误讯息。
+
+config ITP_WARN
+    bool "Warning Log"
+    default y
+    help
+        Output warning log. RD internal use only.
+    help_cht
+        輸出警告訊息。
+    help_chs
+        输出警告讯息。
+
+config ITP_INFO
+    bool "Information Log"
+    default y
+    help
+        Output information log. RD internal use only.
+    help_cht
+        輸出資訊訊息。
+    help_chs
+        输出资讯讯息。
+
+config ITP_DBG
+    bool "Debug Log"
+    default n
+    help
+        Output debug log. RD internal use only.
+    help_cht
+        輸出除錯訊息。
+    help_chs
+        输出侦错讯息。
+
+endmenu

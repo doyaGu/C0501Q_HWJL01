@@ -1,0 +1,93 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6065.23718, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6065.23718, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Object type="GUIDesigner.AnimationWidget, GUIDesigner, Version=1.0.6065.23718, Culture=neutral, PublicKeyToken=null" name="Animation1" children="Controls">
+        <Object type="GUIDesigner.IconWidget, GUIDesigner, Version=1.0.6065.23718, Culture=neutral, PublicKeyToken=null" name="Icon2" children="Controls">
+          <Property name="Image">
+            <Binary>iVBORw0KGgoAAAANSUhEUgAAAHcAAAA8CAYAAABcpiUlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEQAACxEBf2RfkQAABAJJREFUeF7t2E1oVFcUB/C8N5NJ0oUfwUA2dtNFwZUbF6K4Mu1CWqFQ6KpjC1XoQnFTrAstfuHCFKW0BII0xVJpSyCFBmsDEmyLIgihrV0ohUDRhVBRFy4K5ZrzZs7k5PQ/b27gvkVPzoMfefd/77kz99yAmL4QgjMKhs4GGDobYOhsgKGzAYbOBhg6G2DobIChswGGzgYYOhtg6GyAobMBhs4GGDobYOhsgKGzAYapqYeCtarzoD6lBsPUxBPml6K1is7faoO9yw3X/nXUh6IZoE+pwTA1OsvcP4617hb3KiUYpkaH+eFZ5trMXe7s08y1mbvc7x5lrs3c5U4/zEsdnshCf6MvvLovg/Or0e3zYr4H0etoXEaujUE1ukdVgGFqdJiv7+eluFHklWYG18Tq9nnXH6/rOifpdTymn4zGnMnaGFSne1QFGKZGh/lysVaKm8X2nczhuhjy8/S+mqyTrv29fsU8jxmNiayJRfW6R1WAYWp0mKl7tVLcNNZsNuG6MnoPMvewdSn0U+IM7cN4Xu6H6LpeqEb3qAowTI0OM3mnVoobRU7M7Q2Xn+yH68pcebC+QHvwO+fyO/A8jyX+Dmg978PvPJb1MahG96gKMEyNDvPZQr3Uux/vLA7Nzt/A62Lw58n9utG13/+1oSDndI0m62NQje5RFWCYGh3mwq16qU9/3RK2jm3uNIyM/4zX9sL1M4sbOlBGUD2htfKd16N9ZV0MqtE9qgIMU6PDnPulv9T4jcFwZn5XcXDp1NXW/Nuna2Hsnfw/dZKsm/5z44pxN2gfIud0jSbrYlCN7lEVYJgaHebsfH9P4zc3hWOzr3Waxt48svxv4bY9Oawl39zdWKB1PKZ3ziXO9R6M9+B3XSfHsi4G1egeVQGGqdFhTv7YiHLu5ovh+JXXiwZ0s2VHDmsZreH3r/4YXlHL85TzGkTuod81notFNbpHVYBhanSYY7ONaGd/2hzOL7wVtr/xUqeBGqpjev7Sb8OF1dTzehrTO8/xXhLPxaJ9dY+qAMPU6DBHZwZW5aOrm8Inv+8Oh77YXTRDmlxswhq5Ro/J1MJwB2doD5qnd7muF71PGVqve1QFGKZGh/ng24FVOzL9Qjhz/eXi/7zShzPr4PqLt4c79JgzvVZmnOtxDFnTi7nLPXx5wLWZu9yDlwZdm7nLff/zQddm7XLpCQcmB9c86kPRDNCn1GCYmnjCexNDa9bIyMjybzroU2owTE0+o6OjYWhoKNTr9VCrLf/lKc/z/5Usy3qidY3G8h8+li536UfrQX1KDYbOBhg6G2DobIChswGGzgYYOhtg6GyAobMBhs4GGDobYOhsgKGzAYbOBhg6G2DobIChswGGzoLQ9xxV5AipLjl7YwAAAABJRU5ErkJggg==</Binary>
+          </Property>
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="External">False</Property>
+          <Property name="ExternalImage">False</Property>
+          <Property name="Stretch">False</Property>
+          <Property name="Angle">0</Property>
+          <Property name="Alpha">255</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TabStop">False</Property>
+          <Property name="TabIndex">0</Property>
+          <Property name="Location">29, 35</Property>
+          <Property name="Name">Icon2</Property>
+          <Property name="Size">119, 60</Property>
+        </Object>
+        <Object type="GUIDesigner.IconWidget, GUIDesigner, Version=1.0.6065.23718, Culture=neutral, PublicKeyToken=null" name="Icon3" children="Controls">
+          <Property name="Image">
+            <Binary>iVBORw0KGgoAAAANSUhEUgAAAHcAAAA8CAYAAABcpiUlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEAAACxABrSO9dQAABAJJREFUeF7t2E1oVFcUB/C8N5NJ0oUfwUA2dtNFwZUbF6K4Mu1CWqFQ6KpjC1XoQnFTrAstfuHCFKW0BII0xVJpSyCFBmsDEmyLIgihrV0ohUDRhVBRFy4K5ZrzZs7k5PQ/b27gvkVPzoMfefd/77kz99yAmL4QgjMKhs4GGDobYOhsgKGzAYbOBhg6G2DobIChswGGzgYYOhtg6GyAobMBhs4GGDobYOhsgKGzAYapqYeCtarzoD6lBsPUxBPml6K1is7faoO9yw3X/nXUh6IZoE+pwTA1OsvcP4617hb3KiUYpkaH+eFZ5trMXe7s08y1mbvc7x5lrs3c5U4/zEsdnshCf6MvvLovg/Or0e3zYr4H0etoXEaujUE1ukdVgGFqdJiv7+eluFHklWYG18Tq9nnXH6/rOifpdTymn4zGnMnaGFSne1QFGKZGh/lysVaKm8X2nczhuhjy8/S+mqyTrv29fsU8jxmNiayJRfW6R1WAYWp0mKl7tVLcNNZsNuG6MnoPMvewdSn0U+IM7cN4Xu6H6LpeqEb3qAowTI0OM3mnVoobRU7M7Q2Xn+yH68pcebC+QHvwO+fyO/A8jyX+Dmg978PvPJb1MahG96gKMEyNDvPZQr3Uux/vLA7Nzt/A62Lw58n9utG13/+1oSDndI0m62NQje5RFWCYGh3mwq16qU9/3RK2jm3uNIyM/4zX9sL1M4sbOlBGUD2htfKd16N9ZV0MqtE9qgIMU6PDnPulv9T4jcFwZn5XcXDp1NXW/Nuna2Hsnfw/dZKsm/5z44pxN2gfIud0jSbrYlCN7lEVYJgaHebsfH9P4zc3hWOzr3Waxt48svxv4bY9Oawl39zdWKB1PKZ3ziXO9R6M9+B3XSfHsi4G1egeVQGGqdFhTv7YiHLu5ovh+JXXiwZ0s2VHDmsZreH3r/4YXlHL85TzGkTuod81notFNbpHVYBhanSYY7ONaGd/2hzOL7wVtr/xUqeBGqpjev7Sb8OF1dTzehrTO8/xXhLPxaJ9dY+qAMPU6DBHZwZW5aOrm8Inv+8Oh77YXTRDmlxswhq5Ro/J1MJwB2doD5qnd7muF71PGVqve1QFGKZGh/ng24FVOzL9Qjhz/eXi/7zShzPr4PqLt4c79JgzvVZmnOtxDFnTi7nLPXx5wLWZu9yDlwZdm7nLff/zQddm7XLpCQcmB9c86kPRDNCn1GCYmnjCexNDa9bIyMjybzroU2owTE0+o6OjYWhoKNTr9VCrLf/lKc/z/5Usy3qidY3G8h8+li536UfrQX1KDYbOBhg6G2DobIChswGGzgYYOhtg6GyAobMBhs4GGDobYOhsgKGzAYbOBhg6G2DobIChswGGzoLQ9xxV5AipLjl7YwAAAABJRU5ErkJggg==</Binary>
+          </Property>
+          <Property name="PixelFormat">ARGB8888</Property>
+          <Property name="Compress">True</Property>
+          <Property name="External">False</Property>
+          <Property name="ExternalImage">False</Property>
+          <Property name="Stretch">False</Property>
+          <Property name="Angle">360</Property>
+          <Property name="Alpha">255</Property>
+          <Property name="Hided">False</Property>
+          <Property name="TabStop">False</Property>
+          <Property name="TabIndex">1</Property>
+          <Property name="Location">29, 35</Property>
+          <Property name="Name">Icon3</Property>
+          <Property name="Size">119, 60</Property>
+        </Object>
+        <Property name="Delay">1</Property>
+        <Property name="TotalFrame">100</Property>
+        <Property name="Repeat">True</Property>
+        <Property name="Playing">True</Property>
+        <Property name="MoveAnimation">False</Property>
+        <Property name="RotateAnimation">True</Property>
+        <Property name="ScaleAnimation">False</Property>
+        <Property name="ColorAnimation">False</Property>
+        <Property name="Cycling">False</Property>
+        <Property name="ScaleOnCenter">False</Property>
+        <Property name="AlwaysVisible">False</Property>
+        <Property name="Action01">None,Press,,</Property>
+        <Property name="Action02">None,Stopped,,</Property>
+        <Property name="Action03">None,Stopped,,</Property>
+        <Property name="Action04">None,Stopped,,</Property>
+        <Property name="Action05">None,Stopped,,</Property>
+        <Property name="Action06">None,Stopped,,</Property>
+        <Property name="Action07">None,Stopped,,</Property>
+        <Property name="Action08">None,Stopped,,</Property>
+        <Property name="Action09">None,Stopped,,</Property>
+        <Property name="Action10">None,Stopped,,</Property>
+        <Property name="Action11">None,Stopped,,</Property>
+        <Property name="Action12">None,Stopped,,</Property>
+        <Property name="Action13">None,Stopped,,</Property>
+        <Property name="Action14">None,Stopped,,</Property>
+        <Property name="Action15">None,Stopped,,</Property>
+        <Property name="Hided">False</Property>
+        <Property name="Location">20, 23</Property>
+        <Property name="Name">Animation1</Property>
+        <Property name="Size">323, 227</Property>
+      </Object>
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">480, 272</Property>
+    </Object>
+    <Property name="ClientSize">800, 600</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>

@@ -1,0 +1,538 @@
+﻿#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config CTRLBOARD
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9852
+    def_bool y
+
+config DEF_CHIP_REV_A0
+    def_bool y  
+
+config RAM_SIZE
+    default "0x1000000"
+
+config RAM_INIT_SCRIPT
+    default "IT9850A0_360MHz.scr" if !ENABLE_ROTATE
+    default "IT9850A0_360MHz_tiling_pitch2048.scr"  if ENABLE_ROTATE
+
+config SET_ROTATE 
+    int       
+    default 0 if !ENABLE_ROTATE
+    default 1 if ENABLE_ROTATE
+
+config TILING_WIDTH_128
+    int
+    default 0
+
+config WATCHDOG_ENABLE
+    def_bool y
+
+config DCPS_ENABLE
+    def_bool y
+
+config FONT_FILENAME
+    default "wqyMicroHeiProportional.ttf"
+
+config BACKLIGHT_ENABLE
+    def_bool y
+
+config BACKLIGHT_DUTY_CYCLES
+    default "95, 92, 88, 82, 75, 65, 55, 40, 25, 5"
+
+config BACKLIGHT_DEFAULT_DUTY_CYCLE
+    default "5"
+
+config LCD_ENABLE
+    def_bool y
+
+if !LCD_MULTIPLE
+
+config LCD_WIDTH
+    default "480"
+
+config LCD_HEIGHT
+    default "272"
+
+config LCD_PITCH
+    default "960"
+
+config LCD_INIT_SCRIPT
+    default "IT9850_LCD_480_272_innolux_4.3inch_565.txt.in"
+
+endif
+
+config CMDQ_ENABLE
+    def_bool y
+
+config M2D_ENABLE
+    def_bool y
+
+config JPEG_HW_ENABLE
+    def_bool y
+
+config AUDIO_ENABLE
+    def_bool y
+
+config AUDIO_DAC_MODULE
+    default "itp_dac_alc5628.c"
+
+config AUDIO_CODEC_MP3DEC
+    def_bool y
+
+config AUDIO_CODEC_WMADEC
+    def_bool y
+
+config AUDIO_CODEC_WAV
+    def_bool y
+
+config COMPRESS_AUDIO_PLUGIN
+    def_bool y
+
+config KEYPAD_ENABLE
+    def_bool n
+
+config NOR_ENABLE
+    def_bool y
+
+config NOR_CACHE_SIZE
+    default "0x100000"
+
+config NOR_RESERVED_SIZE
+    default "0x200000"
+
+config NOR_PARTITION0
+    def_bool y
+
+config NOR_PARTITION0_SIZE
+    default "0xB00000"
+
+config NOR_PARTITION1
+    def_bool y
+
+config NOR_PARTITION1_SIZE
+    default "0x280000"
+    
+config NOR_PARTITION2
+    def_bool y
+
+config NOR_PARTITION2_SIZE
+    default "0x40000"
+
+config NOR_PARTITION3
+    def_bool y
+
+config TEMP_DRIVE
+    default "D"
+
+config SD0_ENABLE
+    def_bool y
+
+config GPIO_SD0_IO
+    default "16, 17, 18, 19, 20, 21, -1, -1, -1, -1"
+
+config USB0_ENABLE
+    def_bool y
+
+config MSC_ENABLE
+    def_bool y
+
+config FS_FAT
+    def_bool y
+
+config RTC_ENABLE
+    def_bool y
+
+config I2C0_ENABLE
+    def_bool y
+
+config DEF_IIC0_GPIO_CONFIG_1
+    def_bool y
+
+config I2C1_ENABLE
+    def_bool y
+
+config DEF_IIC1_GPIO_CONFIG_1
+    def_bool y
+
+config TOUCH_ENABLE
+    def_bool y
+
+config TOUCH_MODULE
+    default "ft5406"
+
+config TOUCH_X_MAX_VALUE
+    default "0x1DF"
+
+config TOUCH_Y_MAX_VALUE
+    default "0x10F"
+
+config GPIO_TOUCH_INT
+    default "38"
+
+config GPIO_TOUCH_WAKE
+    default "-1"
+
+config DEF_TOUCH_I2C1
+    def_bool y
+
+config I2S_ENABLE
+    def_bool y
+
+config I2S_SPDIF_ENABLE
+    def_bool n
+
+config POWER_SAVING_ENABLE
+    def_bool y
+
+config DEF_POWER_STANDBY
+    def_bool y
+
+config POWER_STANDBY_CPU_FREQ_RATIO
+    default "15"
+
+config POWER_STANDBY_BUS_FREQ_RATIO
+    default "30"
+
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "4"
+
+config GPIO_UART1_RX
+    default "-1"
+
+config UART0_ENABLE
+    def_bool y
+
+config GPIO_UART0_TX
+    default "34"
+
+config GPIO_UART0_RX
+    default "33"
+
+config GPIO_SD0_CARD_DETECT
+    default "98"
+
+config GPIO_SD0_POWER_ENABLE
+    default "99"
+
+config SPI0_MOSI_GPIO
+    default "18"
+
+config SPI0_MISO_GPIO
+    default "19"
+
+config SPI0_CLOCK_GPIO
+    default "20"
+
+config SPI0_CHIP_SEL_GPIO
+    default "14"
+
+config SPI1_ENABLE
+    def_bool y
+
+config SPI0_MOSI_GPIO
+    default "29"
+
+config SPI0_MISO_GPIO
+    default "30"
+
+config SPI0_CLOCK_GPIO
+    default "31"
+
+config SPI0_CHIP_SEL_GPIO
+    default "15"
+
+config GPIO_BACKLIGHT_PWM
+    default "64"
+
+config GPIO_EXPANDER_ENABLE
+    default n
+
+config NET_ENABLE
+    def_bool n
+
+config TASK_DRIVE_PROBE
+    def_bool y
+
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHz.txt"
+
+config DBG_STATS
+    def_bool y
+
+config DBG_STATS_HEAP
+    def_bool y
+
+config DEF_BUILD_MINSIZEREL
+    def_bool y
+
+config SYSTEM_NAME
+    default "ITE Display Control Board"
+
+config ITU_FT_CACHE_ENABLE
+    def_bool y
+
+config ITU_FT_CACHE_SIZE
+    default "0xFA000"
+
+config GCC_LTO
+    def_bool y
+
+config BUILD_AUDIO_MGR
+    def_bool y
+
+config BUILD_INIPARSER
+    def_bool y
+
+config BUILD_ITU
+    def_bool y
+
+config BUILD_SDL
+    def_bool y
+
+config BUILD_UPGRADE
+    def_bool y
+
+config BUILD_PYINPUT
+    def_bool y
+
+if NET_ENABLE
+config NET_ETHERNET
+    def_bool n
+
+config NET_ETHERNET_LINK_INTR
+    def_bool y
+
+config NET_ETHERNET_MAC_ADDR_RANDOM
+    def_bool y
+
+config NET_ETHERNET_MAC_ADDR_STORAGE
+    def_bool y
+
+if NET_ETHERNET_MAC_ADDR_NOR
+
+config NET_ETHERNET_MAC_ADDR_POS
+    default "0x70000"
+
+endif
+
+config NET_ETHERNET_MAC_ADDR_UPGRADE
+    def_bool y
+
+config NET_DHCP_SERVER
+	def_bool y
+
+config DHCPS_ADDR_COUNT
+  default "254"
+
+config BUILD_MICROHTTPD
+    def_bool y
+
+config BUILD_XML2
+    def_bool y
+endif
+
+if NET_WIFI
+config NET_WIFI_WPA
+    def_bool y
+
+config NET_WIFI_SSID
+    default "CtrlBoard"
+
+config NET_WIFI_FIND_BEST_CHANNEL
+    default n
+	
+config NET_WIFI_REDEFINE
+	def_bool y
+
+config NET_DHCP_SERVER
+    def_bool y
+
+config DHCPS_ADDR_COUNT
+    default "254"
+endif
+
+######################################################################
+# Start of bootloader setting
+######################################################################
+config BOOTLOADER_ENABLE
+    def_bool n
+
+if BOOTLOADER_ENABLE && LCD_ENABLE && !LCD_MULTIPLE
+
+config LCD_BOOT_BITMAP
+    default "logo.bmp"
+
+config BL_SHOW_LOGO 
+    def_bool y
+
+endif
+
+if BOOTLOADER_ENABLE
+config UPGRADE_BOOTLOADER
+    def_bool y
+
+config UPGRADE_IMAGE
+    def_bool y
+
+if UPGRADE_IMAGE_NOR
+
+config UPGRADE_IMAGE_POS
+    default "0x80000"
+
+endif
+
+config UPGRADE_DATA
+    def_bool y
+
+config UPGRADE_PUBLIC
+    def_bool y
+
+config UPGRADE_OPEN_FILE
+    def_bool y
+
+config UPGRADE_PARTITION
+    def_bool y
+
+config UPGRADE_DELETE_PKGFILE_AFTER_FINISH
+    def_bool y
+
+config UPGRADE_NOR_IMAGE
+    def_bool y
+
+config UPGRADE_NOR_IMAGE_SIZE
+    default "0x1000000"
+
+config BL_LCD_CONSOLE
+    def_bool y
+
+config BL_ERR
+    def_bool y
+
+config BL_WARN
+    def_bool y
+
+config BL_INFO
+    def_bool y
+
+config BL_DBG
+    def_bool y
+
+config CHECK_FILES_CRC_ON_BOOTING
+    def_bool y
+
+endif
+
+######################################################################
+# End of bootloader setting
+######################################################################
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+######################################################################
+# Project Menu
+######################################################################
+menu "Display Control Board"
+
+    config CHECK_FILES_CRC_ON_BOOTING
+        bool "Checking files' CRC on booting time"
+        default n
+        help
+            Checking files' CRC on booting time
+        help_cht
+            開啟開機時檢查檔案 CRC 值的功能。
+        help_chs
+            开启开机时检查档案 CRC 值的功能。
+
+    config HW_VERSION
+        string "Hardware version"
+        default "V02"
+        help
+            Hardware version
+        help_cht
+            硬體版號。
+        help_chs
+            硬件版号。
+
+    config SCREENSHOT_ENABLE
+        bool "Screenshot is enabled or not"
+        default n
+        help
+            Screenshot is enabled or not
+        help_cht
+            開啟螢幕擷取功能。
+        help_chs
+            开启屏幕撷取功能。
+
+    config WEBSERVER_PORT
+        string "Web server port"
+        default "80"
+        help
+            Web server port
+        help_cht
+            網頁伺服器埠號。
+        help_chs
+            网页服务器埠号。
+
+    config ITU_PATH
+        string "ITU files path"
+        depends on !LCD_MULTIPLE
+        default "itu/480x272"
+        help
+            ITU files path
+        help_cht
+            ITU檔案路徑。
+        help_chs
+            ITU档案路径。
+
+    config UPGRADE_FTP_URL
+        string "Upgrade ftp URL"
+        default "ftp://192.168.1.1/ctrlboard/ITEPKG03.PKG"
+        help
+            Upgrade ftp URL
+        help_cht
+            網路更新F/W路徑。
+        help_chs
+            网络更新F/W路径。
+
+    config UPGRADE_GUI
+        bool "Upgrade by graphics display"
+        depends on !LCD_MULTIPLE
+        default n
+        help
+            Upgrade by graphics display
+        help_cht
+            圖形顯示更新。
+        help_chs
+            图形显示更新。
+
+    config DYNAMIC_LOAD_TP_MODULE
+        bool "Dynamically Load the Touch Panel Module"
+        default n
+        help
+            One PKG can support multiple TP module by modifying the Peripheral->TOUCH_MODULE.
+        help_cht
+            一個PKG可同時支援多組觸控模組，須配合Peripheral->TOUCH_MODULE的設定。
+        help_chs
+            一个PKG可同时支持多组触控模块，须配合Peripheral->TOUCH_MODULE的设定。
+            
+endmenu

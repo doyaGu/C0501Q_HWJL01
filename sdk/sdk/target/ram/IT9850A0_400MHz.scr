@@ -1,0 +1,558 @@
+// ============================================================================================
+// Initial script for IT9852E/IT9854E/IT9856TE/IT9866TE
+// 2015 (c) ITE Tech. Corp.
+// Date: 2015/12/01
+// ============================================================================================
+
+// ==============================================
+// Enable timer 6 to measure booting time
+// ==============================================
+write(0xa494, 0x0000);                              // Diable timer 6
+write(0xa462, 0x0000);                              // Clear timer 6 counter
+write(0xa460, 0x0000);
+write(0xa494, 0x000d);                              // Enable timer 6, one-shot mode
+
+// ==============================================
+// Set GPIO driving to level 0
+// ==============================================
+write(0x8130, 0x0000);
+write(0x8132, 0x0000);
+write(0x8134, 0x0000);
+write(0x8136, 0x0000);
+write(0x8138, 0x0000);
+write(0x813a, 0x0000);
+write(0x813c, 0x0000);
+write(0x813e, 0x0000);
+write(0x8140, 0x0000);
+write(0x8142, 0x0000);
+write(0x8144, 0x0000);
+write(0x8146, 0x0000);
+write(0x8148, 0x0000);
+write(0x814a, 0x0000);
+
+// ==============================================
+// NOR clock div = WCLK/8 = (3+1)*2
+// ==============================================
+write(0x9c04, 0x0003);
+
+// ==============================================
+//            Engine & Clcok Setting
+// ==============================================
+// General reset register and General clock register
+write(0x0012, 0x0008);                              // Enable MCLK for host
+write(0x0014, 0xc001);                              // MCLK PLL1_OUT1 / 2 (Memory 200MHz)
+write(0x0016, 0x102a);
+write(0x0018, 0xc001);                              // NCLK PLL1_OUT1 / 2 (AHB/RISC 200MHz)
+
+if (read_mask(0x0000, 0x0003)!=0x0003) {            // Booting mode
+    write(0x001a, 0x0028);                          // Do not reset AHB on booting
+} else {
+    write(0x001a, 0x1028);
+}
+
+write(0x001c, 0xc004);                              // WCLK PLL1_OUT1 / 5 (APB 80MHz)
+
+if (read_mask(0x0000, 0x0003)!=0x0003) {            // Booting mode
+    write(0x001e, 0x0aaa);                          // Do not reset APB on booting
+} else {
+    write(0x001e, 0x3aaa);
+}
+
+write(0x0020, 0x0a2a);                              // APB Clock
+
+if (read_mask(0x0000, 0x0003)!=0x0003) {            // Booting mode
+    write(0x0022, 0x3c00);                          // APB Reset, do not reset NOR0, SDIP on booting
+} else {
+    write(0x0022, 0x3f00);
+}
+
+write(0x0024, 0x9000);                              // GCLK PLL1_OUT2 / 1 (2D 266MHz)
+write(0x0026, 0x3000);                              // Disable 2D clock
+write(0x0028, 0xc000);                              // DCLK PPL3_OUT1 (LCD)
+write(0x002a, 0x3000);                              // Disable LCD clock
+write(0x0030, 0x8001);                              // ICLK PLL1_OUT1 / 2 (ISP 200MHz)
+write(0x0032, 0x7000);                              // Reset ISP, and disable clock
+write(0x0034, 0x8001);                              // XCLK PLL1_OUT1 / 2 (Video 200MHz)
+write(0x0036, 0xf000);                              // Reset Video & JPEG, and disable clock
+write(0x0038, 0x9001);                              // JCLK PLL1_OUT2 / 2 (JPEG 133MHz)
+write(0x003A, 0xa000);                              // AMCLK PLL2_OUT1     (Audio, run-time adjust sampling rate)
+write(0x003C, 0x8000);                              // ZCLK  PLL2_OUT1 / 1 (Audio, run-time adjust sampling rate)
+write(0x003e, 0x7000);                              // Reset IIS, and disable clock
+write(0x0040, 0x8009);                              // PCLK PLL1_OUT1 / 10 (PCR 40MHz)
+write(0x0042, 0x0000);                              // PCLK disable
+write(0x0044, 0xf000);                              // Reset RISC and disable clock
+write(0x0046, 0x100a);                              // Reset USB and enable clock
+write(0x0048, 0x7000);                              // Reset TSI and disable clock
+write(0x004c, 0xc000);                              // FCLK PLL1_OUT1 (ARM 400MHz)
+
+if (read_mask(0x0000, 0x0003)!=0x0003) {            // Booting mode
+    write(0x004e, 0x003f);                          // Do not reset ARM on booting
+} else {
+    write(0x004e, 0x803f);
+}
+
+write(0x005c, 0x0400);                              // Reset TSO and disable clock
+write(0x0060, 0x8000);                              // Reset MAC and disable clock
+write(0x0062, 0x0008);                              // Reset CAP and disable clock
+write(0x0064, 0x0000);                              // Disable CAPCLK
+
+// Disable CLK Reset
+write(0x0016, 0x002a);                              // Enable M1CLK/N2CLK/N10CLK Setting
+write(0x001a, 0x0028);                              // Enable N1CLK Setting, Enable DPU clock
+write(0x001e, 0x0aaa);                              // Enable W0CLK/W1CLK/W2CLK/W3CLk/W4CLK/W5CLK Setting
+write(0x0020, 0x0a2a);                              // Enable W6CLK/W7CLK/W8CLK/W9CLk/W11CLK Setting, Disable W10CLK (KBC)
+write(0x0022, 0x0000);                              // USB Clock Setting
+write(0x0026, 0x0000);                              // Disable CQ
+write(0x002a, 0x0000);                              // Disable DCLK LCD Clock Setting
+write(0x0032, 0x0000);                              // Disable M5CLK/ICLK/I1CLK Clock Setting
+write(0x0036, 0x0000);                              // Disable JPEG Clock Setting
+write(0x003e, 0x0000);                              // Disable Audio DAC Clock Setting
+write(0x0042, 0x0000);                              // Disable PCR Clock Setting
+write(0x0044, 0x0000);                              // Disable RISC Clock Setting
+write(0x0046, 0x0000);                              // Disable USB Clock Setting
+write(0x0048, 0x0000);                              // Disable TSI Clock Setting
+write(0x004e, 0x003a);                              // Enable ARM Clcok Setting
+write(0x005c, 0x0400);                              // Disable TSO Clock Setting
+write(0x0060, 0x0000);                              // Disable MAC Clock Setting
+write(0x0062, 0x0000);                              // Disable TSP and CAPCLK(M17CLK)
+write(0x0080, 0x018F);                              // PCR clock = 40M/400 = 100KHz
+
+// SDCLK div = WCLK/4
+write(0xb010, 0x000c);
+
+// pull-up GPIO1 (SPI CS# for host)
+// write(0x8014, 0x0002);
+// write(0x8018, 0x0002);
+
+// pull-up unused GPIO 82~97, 100~102 for IT9852 or IT9854
+if (read_mask(0x0000, 0x6000)==0x4000) {            // IT9852
+    write(0x8096, 0xfffc);                          // enable GPIO 82~95 pull-up
+    write(0x809a, 0xfffc);                          // enable GPIO 82~95 pull-up
+    write(0x80d4, 0x0073);                          // enable GPIO 96~97, 100~102 pull-up
+    write(0x80d8, 0x0073);                          // enable GPIO 96~97, 100~102 pull-up
+} else if (read_mask(0x0000, 0x6000)==0x0000) {     // IT9854
+    write(0x8096, 0xfffc);                          // enable GPIO 82~95 pull-up
+    write(0x809a, 0xfffc);                          // enable GPIO 82~95 pull-up
+    write(0x80d4, 0x0073);                          // enable GPIO 96~97, 100~102 pull-up
+    write(0x80d8, 0x0073);                          // enable GPIO 96~97, 100~102 pull-up
+}
+
+// Set Host clock to PLL2 temporary, and set it to PLL1_OUT2 latter
+write(0x0010, 0x5000);                              // BCLK PLL2_OUT1 (Host 33MHz)
+
+// ==============================================
+// PLL1 800Hz ck1_n1=400MHz , ck1_n2=266MHz
+// ==============================================
+write(0x00a0, 0x450c);
+write(0x00a2, 0x0302);
+write(0x00a4, 0x2320);
+write(0x00a4, 0x3320);
+write(0x00a4, 0x2320);
+
+// Set the host clock to PLL1_OUT2
+write(0x0010, 0x4803);                              // BCLK PLL1_OUT2 / 4 (Host 66.5MHz)
+
+// ==============================================
+// PLL2 ck2_n1=166MHz , ck2_n2=166MHz
+// ==============================================
+// write(0x00b0, 0x450c);
+// write(0x00b2, 0x0404);
+// write(0x00b4, 0x2298);
+// write(0x00b4, 0x3298);
+// write(0x00b4, 0x2298);
+
+// write(0x00b4, 0x8000);                           // Power down PLL
+
+// ==============================================
+// PLL3 ck3_n1=148.5MHz , ck3_n2=74.25MHz
+// ==============================================
+// write(0x00c0, 0x450c);
+// write(0x00c2, 0x0c06);
+// write(0x00c4, 0x237b);
+// write(0x00c4, 0x337b);
+// write(0x00c4, 0x237b);
+
+// write(0x00c4, 0x8000);                           // Power down PLL
+
+// Host bus controller registers
+write(0x0200, 0x0000);
+write(0x0210, 0x0002);                              // Host_IO_Drv="01"
+write(0x0214, 0x0c00);
+
+// ==============================================
+//              AHB Setting
+// ==============================================
+write(0x03da, 0x7508);                              // AHB Wrapper Setting
+write(0x03de, 0x000f);                              // AHB time out
+
+// ==============================================
+//         Memory Setting for Winbond DDR2
+// ==============================================
+if (read_mask(0x0000, 0x1000)==0x0000) {
+    // Memory IO strength Setting
+
+    // Memory controller registers
+    // select MA13 MA12 as bank address
+    // linear mode, 512Mbits 4banks 16bits_BusWidth 10Bits_col_add(2KByte per page)
+    if (read_mask(0x0000, 0x6000)==0x4000) {        // IT9852
+        if (read_mask(0xDE000014, 0x0002)==0x0002) {    // AX2
+            write(0x0300, 0x3298);
+        } else {
+            write(0x0300, 0xb298);
+        }        
+    } else {                                        // IT9854, IT9856, IT9866
+        if (read_mask(0xDE000014, 0x0002)==0x0002)  {   // AX2
+            write(0x0300, 0x32a8);
+        } else {
+            write(0x0300, 0xb2a8);
+        }
+    }
+    write(0x030a, 0x0025);                          // Enable auto precharge, Turbo mode, RISC R/W merge
+    write(0x0310, 0x1a22);
+    write(0x0312, 0x6412);                          // B0DTWR, B0DTWTR, B0DTXP, B0DTRTW, B0DTRFC, B0DTRCD, B0DTRP
+    write(0x0314, 0x0028);
+    write(0x0316, 0x1000);                          // B0DTDQSMCLK=00, B0DTDQL=6
+    write(0x0318, 0x2208);
+    write(0x031a, 0x2000);                          // B0DTWL, B0DTEnCKGat, B0DTRAS
+    write(0x031c, 0x6121);
+
+// ==============================================
+//         Memory Setting for Etron DDR2
+// ==============================================
+} else {
+    // Memory IO strength Setting
+
+    // Memory controller registers
+    // select MA13 MA12 as bank address
+    // linear mode, 512Mbits 4banks 16bits_BusWidth 10Bits_col_add(2KByte per page)
+    if (read_mask(0x0000, 0x6000)==0x4000) {        // IT9852
+        if (read_mask(0xDE000014, 0x0002)==0x0002) {    // AX2
+            write(0x0300, 0x3298);
+        } else {
+            write(0x0300, 0xb298);
+        }
+    } else {                                        // IT9854, IT9856, IT9866
+        if (read_mask(0xDE000014, 0x0002)==0x0002) {    // AX2
+            write(0x0300, 0x32a8);
+        } else {
+            write(0x0300, 0xb2a8);
+        }
+    }
+    write(0x030a, 0x0025);                          // Enable auto precharge, Turbo mode, RISC R/W merge
+    write(0x0310, 0x1a22);
+    write(0x0312, 0x6412);                          // B0DTWR, B0DTWTR, B0DTXP, B0DTRTW, B0DTRFC, B0DTRCD, B0DTRP
+    write(0x0314, 0x0028);                          // B0DTDQSMCLK=00, B0DTDQL=6
+    write(0x0316, 0x1000);
+    write(0x0318, 0x2208);
+    write(0x031a, 0x2000);                          // B0DTWL, B0DTEnCKGat, B0DTRAS
+    write(0x031c, 0x6121);
+}
+
+// ==============================================
+//              DDRPLL reset and start
+// ==============================================
+write(0x0340, 0x2a40);                              // Reset PLL
+write(0x0340, 0x2a44);                              // Start PLL
+write(0x0340, 0x3a44);                              // Update PLL
+write(0x0340, 0x2a44);                              // Start PLL
+write(0x0342, 0x0882);                              // DLL reset
+
+// ==============================================
+//      Open auto digital delay lock loop
+// ==============================================
+write(0x0320, 0x704a);                              // auto DDLL
+write(0x0322, 0x0a4a);
+write(0x0324, 0x0a4a);
+write(0x0320, 0xf04a);                              // update phase from average compare cycle
+
+// ==============================================
+//         Memory Setting for Winbond DDR2
+// ==============================================
+if (read_mask(0x0000, 0x1000)==0x0000) {
+    write(0x0348, 0xe002);                          // B0DTDQSI
+    write(0x0334, 0x0000);                          // MCLKP Out Setting & MA &CMD
+    write(0x0336, 0xc000);                          // ODT Enable & MDQS IO Driving
+    write(0x0330, 0x8000);                          // IO Driving
+    write(0x0332, 0x1400);                          // odt 150 ohm
+    write(0x0396, 0xa000);                          // MAX GNT
+
+    write(0x0338, 0x0000);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0080);
+
+    write(0x0338, 0x0001);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0081);
+
+    write(0x0338, 0x0002);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0082);
+
+    write(0x0338, 0x0003);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0083);
+
+    write(0x0338, 0x0004);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0084);
+
+    write(0x0338, 0x0005);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0085);
+
+    write(0x0338, 0x0006);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0086);
+
+    write(0x0338, 0x0007);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0087);
+
+    write(0x0338, 0x0008);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0088);
+
+    write(0x0338, 0x0009);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0089);
+
+    write(0x0338, 0x000a);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008a);
+
+    write(0x0338, 0x000b);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008b);
+
+    write(0x0338, 0x000c);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008c);
+
+    write(0x0338, 0x000d);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008d);
+
+    write(0x0338, 0x000e);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008e);
+
+    write(0x0338, 0x000f);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008f);
+
+    write(0x0338, 0x8200);                          // Enable Absorber
+    write(0x0320, 0xf84a);                          // update phase from Dram refresh
+
+    // Extend mode register 2: 1X refresh rate
+    write(0x0304, 0x8000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    write(0x0316, 0x1180);
+    wait(1);
+
+    // Extend mode register 3:
+    write(0x0304, 0xc000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: DLL enable
+    write(0x0304, 0x4000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // mode register: burst length=4, CAS latency=6 , DLL reset
+    // write(0x0304, 0x0f62);
+    write(0x0304, 0x0162);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // mode register: burst length=4, CAS latency=6, DLL reset Off
+    // write(0x0304, 0x0e62);
+    write(0x0304, 0x0862);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0xc800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: OCD default
+    write(0x0304, 0x43c0);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: OCD exit
+    write(0x0304, 0x4042);                          // odt 150 ohm
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0xc880);                          // turn off PD
+    wait(1);
+
+// ==============================================
+//         Memory Setting for Etron DDR2
+// ==============================================
+} else {
+    write(0x0348, 0xe002);                          // B0DTDQSI
+    write(0x0334, 0x0000);                          // MCLKP Out Setting & MA &CMD
+    write(0x0336, 0xc000);                          // ODT Enable & MDQS IO Driving
+    write(0x0330, 0x8000);                          // IO Driving
+    write(0x0332, 0x1400);                          // odt 150 ohm
+    write(0x0396, 0xa000);                          // MAX GNT
+
+    write(0x0338, 0x0000);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0080);
+
+    write(0x0338, 0x0001);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0081);
+
+    write(0x0338, 0x0002);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0082);
+
+    write(0x0338, 0x0003);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0083);
+
+    write(0x0338, 0x0004);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0084);
+
+    write(0x0338, 0x0005);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0085);
+
+    write(0x0338, 0x0006);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0086);
+
+    write(0x0338, 0x0007);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0087);
+
+    write(0x0338, 0x0008);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0088);
+
+    write(0x0338, 0x0009);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x0089);
+
+    write(0x0338, 0x000a);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008a);
+
+    write(0x0338, 0x000b);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008b);
+
+    write(0x0338, 0x000c);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008c);
+
+    write(0x0338, 0x000d);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008d);
+
+    write(0x0338, 0x000e);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008e);
+
+    write(0x0338, 0x000f);
+    write(0x033a, 0x0f0f);
+    write(0x0338, 0x008f);
+
+    write(0x0338, 0x8200);                          // Enable Absorber
+    write(0x0320, 0xf84a);                          // update phase from Dram refresh
+
+    // Extend mode register 2: 1X refresh rate
+    write(0x0304, 0x8000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    write(0x0316, 0x1180);
+    wait(1);
+
+    // Extend mode register 3:
+    write(0x0304, 0xc000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: DLL enable
+    write(0x0304, 0x4000);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // mode register: burst length=4, CAS latency=6 , DLL reset
+    // write(0x0304, 0x0f62);
+    write(0x0304, 0x0162);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // mode register: burst length=4, CAS latency=6, DLL reset Off
+    // write(0x0304, 0x0e62);
+    write(0x0304, 0x0862);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0xc800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: OCD default
+    write(0x0304, 0x43c0);
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0x8800);                          // turn off PD
+    wait(1);
+
+    // Extend mode register: OCD exit
+    write(0x0304, 0x4042);                          // odt 150 ohm
+    write(0x0308, 0x0800);                          // tune tRC for tref
+    wait(1);
+    write(0x0308, 0xc880);                          // turn off PD
+    wait(1);
+}
+
+// Memory Priority Setting for Arbitration, original priority USB > ARM > RISC > AHB > ISP
+//swap the priority ISP > USB > AHB > RISC > ARM
+write(0x0376, 0x0100);
+write(0x0378, 0x0302);
+write(0x037a, 0x0504);
+write(0x037c, 0x0706);
+write(0x037e, 0x1413);
+write(0x0380, 0x0908);
+write(0x0382, 0x0b0a);
+write(0x0384, 0x100c);
+write(0x0386, 0x0f0e);
+write(0x0388, 0x110d);
+write(0x038a, 0x1512);
+
+// ==============================================
+//           End of Memory Setting
+// ==============================================
+
+// ==============================================
+// Setting to resume from RAM
+// ==============================================
+if (0) {                                            // turn it on if the suspend to RAM is supported
+    if (read_mask(0x0000, 0x0003)!=0x0003) {        // booting mode
+        if (read_mask(0xde50002c, 0x7e000000) != 0x02000000) {  // read the tag from RTC register
+            write(0x0308, 0xc800);                  // exit self refresh
+            wait(50*1000);                          // wait 50 ms
+            goto(0x800001c0);                       // goto startup.S itpSuspendRestore function
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#ifndef ITP_TIME_H
+#define ITP_TIME_H
+
+#include "$ENV{CFG_VC_INC_PATH}/time.h"
+#include <sys/types.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define CLOCK_REALTIME (clockid_t)1
+#define CLOCK_MONOTONIC (clockid_t)4
+
+int clock_gettime(clockid_t clock_id, struct timespec *tp);
+struct tm *localtime_r(const time_t *, struct tm *);
+char *strptime(const char *buf, const char *format, struct tm *tm);
+int settimeofday(const struct timeval *tv , const struct timezone *tz);
+int timer_create(clockid_t clock_id, struct sigevent *evp, timer_t *timerid);
+int timer_delete(timer_t timerid);
+int timer_settime(timer_t timerid, int flags, const struct itimerspec *value, struct itimerspec *ovalue);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // ITP_TIME_H

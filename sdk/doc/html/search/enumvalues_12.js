@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['unknow_5fcmd_5ftype',['UNKNOW_CMD_TYPE',['../nor_8h.html#a4eebec720914ae2536e57c0db1bec038ab748b520afbf144613c07879853adae3',1,'nor.h']]],
+  ['unkown_5fmode',['UNKOWN_MODE',['../group__ith__dpu.html#gga73865ecd4627e99fa5ef7946146cff20a6614f9b0e148e4b18afbb4f7c4956b21',1,'ith.h']]],
+  ['usb0',['USB0',['../ite__usbex_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a65f1eb743a1f569509a319dcd334471e',1,'ite_usbex.h']]],
+  ['usb1',['USB1',['../ite__usbex_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a6dd055d392de5ddb40912e3f9adbc4f4',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5fstate_5fconnect',['USB_DEVICE_STATE_CONNECT',['../ite__usbex_8h.html#adc29c2ff13d900c2f185ee95427fb06ca62e4dd718c0b230e01a75ca521bde648',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5fstate_5fdisconnect',['USB_DEVICE_STATE_DISCONNECT',['../ite__usbex_8h.html#adc29c2ff13d900c2f185ee95427fb06ca14be09ff84946bd74f52c2980350b7de',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5fstate_5fnochagne',['USB_DEVICE_STATE_NOCHAGNE',['../ite__usbex_8h.html#adc29c2ff13d900c2f185ee95427fb06ca3cbbcde7b9a01a21f462c98275bf5095',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fdemod',['USB_DEVICE_TYPE_DEMOD',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04a455925286732fd546ab3db6d55908263',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fkbd',['USB_DEVICE_TYPE_KBD',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04ae4010ba1f6515aee33c25be0709fe4a4',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fmouse',['USB_DEVICE_TYPE_MOUSE',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04a1181e5460887b5195a587ceffe7b757e',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fmsc',['USB_DEVICE_TYPE_MSC',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04a29a271fb2a383c91b36284a12280c620',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fnot_5fmatch',['USB_DEVICE_TYPE_NOT_MATCH',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04ae07d7552eba7639a3fa7fe08bbe5adbc',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fuas',['USB_DEVICE_TYPE_UAS',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04a797b3bc342f0dfa205439c5245a342c5',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fuvc',['USB_DEVICE_TYPE_UVC',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04ab93b8698ad49bbf84f32225a1475b47a',1,'ite_usbex.h']]],
+  ['usb_5fdevice_5ftype_5fwifi',['USB_DEVICE_TYPE_WIFI',['../ite__usbex_8h.html#abc6126af1d45847bc59afa0aa3216b04a27c04ab038b5078929cf33a4c96bdc32',1,'ite_usbex.h']]],
+  ['usb_5fport_5ftest_5fforce_5fen',['USB_PORT_TEST_FORCE_EN',['../ite__usbex_8h.html#a61dadd085c1777f559549e05962b2c9ea1629d0e153098f66f78ecdaa12fde534',1,'ite_usbex.h']]],
+  ['usb_5fport_5ftest_5fj_5fstate',['USB_PORT_TEST_J_STATE',['../ite__usbex_8h.html#a61dadd085c1777f559549e05962b2c9ea29a8e98ca7c506a021c1fb77dc6c52b7',1,'ite_usbex.h']]],
+  ['usb_5fport_5ftest_5fk_5fstate',['USB_PORT_TEST_K_STATE',['../ite__usbex_8h.html#a61dadd085c1777f559549e05962b2c9ea9361e608998ef90d224c57ef7763478c',1,'ite_usbex.h']]],
+  ['usb_5fport_5ftest_5fpacket',['USB_PORT_TEST_PACKET',['../ite__usbex_8h.html#a61dadd085c1777f559549e05962b2c9ea855a801d9b84db22e80eb1c428af4606',1,'ite_usbex.h']]],
+  ['usb_5fport_5ftest_5fse0_5fnak',['USB_PORT_TEST_SE0_NAK',['../ite__usbex_8h.html#a61dadd085c1777f559549e05962b2c9ea900ab8b5d2760d785a19d1dffc7d8c1b',1,'ite_usbex.h']]],
+  ['usbex_5fspeed_5ffull',['USBEX_SPEED_FULL',['../ite__usbex_8h.html#a99fb83031ce9923c84392b4e92f956b5aa22ec1f45fcd0e94c219ae4a821b7167',1,'ite_usbex.h']]],
+  ['usbex_5fspeed_5fhigh',['USBEX_SPEED_HIGH',['../ite__usbex_8h.html#a99fb83031ce9923c84392b4e92f956b5ae4438f62022bc059222283c44ea9bc11',1,'ite_usbex.h']]],
+  ['usbex_5fspeed_5flow',['USBEX_SPEED_LOW',['../ite__usbex_8h.html#a99fb83031ce9923c84392b4e92f956b5a317cb23a2d7a949c0cdc1860d2d91d79',1,'ite_usbex.h']]],
+  ['usbex_5fspeed_5funknown',['USBEX_SPEED_UNKNOWN',['../ite__usbex_8h.html#a99fb83031ce9923c84392b4e92f956b5a5323f67c25f33b6dcb6d82997fc4976e',1,'ite_usbex.h']]]
+];

@@ -1,0 +1,8 @@
+// Switch the SPI to JTAG Interface for SM32
+write(0x0044, 0x00aa);  // disable gating clock
+
+if (read_mask(0x0002, 0xffff) == 0x9850) {
+    write(0x81a0, 0x0060);
+} else {
+    write(0x7cd0, 0x0060);
+}

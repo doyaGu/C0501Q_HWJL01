@@ -1,0 +1,116 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config PROJECT_MODULE_DEFINED
+    bool
+    default y
+    select HAVE_LCD
+    select HAVE_GRAPHICS
+    select HAVE_AUDIO
+    select HAVE_VIDEO
+    
+config DEF_CHIP_PKG_IT9856
+    def_bool y
+    
+config RAM_INIT_SCRIPT
+    default "IT9850A0_360MHz.scr"
+    
+config DBG_INIT_SCRIPT
+	default "IT9850A0_400MHz.txt"
+    
+config UART1_ENABLE
+    def_bool y    
+    
+config GPIO_UART1_TX
+    default "4"
+    
+config LCD_ENABLE
+    def_bool y
+
+config LCD_WIDTH
+    default "800"
+
+config LCD_HEIGHT
+    default "480"
+    
+config LCD_PITCH
+    default "1600"
+    
+config LCD_INIT_SCRIPT
+    default "IT9850_LCD_800_480_Allentech_7inch_565.txt.in"
+
+config BACKLIGHT_ENABLE
+    def_bool y
+
+config BACKLIGHT_DUTY_CYCLES
+    default "95, 92, 88, 82, 75, 65, 55, 40, 25, 5"
+
+config GPIO_BACKLIGHT_PWM
+     default "64"
+
+config BACKLIGHT_DEFAULT_DUTY_CYCLE
+    default "5"
+
+config CMAKE_SOURCE_DIR
+    string
+    option env="CMAKE_SOURCE_DIR"
+    
+menu "TEST TIMER"
+
+    choice
+    prompt "TIMER TEST"
+    default TIMER_BASIC_TEST
+    help
+        Test Timer.
+    help_cht
+        測試 Timer
+    help_chs
+        測試 Timer
+        
+    config TIMER_BASIC_TEST  
+    bool "basic timer test"
+    help
+        basic timer test.
+    help_cht
+        timer 測試。
+    help_chs
+        timer 測試。
+        
+    config TIMER_TIMEOUT_TEST  
+    bool "timeout test"
+    help
+        timeout test.
+    help_cht
+        timeout 測試。
+    help_chs
+        timeout 測試。        
+        
+    config TIMER_IRQ_TEST  
+    bool "interrupt request test "
+    help
+        test interrupt request.
+    help_cht
+        測試IRQ (Interrupt Request)。
+    help_chs
+        測試IRQ (Interrupt Request)。 
+        
+    config TIMER_PWM_TEST  
+    bool "pwm test "
+    help
+        test pwm(backlight module adjust luminance).
+    help_cht
+        測試PWM (背光模組調整亮度)。
+    help_chs
+        測試PWM (背光模組調整亮度)。         
+        
+        
+    endchoice
+
+endmenu       
+    
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"

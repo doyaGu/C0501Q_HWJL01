@@ -1,0 +1,63 @@
+const unsigned char DTBL[60] = {
+0,    // step[00]  0 dB
+0,    // step[01]  0 dB
+0,    // step[02]  0 dB
+0,    // step[03]  0 dB
+0xA1, // step[04] -4 dB
+0xB5, // step[05] -3 dB
+0xCA, // step[06] -2 dB
+0xE4, // step[07] -1 dB
+0,    // step[08]  0 dB
+0,    // step[09]  0 dB
+0,    // step[10]  0 dB
+0xA1, // step[11] -4 dB <-- step[12->11]
+0,    // step[12]  0 dB <-- step[11->12]
+0xB5, // step[13] -3 dB
+0xCA, // step[14] -2 dB
+0xE4, // step[15] -1 dB
+0,    // step[16]  0 dB
+0,    // step[17]  0 dB
+0,    // step[18]  0 dB
+0,    // step[19]  0 dB
+0xA1, // step[20] -4 dB
+0xB5, // step[21] -3 dB
+0xCA, // step[22] -2 dB
+0xE4, // step[23] -1 dB
+0,    // step[24]  0 dB
+0,    // step[25]  0 dB
+0,    // step[26]  0 dB
+0,    // step[27]  0 dB
+0xA1, // step[28] -4 dB
+0xB5, // step[29] -3 dB
+0xCA, // step[30] -2 dB
+0xE4, // step[31] -1 dB
+0,    // step[32]  0 dB
+0,    // step[33]  0 dB
+0,    // step[34]  0 dB
+0,    // step[35]  0 dB
+0xA1, // step[36] -4 dB
+0xB5, // step[37] -3 dB
+0xCA, // step[38] -2 dB
+0xE4, // step[39] -1 dB
+0,    // step[40]  0 dB
+0,    // step[41]  0 dB
+0,    // step[42]  0 dB
+0,    // step[43]  0 dB
+0xA1, // step[44] -4 dB
+0xB5, // step[45] -3 dB
+0xCA, // step[46] -2 dB
+0xE4, // step[47] -1 dB
+0,    // step[48]  0 dB
+0,    // step[49]  0 dB
+0,    // step[50]  0 dB
+0,    // step[51]  0 dB
+0xA1, // step[52] -4 dB
+0xB5, // step[53] -3 dB
+0xCA, // step[54] -2 dB
+0xE4, // step[55] -1 dB
+0,    // step[56]  0 dB
+0,    // step[57]  0 dB
+0,    // step[58]  0 dB
+0     // step[59]  0 dB
+};
+

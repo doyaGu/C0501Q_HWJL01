@@ -1,0 +1,22 @@
+@echo off
+
+pushd ..\..\..
+call common.cmd
+popd
+
+glamomem -t glamomem.dat -i -q
+glamomem -t glamomem.dat -l ${CMAKE_PROJECT_NAME}.bin
+
+# disable dynamic gating clock
+if "${CFG_CHIP_PKG_IT9920}" == "y" (
+    glamomem -t glamomem.dat -R 0x2 -a 0xb0200078
+) else (
+    glamomem -t glamomem.dat -R 0x003A -a 0x44
+)
+
+rem use Host Interface
+rem jp2_usb2spi pci 8888 -d 0 -t 0
+
+rem use JTAG interface
+glamomem -t glamomem.dat -q -e ${PROJECT_SOURCE_DIR}/sdk/target/debug/sm32/JTAG_Switch.txt
+openocd -f ${PROJECT_SOURCE_DIR}/sdk/target/debug/sm32/sm32.cfg

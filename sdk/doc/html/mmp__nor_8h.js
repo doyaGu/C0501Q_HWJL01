@@ -1,0 +1,37 @@
+var mmp__nor_8h =
+[
+    [ "BUILD_VERSION", "mmp__nor_8h.html#ad7a967dd260384e94010b31b1412a0b4", null ],
+    [ "NOR_API", "mmp__nor_8h.html#a3e015eb09a32433f1be39e9f87ae5dd1", null ],
+    [ "NOR_CSN_0", "mmp__nor_8h.html#a0bdbb74da82aa3167843ebebb0143c97", null ],
+    [ "NOR_ERROR_ADDR_UN_ALIGNED", "mmp__nor_8h.html#a3c8e97da5b32c228c3d6d3c824aa9a87", null ],
+    [ "NOR_ERROR_DEVICE_TIMEOUT", "mmp__nor_8h.html#a071682c535a1cabf6733f89aab9f642d", null ],
+    [ "NOR_ERROR_DEVICE_UNKNOW", "mmp__nor_8h.html#a964af51e6366006f2e0d8ce95e42acd9", null ],
+    [ "NOR_ERROR_STATUS_BUSY", "mmp__nor_8h.html#a0e98aeb7966eb24443d510ddeafda198", null ],
+    [ "NOR_ERROR_STATUS_PROTECT", "mmp__nor_8h.html#acb15bc95cf869a8946819c2e27aa29a3", null ],
+    [ "NOR_RESULT", "mmp__nor_8h.html#a42107e9c0c525086dc8aa18c82e4ad1f", null ],
+    [ "NOR_ATTITUDE", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2a", [
+      [ "NOR_ATTITUDE_ERASE_UNIT", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aaaca3b24e817383eba988f2de027313cc", null ],
+      [ "NOR_ATTITUDE_DEVICE_COUNT", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aa5fb9f44edaea3e111e7129a553cb4d44", null ],
+      [ "NOR_ATTITUDE_CURRENT_DEVICE_ID", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aa8627f4464dbcd3a03c9daad171be45f2", null ],
+      [ "NOR_ATTITUDE_PAGE_SIZE", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aa2341abc5e1b0ad31fbc16b5db1f06a87", null ],
+      [ "NOR_ATTITUDE_PAGE_PER_SECTOR", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aa6c037dd47a83188bb163b8eb27befdd2", null ],
+      [ "NOR_ATTITUDE_SECTOR_PER_BLOCK", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aa3dde9e51c578837d3894b3d9002c24bd", null ],
+      [ "NOR_ATTITUDE_BLOCK_SIZE", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aaa9defda7a3f20f8f8db18c6fe2e1d9f7", null ],
+      [ "NOR_ATTITUDE_TOTAL_SIZE", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aaa4b1d310d4b41e0bafd99d31c81d7a9a", null ],
+      [ "NOR_ATTITUDE_UN_DEFINED", "mmp__nor_8h.html#a369fa7b1aae8d3b35bc711595874ac2aadcc960358723c60da36f64882aebafe4", null ]
+    ] ],
+    [ "NorBulkErase", "group__group18.html#ga985e2dfbaeb41da1158866c52b231f61", null ],
+    [ "NorCapacity", "group__group18.html#gad20f6c1e189736baa7d1624c891d7577", null ],
+    [ "NorErase", "group__group18.html#ga93bdc52d062b1afb05f9fdb916bd3a08", null ],
+    [ "NorEraseAll", "group__group18.html#ga2916ced854a6613ff20c560ed8e0b2a9", null ],
+    [ "NorGetAttitude", "group__group18.html#ga1f3ac1caa1a1466d6781e6c94e759466", null ],
+    [ "NorGetBuildInfo", "group__group18.html#ga48720b18f0aad16098d33218495bda06", null ],
+    [ "NorGetDeviceCount", "group__group18.html#ga426e2b441f63db88fa99855b16a6a3b5", null ],
+    [ "NorGetDeviceInfo", "group__group18.html#gaa6b43ce981993a008527f0bbd78edbd0", null ],
+    [ "NorGetDeviceName", "group__group18.html#ga2deda77c0e2a60fe09c74348a1f66bf0", null ],
+    [ "NorInitial", "group__group18.html#ga974325796119fbe344f0a02ed69b84b3", null ],
+    [ "NorRead", "group__group18.html#gaa4cae0d762096fbfe27932805cd90b2c", null ],
+    [ "NorTerminate", "group__group18.html#ga04b2812fe811da3be09c087ef215efcc", null ],
+    [ "NorWrite", "group__group18.html#ga3e63140da84b08940cfd5eac33098fbc", null ],
+    [ "NorWriteWithoutErase", "group__group18.html#ga3a514ea1333025beb22c7255c936295a", null ]
+];

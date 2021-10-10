@@ -1,0 +1,93 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_UPGRADE
+    bool
+    default y
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    #select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config DEF_CHIP_PKG_IT9852
+    def_bool y
+
+config DEF_CHIP_REV_A0
+    def_bool y  
+
+config RAM_SIZE
+    default "0x1000000"
+
+config RAM_INIT_SCRIPT
+    default "IT9850A0_360MHz.scr"
+config NOR_ENABLE
+    def_bool y
+
+config NOR_CACHE_SIZE
+    default "0x100000"
+
+config NOR_RESERVED_SIZE
+    default "0x300000"
+
+config NOR_PARTITION0
+    def_bool y
+
+config NOR_PARTITION0_SIZE
+    default "0xA00000"
+
+config NOR_PARTITION1
+    def_bool y
+
+config FS_FAT
+    def_bool y
+config UART1_ENABLE
+    def_bool y
+
+config GPIO_UART1_TX
+    default "4"
+
+config GPIO_UART1_RX
+    default "-1"
+
+config SPI0_MOSI_GPIO
+    default "18"
+
+config SPI0_MISO_GPIO
+    default "19"
+
+config SPI0_CLOCK_GPIO
+    default "20"
+
+config SPI0_CHIP_SEL_GPIO
+    default "14"
+config DEF_DBG_UART1
+    def_bool y
+
+config DBG_INIT_SCRIPT
+    default "IT9850A0_400MHz.txt"
+
+config BUILD_UPGRADE
+	def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+menu "Upgrade Test"
+
+choice
+	prompt "Test App"
+	default TEST_CHECKCRC
+
+config TEST_CHECKCRC
+	bool "CHECKCRC"
+
+endchoice
+
+endmenu

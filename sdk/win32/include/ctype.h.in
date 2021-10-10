@@ -1,0 +1,6 @@
+#ifndef ITP_CTYPE_H
+#define ITP_CTYPE_H
+
+#include "$ENV{CFG_VC_INC_PATH}/ctype.h"
+
+#endif // ITP_CTYPE_H

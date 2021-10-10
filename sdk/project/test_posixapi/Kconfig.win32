@@ -1,0 +1,92 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_POSIXAPI
+    bool
+    default y
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    #select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config WIN32_SIMULATOR
+    def_bool y
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+
+menu "POSIX API Test"
+
+	choice
+	
+ 		prompt "SYSTEM_TEST"
+		default TEST_STDIO
+
+	config TEST_STDIO
+		bool "Stdio"
+
+	config TEST_DIRENT
+		bool "Dirent"
+	
+	config TEST_SEMAPHORE
+    	bool "Semaphore"
+
+	config TEST_STDLIB
+    	bool "Stdlib"
+    
+	config TEST_SYSTIME
+    	bool "Sys-time"
+    
+	config TEST_SYSTIMES
+		bool "Sys-times"
+	
+	config TEST_SYSSTATVFS
+    	bool "Sys-statvfs"
+
+	config TEST_SYSSTAT
+    	bool "Sys-stat"
+
+	config TEST_UNISTD
+    	bool "Unistd"
+
+	config TEST_MALLOC
+    	bool "Malloc"
+
+	config TEST_SCHED
+    	bool "Sched"
+
+	config TEST_TIME
+    	bool "Time"
+
+	config TEST_MQUEUE
+    	bool "Mqueue"
+    
+    config TEST_PTHREAD_ATTR
+      	bool "Pthread_attr"
+
+    config TEST_PTHREAD_COND
+      	bool "Pthread_cond"
+
+    config TEST_PTHREAD_KEY
+    	bool "Pthread_key"
+
+	config TEST_PTHREAD_MUTEX
+    	bool "Pthread_mutex"
+
+	config TEST_PTHREAD_OTHERS
+    	bool "Pthread_Others"
+	
+	endchoice
+
+endmenu
+
+
+

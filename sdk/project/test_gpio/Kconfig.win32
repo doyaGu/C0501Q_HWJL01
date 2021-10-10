@@ -1,0 +1,39 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+mainmenu "Project Configuration"
+
+config TEST_GPIO
+    bool
+    default y
+    #select HAVE_LCD
+    #select HAVE_GRAPHICS
+    #select HAVE_AUDIO
+    #select HAVE_VIDEO
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+source "$CMAKE_SOURCE_DIR/sdk/Kconfig"
+
+menu "GPIO Test"
+
+choice
+	prompt "Test GPIO"
+	default TEST_GPIO
+
+config TEST_GPIO_EX_1
+	bool "TEST_GPIO_EXAMPLE_1"
+	
+config TEST_GPIO_EX_2
+	bool "TEST_GPIO_EXAMPLE_2"
+
+config TEST_GPIO_EX_3
+	bool "TEST_GPIO_EXAMPLE_3"
+
+endchoice
+
+endmenu

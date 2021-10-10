@@ -1,0 +1,5 @@
+﻿這是跑馬燈範例
+This is scrolling text example
+From WWW.ITE.COM.TW
+上证综合指数 3107.35  +21.66  成交额：1472.65亿元
+天氣預報 北京 10°C    上海 14°C    深圳 20°C

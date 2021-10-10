@@ -1,0 +1,149 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// WRITE        ADDRESS(32bits) DATA(32bits)  ByteEnable(4bits) :write data to address                          //
+// READ         ADDRESS(32bits) DATA(32bits)  BitEnable(32bits) :read address,and then compare with data        //
+// WAIT         ADDRESS(32bits) DATA(32bits)  BitEnable(32bits) :read address until equal to data               //
+// INITFILE     FILENAME                                        :write file to address(@address in the file)    //
+// INITBFILE    ADDRESS(32bits) FILENAME(bin)                   :write file to address                          //
+// DUMP         ADDRESS(32bits) FILENAME      SIZE(byte)        :read address,then write to file                //
+// DUMPB        ADDRESS(32bits) FILENAME(bin) SIZE(byte)        :read address,then write to file                //
+// IDLE         TIME(us)                                        :host model sleep                               //
+// END                                                          :stop simulation                                // 
+// SET_SPIWRCLK Frequency(Mhz)                                  :set spi frequency for write command            // 
+// SET_SPIRDCLK Frequency(Mhz)                                  :set spi frequency for read command             // 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+
+// Reset and enable clock
+WRITE(0xD800000C,0xc02a8801);   // ACLK      PLL1_OUT1 / 1 (AXI        400MHz)            
+WAIT(10);       
+WRITE(0xD8000010,0x8002a802);   // MPHYCLK   PLL3_OUT1 / 2 (Memory PHY 200MHz)  
+WRITE(0xD8000014,0x80aaa801);   // MCLK      PLL2_OUT1 / 1 (Memory     336MHz)   
+WRITE(0xD8000018,0xf02a8801);   // NCLK      PLL1_OUT1 / 1 (AHB/RISC   400MHz)       
+WAIT(10); 
+WRITE(0xD800001c,0x81f89801);  // WCLK      PLL1_OUT2 / 2 (APB        266MHz)         
+WAIT(10);          
+WRITE(0xD8000020,0xc0aaaaaa);  // APB Reset, Enable APB Clock                  
+WRITE(0xD8000024,0xc2af9802);  // GCLK      PLL1_OUT2 / 2 (2D         266MHz)             
+WRITE(0xD8000028,0xe02ac801);  // DCLK      PLL3_OUT1 / 1 (LCD        166MHz)  
+WRITE(0xD800002C,0xc02a9802);  // DPCLK     PLL1_OUT2 / 2 (DPCLK      266MHz)  
+WRITE(0xD8000030,0xe0aa8802);  // ICLK      PLL1_OUT1 / 2 (VP         200MHz)          
+WRITE(0xD8000034,0xc2aa8802);  // XCLK      PLL1_OUT1 / 2 (Video      200MHz)          
+WRITE(0xD8000038,0xc02a9804);  // JCLK      PLL1_OUT2 / 4 (JPEG       133MHz)           
+WRITE(0xD800003c,0xf2aac804);  // ZCLK      PLL3_OUT1 / 4 (LCD       41.5MHz)                                
+WRITE(0xD8000040,0x0000c802);  // AMCLK     PLL3_OUT1 / 2 (AMCLK       83MHz)                              
+WRITE(0xD8000050,0xec000f3f);  // Reset and Enable RISC clock      
+WRITE(0xD8000054,0x8000000a);  // Reset and Enablle TSI clock        
+WRITE(0xD8000058,0x80029804);  // PCLK      PLL1_OUT2 / 4 (PCR        133MHz)            
+WRITE(0xD800005C,0x802a9804);  // WSCLK     PLL1_OUT2 / 4 (WSCLK      133MHz)        
+WRITE(0xD8000060,0xc00ad802);  // CAPCLK    PLL3_OUT2 / 2 (CAP         83MHz)             
+WRITE(0xD8000064,0x8000000a);  // Reset and Enable USB clock                   
+WRITE(0xD8000068,0x800a8808);  // REFCLK    PLL1_OUT1 / 8 (MAC         50MHz)
+
+// Un-Reset                                                                
+WRITE(0xD800000C,0x002a8801);  // ACLK      PLL1_OUT1 / 1 (AXI        400MHz)                 
+WRITE(0xD8000010,0x0002a802);  // MPHYCLK   PLL2_OUT1 / 2 (Memory PHY 200MHz)  
+WRITE(0xD8000014,0x00aaa802);  // MCLK      PLL2_OUT1 / 1 (Memory     336MHz)   
+WRITE(0xD8000018,0x002a8801);  // NCLK      PLL1_OUT1 / 1 (AHB/RISC   400MHz)       
+WRITE(0xD800001c,0x00009801);  // WCLK      PLL1_OUT2 / 2 (APB        266MHz)                
+WRITE(0xD8000020,0x00aaaaaa);  // APB Reset, Enable APB Clock                  
+WRITE(0xD8000024,0x02af9802);  // GCLK      PLL1_OUT2 / 2 (2D         266MHz)             
+WRITE(0xD8000028,0x002ac801);  // DCLK      PLL3_OUT1 / 1 (LCD        166MHz)  
+WRITE(0xD800002C,0x002a9802);  // DPCLK     PLL1_OUT2 / 2 (DPCLK      266MHz)  
+WRITE(0xD8000030,0x00aa8802);  // ICLK      PLL1_OUT1 / 2 (VP         200MHz)          
+WRITE(0xD8000034,0x02aa8802);  // XCLK      PLL1_OUT1 / 2 (Video      200MHz)          
+WRITE(0xD8000038,0x002a9804);  // JCLK      PLL1_OUT2 / 4 (JPEG       133MHz)           
+WRITE(0xD800003c,0x02aac804);  // ZCLK      PLL3_OUT1 / 4 (LCD       41.5MHz)                                                    
+WRITE(0xD8000050,0x00000f3f);  // Reset and Enable RISC clock      
+WRITE(0xD8000054,0x0000000a);  // Reset and Enablle TSI clock        
+WRITE(0xD8000058,0x00029804);  // PCLK      PLL1_OUT2 / 4 (PCR        133MHz)            
+WRITE(0xD800005C,0x002a9804);  // WSCLK     PLL1_OUT2 / 4 (WSCLK      133MHz)        
+WRITE(0xD8000060,0x000ad802);  // CAPCLK    PLL3_OUT2 / 2 (CAP         83MHz)             
+WRITE(0xD8000064,0x0000000a);  // Reset and Enable USB clock                   
+WRITE(0xD8000068,0x000a8808);  // REFCLK    PLL1_OUT1 / 8 (MAC         50MHz)           
+
+// Set Host clock to PLL2 temporary, and set it to PLL1_OUT2 latter
+//##################################################################################################
+
+//##################################################################################################
+
+/////////////////////////////////////////////////////////
+//                                                     //
+//         PLL Setting                                 //
+//                                                     //
+/////////////////////////////////////////////////////////
+//#####################################################//
+//# PLL1_N1   = 12MHz     * 1/1  * 66  * 1/2 = 396MHz, //
+//# PLL1_N2   = 12MHz     * 1/1  * 44  * 1/1 = 528MHz, //
+//#####################################################//  
+WRITE(0xD8000108,0x202c0101);  
+WRITE(0xD800010c,0x80000000);  
+WRITE(0xD800010c,0xF3000000);  
+WAIT(220); 
+WRITE(0xD800010c,0x80000000);
+
+WRITE(0xD8000100,0x20420201); 
+WRITE(0xD8000104,0x80000000); 
+WRITE(0xD8000104,0xF3000000); 
+WAIT(220); // wait pll stable
+WRITE(0xD8000104,0x80000000); 
+
+WRITE(0xD800001c,0x00009802); // WCLK      PLL1_OUT2 / 2 (APB        266MHz)    
+WAIT(10); 
+
+///////////////////////////////////////////////////
+// faraday memory controller initialized process //
+///////////////////////////////////////////////////
+
+//WRITE d810013c 00000300 f  // set command and address clock tree skew and delay
+//WRITE d8100140 03000300 f  // set byte0 and byte1 clock tree skew and delay
+
+WAIT(1);                     // wait 1 us 
+WRITE(0xD8100340,0x00000401);// release PLLPDN
+
+WAIT(50);                    // wait 50 us
+WRITE(0xD8100340,0x00000403);// release PLLRESETN
+
+WAIT(1);                     // wait 1 us
+WRITE(0xD8100340,0x00000407);// release DLLPDN
+
+///////////////////////////////////////////////////
+// set memory controller register MRS, AC timing //
+///////////////////////////////////////////////////
+WRITE(0xD8100000,0x08035d02); // set memory controller configure
+WRITE(0xD8100008,0x00040a53); // set MRS EMRS(DQS# enable,Rtt=75ohm,WR=6,CL=5,BL=8)
+//WRITE(0xD8100008,0x00050a63); // set MRS EMRS(DQS# enable,Rtt=75ohm,WR=6,CL=6,BL=8)
+WRITE(0xD8100010,0x00000012); // set rank0/rank1 type base address 64M Bytes, Row_bit 13, Col_bit 10, bank_bit 2
+WRITE(0xD8100014,0x2b10120d); // set timing parameter 0(TRFC, TFAW, TRC, TRAS)
+WRITE(0xD8100018,0x22401434); // set timing parameter 1(TWTR,TRTP, TWR, TMOD, TMRD, TRP, TRRD, TRCD)
+WRITE(0xD810001c,0x010032a0); // set timing parameter 2(additional delay, TXSR, TREFI)
+WRITE(0xD8100020,0x00000f41); // set DDR2/DDR3 PHY command and data block register
+WRITE(0xD8100024,0x00000000); // set read dqsi delay filtering window(dllsel) just for FPGA
+WRITE(0xD8100028,0x000007a2); // set DDR2/DDR3 PHY comp block register
+WRITE(0xD8100030,0x90000000); // set global channel arbiter parameter
+WRITE(0xD8100034,0x05050505); // set grant count of channel 0 to channel 3
+WRITE(0xD8100038,0x05050505); // set grant count of channel 7 to channel 4
+WRITE(0xD810003c,0x00810011); // set relationship between wrdata and dqsoe, rddata and rdcmd 
+WRITE(0xD8100074,0x11111111); // set dqsi mask filtering window(msdly) just for FPGA
+
+// Just for FPGA
+WRITE(0xD8100000,0x08035d02); // set GDS(bit 2 to bit 0 of register 0)
+
+WRITE(0xD810003c,0x00810011); // set relationship between wrdata and dqsoe, rddata and rdcmd
+WRITE(0xD8100024,0x00000003); // set read dqsi delay filtering window(dllsel) just for FPGA
+WRITE(0xD8100074,0x00000001); // set dqsi mask filtering window(msdly) just for FPGA
+
+//WRITE(0xD8100304,0x00100000);  // set bist0 end address 0x80*0x2000= 0x100000
+WRITE(0xD8100304,0x00080000);  // set bist0 end address 0x80*0x2000= 0x100000
+
+///////////////////////////////////////////////////
+
+// fire memory controller to initiate memory //
+WAIT(100);                  // wait 100 us
+WRITE(0xD8100340,0x0000040f);  // release RESETN
+
+WRITE(0xD8100138,0x00000105);  // reset elastic fifo(EFIFO) 
+
+WRITE(0xD8100004,0x00000001);  // fire memory initiated sequence
+
+//WRITE(0xD8100200,0xa8001010); // enable axi write response waiting
+//WRITE(0xD8100220,0xa8001010); // enable axi write response waiting

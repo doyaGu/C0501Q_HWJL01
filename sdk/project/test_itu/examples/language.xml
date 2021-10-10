@@ -1,0 +1,42 @@
+﻿<ITU>
+  <Object type="GUIDesigner.LayerWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Root0" children="Controls">
+    <Object type="GUIDesigner.BackgroundWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Background1" children="Controls">
+      <Property name="PixelFormat">RGB565</Property>
+      <Property name="Compress">True</Property>
+      <Property name="External">False</Property>
+      <Property name="ExternalImage">False</Property>
+      <Property name="EffectSteps">10</Property>
+      <Property name="ShowDelay">0</Property>
+      <Property name="HideDelay">-1</Property>
+      <Property name="AlwaysVisible">False</Property>
+      <Property name="ShowingEffect">None</Property>
+      <Property name="HidingEffect">None</Property>
+      <Property name="GradientColor">
+      </Property>
+      <Property name="GradientMode">None</Property>
+      <Property name="Hided">False</Property>
+      <Property name="Location">0, 0</Property>
+      <Property name="Name">Background1</Property>
+      <Property name="Size">800, 480</Property>
+    </Object>
+    <Object type="GUIDesigner.TextWidget, GUIDesigner, Version=1.0.6068.32601, Culture=neutral, PublicKeyToken=null" name="Text1" children="Controls">
+      <Property name="Text1">多国语言</Property>
+      <Property name="Text2">多國語言</Property>
+      <Property name="Text3">Multilingue</Property>
+      <Property name="Text4">Mehrsprachiges</Property>
+      <Property name="Text5">多言語</Property>
+      <Property name="Text6">Multilingüe</Property>
+      <Property name="Text7">다국어</Property>
+      <Property name="FontIndex">0</Property>
+      <Property name="Hided">False</Property>
+      <Property name="TextAlign">MiddleCenter</Property>
+      <Property name="Text">Multi-lingual</Property>
+      <Property name="Font">文泉驛微米黑, 24pt</Property>
+      <Property name="Location">264, 209</Property>
+      <Property name="Name">Text1</Property>
+      <Property name="Size">268, 50</Property>
+    </Object>
+    <Property name="ClientSize">800, 480</Property>
+    <Property name="Name">Root0</Property>
+  </Object>
+</ITU>
