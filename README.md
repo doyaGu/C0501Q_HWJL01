@@ -5,8 +5,7 @@ The related resources for this device.
 
 ## Photo
 
-![PCB Front](\doc\images\pcb-front.jpg)
-
+![PCB Front](https://raw.githubusercontent.com/doyaGu/C0501Q_HWJL01/main/doc/images/pcb-front.jpg)
 
 
 ## Hardware Spec
