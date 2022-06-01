@@ -43,7 +43,7 @@ The related resources for this device.
 | No. | LCM Pinout | Pinout | Pin Number |
 | :-----------: | :-----------: | :----: | :--------: |
 | 1 |     LEDK      |  GND   |     -      |
-| 2 |     LEDA      |   5V [Controlled by GPIO38]   |     PIN63 |
+| 2 |     LEDA      |  16V [Controlled by GPIO78]   |     PIN112 |
 | 3 |      GND      |  GND   |     -      |
 | 4 |      VDD      |  3V3 [Controlled by GPIO38]  |     PIN63 |
 | 5 | R7 | LD23 (GPIO39) | PIN65 |
